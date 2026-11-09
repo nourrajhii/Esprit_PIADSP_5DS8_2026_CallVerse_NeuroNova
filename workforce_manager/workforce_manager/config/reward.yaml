@@ -1,0 +1,72 @@
+# Poids de la fonction de récompense du Workforce Manager (niveau macro) – version 2.
+#
+# Unité commune : 1 point = la valeur d'un appel STANDARD résolu au premier contact.
+# Récompense d'un pas (15 min) = somme des composantes ci-dessous :
+#
+#   R =  Σ_type resolu[type]  x nb_resolus_au_premier_contact[type]       (taux de résolution)
+#      - Σ_type abandon[type] x nb_abandons[type]                         (abandons)
+#      - attente_par_client_minute x minutes d'attente cumulées en file   (temps d'attente)
+#      - sla_urgence           x nb d'urgences dont l'attente a atteint 3 min   (SLA)
+#      - occupation            x écart à la plage d'occupation raisonnable      (occupation)
+#      + satisfaction          x Σ_clients_servis (note - 3) / 2                (satisfaction)
+#      - cout_conseiller       x nb de conseillers payés pendant le pas         (coûts)
+#      - heures_sup            x nb de conseillers en heures supplémentaires    (coûts)
+#      - action_impossible     x 1 si l'action demandée était impossible
+
+# Valeur d'un appel RÉSOLU AU PREMIER CONTACT (un appel non résolu ne rapporte rien :
+# le client rappellera, ce qui coûte une deuxième prise en charge).
+resolu:
+  standard: 1.0   # référence : suivi de commande, facturation, livraison.
+  sante: 1.5      # conseil sur un produit de santé : panier plus sensible, client
+                  # souvent abonné (ex. Sami), forte valeur de fidélisation.
+  urgence: 2.0    # urgence santé bien orientée : enjeu de sécurité du patient et
+                  # de réputation pour une pharmacie en ligne.
+
+# Pénalité d'abandon : toujours supérieure à la valeur d'un appel résolu,
+# car un client qui raccroche est perdu ET peut partir à la concurrence.
+abandon:
+  standard: 2.0   # perte d'une vente / d'un client, sans risque sanitaire.
+  sante: 5.0      # client laissé sans réponse sur un produit de santé (posologie,
+                  # rupture d'un traitement) : risque sanitaire et de churn d'abonné.
+  urgence: 10.0   # PRIORITÉ ABSOLUE : une urgence non prise en charge (ex. Inès)
+                  # est l'événement le plus grave pour PharmaShop (sécurité, juridique).
+
+# Attente : 0,03 point par client et par minute d'attente.
+# Un client qui attend 10 min coûte 0,3 point, soit un tiers d'appel standard :
+# l'attente dégrade la satisfaction, mais reste moins grave qu'un abandon.
+attente_par_client_minute: 0.03
+
+# Engagement de service (SLA) : une urgence doit être prise en charge en moins de 3 min.
+# S'ajoute à la pénalité d'abandon : rater le SLA est une faute de pilotage du centre.
+sla_urgence: 5.0
+
+# Taux d'occupation raisonnable des conseillers (temps occupé / temps disponible).
+# Plage cible 60-85 % : au-delà de 85 %, fatigue, erreurs et absentéisme augmentent
+# (repère usuel des centres d'appels) ; en dessous de 60 %, l'équipe est sous-employée.
+# Pénalité par quart d'heure : 2 points à 100 % d'occupation, 0,5 point à 0 %.
+# La surcharge pèse plus : le sous-emploi est déjà pénalisé par le coût des conseillers.
+occupation:
+  plage: [0.60, 0.85]
+  surcharge: 2.0
+  sous_emploi: 0.5
+
+# Satisfaction client simulée (note de 1 à 5 par client servi) : elle dépend de la
+# qualité de la réponse, de l'attente et d'un éventuel rappel. Par client : +0,5 point
+# pour 5/5, -0,5 pour 1/5. Remplace l'ancien bonus « qualité », qu'elle inclut.
+satisfaction: 0.5
+
+# Coût d'un conseiller payé pendant un pas de 15 min.
+# Un conseiller occupé résout ~1,5 appel par pas (15 / 7,9 min x 80 %) ; 0,5 point
+# rend rentable l'ajout d'un conseiller en période de surcharge, mais pénalise un
+# conseiller inoccupé quand la file est vide.
+cout_conseiller: 0.5
+
+# Surcoût d'un conseiller en heures supplémentaires (en plus de cout_conseiller).
+# 0,25 = majoration salariale de 50 % ; + 0,15 de coût indirect (fatigue, absentéisme).
+# Les heures sup doivent donc rester un dernier recours : un renfort PLANIFIÉ
+# (action « planifier_renfort ») coûte le prix normal, mais il faut l'anticiper.
+heures_sup: 0.4
+
+# Action impossible (plus de réserve, personne à former...) : petite pénalité
+# pour que l'agent apprenne à ne pas gaspiller ses décisions.
+action_impossible: 0.2

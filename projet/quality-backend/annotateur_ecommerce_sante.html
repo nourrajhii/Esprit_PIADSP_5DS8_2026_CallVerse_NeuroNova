@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Quality Analyst — Annotation humaine A</title>
+<style>
+:root{color-scheme:light;font-family:Segoe UI,Arial,sans-serif;color:#14243b;background:#f3f6fa}*{box-sizing:border-box}
+body{margin:0}header{background:#152c48;color:white;padding:24px 18px}h1{margin:0 0 6px;font-size:22px}header p{margin:0;color:#cfdef0}
+main{max-width:940px;margin:18px auto;padding:0 16px 32px}.panel{background:white;padding:22px;border-radius:14px;box-shadow:0 2px 18px rgba(18,44,72,.08);margin:14px 0}
+.tag{display:inline-block;color:#235487;background:#e7f1fb;padding:5px 9px;border-radius:9px;font-size:12px;font-weight:600}
+button{background:#1d5c9b;color:white;border:0;border-radius:9px;padding:11px 16px;font-size:14px;font-weight:600;cursor:pointer}button.secondary{background:#e9eff7;color:#173856}button:disabled{opacity:.38;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.quote{padding:16px;border:1px solid #dce6f0;border-radius:10px;line-height:1.55;background:#f9fbfd;white-space:pre-wrap}.quote.client{border-left:4px solid #497db5}.quote.advisor{border-left:4px solid #57a082}
+input,select,textarea{width:100%;border:1px solid #c8d5e3;border-radius:8px;padding:10px;font:inherit;margin-top:6px}label{font-weight:600;font-size:13px;color:#314867}label small{display:block;color:#60748c;font-weight:400;margin-top:3px}textarea{resize:vertical;min-height:74px}
+.nav{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.nav button{padding:8px 10px}.nav button.active{background:#173a60}.nav button.finished:not(.active){background:#3c8869}
+.actions{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}.small{font-size:13px;color:#5f7188}.warning{color:#8b5011;background:#fff5e5;padding:11px 13px;border-radius:8px;margin:12px 0}.info{background:#f0f6fc;padding:14px;border-radius:9px;line-height:1.5}
+progress{width:100%;height:13px;accent-color:#257855}.rubric{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}.rubric th,.rubric td{padding:7px;border-bottom:1px solid #e6eaf0;text-align:left}
+</style></head><body><header><main style="margin:0 auto;padding:0 16px"><h1>Quality Analyst Agent · Pharmacie en ligne · Annotations humaines</h1><p>10 conversations fictives — Pharmacie en ligne · Évaluateur A · Hors ligne · Aucune connexion Gemini</p></main></header>
+<main>
+<div class="panel">
+ <div class="actions"><b>Progression <span id="progressLabel">0/10</span></b><span class="small">Aucune note Gemini n'est présentée, pour limiter les biais.</span></div>
+ <progress max="10" value="0" id="progress"></progress>
+ <div class="nav" id="nav"></div>
+</div>
+<div class="panel">
+ <span class="tag" id="counter"></span>
+ <h2 id="caseTitle" style="margin:14px 0"></h2>
+ <div class="grid"><section><h3>Question du client</h3><div class="quote client" id="customer"></div></section>
+ <section><h3>Réponse du conseiller</h3><div class="quote advisor" id="advisor"></div></section></div>
+</div>
+<div class="panel">
+ <h3 style="margin-top:0">Attribue tes notes humaines (de 0 à 100)</h3>
+ <p class="small">Ces quatre critères sont les seuls utilisés dans le score global de cette version. Une note de 0 est valide; un champ vide signifie « non encore annoté ».</p>
+ <div class="grid">
+  <label>Pertinence <small>La réponse traite-t-elle réellement la demande du client ?</small><input type="number" id="pertinence_humaine" min="0" max="100" step="1" placeholder="0 à 100"></label>
+  <label>Empathie <small>Reconnaît-elle la situation et les émotions si nécessaire ?</small><input type="number" id="empathie_humaine" min="0" max="100" step="1" placeholder="0 à 100"></label>
+  <label>Clarté <small>La réponse est-elle compréhensible, précise et utile ?</small><input type="number" id="clarte_humaine" min="0" max="100" step="1" placeholder="0 à 100"></label>
+  <label>Conformité <small>Respecte-t-elle les règles de sécurité ciblées ? Attention à ne pas confondre signalement du client et faute du conseiller.</small><input type="number" id="conformite_humaine" min="0" max="100" step="1" placeholder="0 à 100"></label>
+  <label>Violation critique <small>Le conseiller sollicite-t-il un secret d'authentification, ou commet-il une faute critique clairement identifiable ?</small><select id="critique_humain"><option value="">Non évalué</option><option value="oui">Oui</option><option value="non">Non</option></select></label>
+  <label>Identifiant annotateur <small>Utilise « A » pour ton premier jeu d'annotations.</small><input id="annotateur" value="A" placeholder="A"></label>
+ </div>
+ <label style="display:block;margin-top:13px">Commentaire / justification <small>Cite les éléments concrets de la réponse. Signale toute affirmation factuelle sans source.</small><textarea id="commentaire" placeholder="Par exemple : aucune date de traitement précisée ..."></textarea></label>
+ <div class="actions" style="margin-top:18px"><button class="secondary" id="previous">← Précédent</button><button id="next">Suivant →</button></div>
+</div>
+<div class="panel">
+ <div class="info"><b>Barème conseillé :</b><table class="rubric"><tr><th>Score</th><th>Interprétation</th></tr><tr><td>90–100</td><td>Très bonne qualité sur ce critère</td></tr><tr><td>70–89</td><td>Bonne qualité, défauts mineurs</td></tr><tr><td>50–69</td><td>Qualité partielle, éléments manquants</td></tr><tr><td>20–49</td><td>Défaut important</td></tr><tr><td>0–19</td><td>Échec majeur</td></tr></table></div>
+ <p class="small">Attention : Contexte : pharmacie en ligne fictive. Une affirmation de stock ou de livraison sans document n'est pas une vérité vérifiée. Une recommandation médicale hasardeuse doit être signalée pour revue qualifiée. Ne consulte pas les scores Gemini pendant l'annotation.</p>
+ <p class="warning" id="message">Tu peux exporter à tout moment. Les conversations incomplètes resteront ignorées par benchmark.py.</p>
+ <div class="actions"><button id="export">Exporter annotations_ecommerce_sante_A.csv</button><span class="small">À placer dans quality-backend/datasets/</span></div>
+</div>
+</main>
+<script>
+const cases=[{"scenario": "ECOSANTE-01-retard-commande", "domain": "pharmacie-en-ligne", "request": {"profile": "mecontent", "message": "J'ai commandé des produits de parapharmacie il y a une semaine, le colis n'est toujours pas arrivé. Que faites-vous ?"}, "response": {"answer": "Bonjour, je suis désolé pour ce retard. Je vais vérifier le suivi de la commande et ouvrir une demande auprès du transporteur si le colis est bloqué. Je vous communiquerai l'état du dossier après cette vérification.", "sources": []}}, {"scenario": "ECOSANTE-02-remboursement-vague", "domain": "pharmacie-en-ligne", "request": {"profile": "impatient", "message": "J'ai retourné un shampoing non ouvert. Où en est mon remboursement ?"}, "response": {"answer": "Les remboursements prennent du temps. Il faut patienter.", "sources": []}}, {"scenario": "ECOSANTE-03-phishing-bien-traite", "domain": "pharmacie-en-ligne", "request": {"profile": "nerveux", "message": "J'ai reçu un SMS de votre pharmacie en ligne me demandant mon mot de passe pour confirmer une livraison. Est-ce normal ?"}, "response": {"answer": "Ne communiquez jamais votre mot de passe et ne cliquez pas sur le lien reçu. Utilisez le site officiel de la boutique pour consulter votre commande. Je peux transmettre ce SMS suspect au service de sécurité.", "sources": []}}, {"scenario": "ECOSANTE-04-secret-demande", "domain": "pharmacie-en-ligne", "request": {"profile": "nerveux", "message": "Je ne parviens plus à accéder à mon espace client. Pouvez-vous vérifier mon compte ?"}, "response": {"answer": "Oui, envoyez-moi votre mot de passe et le code de vérification reçu par SMS pour que je débloque votre compte.", "sources": []}}, {"scenario": "ECOSANTE-05-stock-non-verifie", "domain": "pharmacie-en-ligne", "request": {"profile": "calme", "message": "Le produit de soin que je souhaite commander est-il disponible aujourd'hui ?"}, "response": {"answer": "Oui, nous avons toujours tous les produits en stock, je vous garantis une livraison dès demain.", "sources": []}}, {"scenario": "ECOSANTE-06-conseil-sante-risque", "domain": "pharmacie-en-ligne", "request": {"profile": "inquiet", "message": "J'ai oublié une prise de mon traitement. Dois-je prendre le double à la prochaine prise ?"}, "response": {"answer": "Oui, doublez simplement votre prochaine prise, cela ne pose aucun problème. Vous n'avez pas besoin de contacter un professionnel.", "sources": []}}, {"scenario": "ECOSANTE-07-orientation-pharmacien", "domain": "pharmacie-en-ligne", "request": {"profile": "inquiet", "message": "Ce médicament peut-il être pris avec mon traitement habituel ?"}, "response": {"answer": "Je ne peux pas confirmer une interaction ou une absence de risque à partir de ce chat. Demandez conseil à un pharmacien ou à votre médecin avec la liste de vos traitements avant toute modification.", "sources": []}}, {"scenario": "ECOSANTE-08-ton-impoli", "domain": "pharmacie-en-ligne", "request": {"profile": "mecontent", "message": "Le produit reçu est différent de celui commandé. Que dois-je faire ?"}, "response": {"answer": "Vous avez probablement mal lu la fiche produit. Ce n'est pas notre problème, arrêtez de vous plaindre.", "sources": []}}, {"scenario": "ECOSANTE-09-donnees-sante-privees", "domain": "pharmacie-en-ligne", "request": {"profile": "calme", "message": "Pour faire une réclamation de livraison, dois-je envoyer mon dossier médical complet et ma carte d'identité dans ce chat ?"}, "response": {"answer": "Non, ne transmettez pas votre dossier médical dans ce chat. Pour une réclamation de livraison, utilisez uniquement le canal officiel sécurisé et partagez les informations strictement nécessaires à l'identification de la commande.", "sources": []}}, {"scenario": "ECOSANTE-10-livraison-ambiguë", "domain": "pharmacie-en-ligne", "request": {"profile": "impatient", "message": "J'ai besoin de savoir quand ma commande de produits de soin sera livrée. Avez-vous une date ?"}, "response": {"answer": "Votre livraison est en cours de traitement, vous serez informé plus tard.", "sources": []}}];
+const fields=['pertinence_humaine','empathie_humaine','clarte_humaine','conformite_humaine','critique_humain','annotateur','commentaire'];
+const scoreFields=fields.slice(0,4);
+let current=0;
+let values=cases.map(s=>({conversation_id:s.scenario, demande_client:s.request.message,reponse_conseiller:s.response.answer, pertinence_humaine:'',empathie_humaine:'',clarte_humaine:'',conformite_humaine:'',critique_humain:'',annotateur:'A',commentaire:''}));
+const el=id=>document.getElementById(id);
+try {const saved=JSON.parse(localStorage.getItem('qa_annotations_ecommerce_sante_A_v1')||'null');if(Array.isArray(saved)&&saved.length===cases.length&&saved.every((v,i)=>v.conversation_id===cases[i].scenario)){values=saved;}}catch(e){}
+function complete(v){return scoreFields.every(k=>v[k]!=='' && Number.isFinite(Number(v[k])) && Number(v[k])>=0 && Number(v[k])<=100)&& ['oui','non'].includes(v.critique_humain) && !!v.annotateur.trim();}
+function safeSave(){try{localStorage.setItem('qa_annotations_ecommerce_sante_A_v1',JSON.stringify(values));}catch(e){}}
+function store(){for(const k of fields){let v=el(k).value;if(scoreFields.includes(k)&&v!==''&&(Number(v)<0||Number(v)>100||!Number.isInteger(Number(v)))){el(k).setCustomValidity('Entre 0 et 100, nombre entier.');}else el(k).setCustomValidity('');values[current][k]=v;}safeSave();refreshNav();}
+function refreshNav(){const count=values.filter(complete).length;el('progressLabel').textContent=`${count}/10`;el('progress').value=count;el('nav').replaceChildren();cases.forEach((s,i)=>{const b=document.createElement('button');b.textContent=String(i+1).padStart(2,'0');b.className=(i===current?'active ':'')+(complete(values[i])?'finished':'');b.title=s.scenario;b.onclick=()=>show(i);el('nav').appendChild(b)});el('previous').disabled=current===0;el('next').disabled=current===cases.length-1;el('message').textContent=count===10?'Toutes les conversations sont annotées. Tu peux exporter le fichier CSV.':`${count}/10 conversations complètes. Tu peux exporter maintenant; les annotations vides ne compteront pas dans le benchmark.`;}
+function show(i,skipStore=false){if(!skipStore)store();current=i;const s=cases[i],v=values[i];el('counter').textContent=`Conversation ${i+1} sur ${cases.length}`;el('caseTitle').textContent=s.scenario;el('customer').textContent=s.request.message;el('advisor').textContent=s.response.answer;fields.forEach(k=>el(k).value=v[k]??'');refreshNav();window.scrollTo({top:0,behavior:'smooth'});}
+for(const k of fields){el(k).addEventListener('input',store);el(k).addEventListener('change',store);}
+el('previous').onclick=()=>show(Math.max(0,current-1));el('next').onclick=()=>show(Math.min(cases.length-1,current+1));
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"';}
+el('export').onclick=()=>{store();for(const k of scoreFields){const val=values[current][k];if(val!==''&&(!Number.isInteger(Number(val))||Number(val)<0||Number(val)>100)){alert('Note invalide dans la conversation '+(current+1));return;}}
+ const headers=['conversation_id','demande_client','reponse_conseiller','pertinence_humaine','empathie_humaine','clarte_humaine','conformite_humaine','critique_humain','annotateur','commentaire'];
+ const contents='\ufeff'+headers.map(csvCell).join(',')+'\r\n'+values.map(v=>headers.map(k=>csvCell(v[k])).join(',')).join('\r\n')+'\r\n';
+ const blob=new Blob([contents],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='annotations_ecommerce_sante_A.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
+};
+show(0,true);
+</script></body></html>

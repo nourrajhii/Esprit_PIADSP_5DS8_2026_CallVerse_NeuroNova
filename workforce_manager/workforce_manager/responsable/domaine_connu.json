@@ -1,0 +1,115 @@
+{
+  "source": "400 journées (journées types + aléatoires), agent PPO généraliste",
+  "nb_observations": 19200,
+  "quantile_haut": 0.999,
+  "bornes": {
+    "clients_en_attente": {
+      "bas": 0.0,
+      "haut": 0.4749999940395355
+    },
+    "file_standard": {
+      "bas": 0.0,
+      "haut": 0.4933666670620267
+    },
+    "file_sante": {
+      "bas": 0.0,
+      "haut": 0.36666667461395264
+    },
+    "file_urgence": {
+      "bas": 0.0,
+      "haut": 0.20000000298023224
+    },
+    "attente_moyenne": {
+      "bas": 0.0,
+      "haut": 0.3768933394849277
+    },
+    "conseillers_libres_generalistes": {
+      "bas": 0.0,
+      "haut": 0.9090909361839294
+    },
+    "conseillers_libres_sante": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "conseillers_occupes": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "taux_occupation": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "volume_entrant_recent": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "prevision_charge": {
+      "bas": 0.0,
+      "haut": 0.766019984722127
+    },
+    "taux_abandon_recent": {
+      "bas": 0.0,
+      "haut": 0.45766859170794444
+    },
+    "aht_recent": {
+      "bas": 0.0,
+      "haut": 0.574128865003585
+    },
+    "fcr_recent": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "taux_escalade_recent": {
+      "bas": 0.0,
+      "haut": 0.32311135211586844
+    },
+    "satisfaction_recente": {
+      "bas": 0.0,
+      "haut": 0.8524005168080327
+    },
+    "score_qualite_moyen_recent": {
+      "bas": 0.0,
+      "haut": 0.8553641096353528
+    },
+    "tranche_horaire": {
+      "bas": 0.0,
+      "haut": 0.9791666865348816
+    },
+    "evt_stock_sante": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "evt_incident_technique": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "evt_campagne_commerciale": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "evt_pic_demande": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "evt_sous_effectif": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "reserve_disponible": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "mode_priorite": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "mode_competences": {
+      "bas": 0.0,
+      "haut": 1.0
+    },
+    "renforts_engages": {
+      "bas": 0.0,
+      "haut": 1.0
+    }
+  }
+}

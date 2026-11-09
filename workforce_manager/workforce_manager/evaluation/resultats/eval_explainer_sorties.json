@@ -1,0 +1,582 @@
+[
+  {
+    "cas": "persona_sami_variante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "La réponse contient des informations inexactes.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "signaler_kb",
+          "description": "Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "La réponse contient des informations inexactes.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "signaler_kb",
+          "description": "Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "persona_ines_variante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "L'urgence du client n'a pas été prise en compte.",
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Prise en charge immédiate par un conseiller humain.",
+          "priority": "haute"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "L'urgence du client n'a pas été prise en compte.",
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Prise en charge immédiate par un conseiller humain.",
+          "priority": "haute"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "persona_karim_variante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée)."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        },
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée)."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        },
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_non_conformite_sante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_empathie_faible",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_groundedness_faible",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée).",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée. Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée).",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée. Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_clarte_faible",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_urgence_mal_geree",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "L'urgence du client n'a pas été prise en compte.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client. Prise en charge immédiate par un conseiller humain.",
+          "priority": "haute"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé.",
+        "L'urgence du client n'a pas été prise en compte.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client. Prise en charge immédiate par un conseiller humain.",
+          "priority": "haute"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "mock_kb_manquante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "La réponse ne traite pas vraiment la question posée.",
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée)."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche sur la vraie intention du client. Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "La réponse ne traite pas vraiment la question posée.",
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée)."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche sur la vraie intention du client. Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "doublon_signaler_kb",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée).",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée. Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée).",
+        "La réponse contient des informations inexactes."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche documentaire avec une requête reformulée.",
+          "priority": "haute"
+        },
+        {
+          "type": "signaler_kb",
+          "description": "Vérifier que la base contient bien l'information demandée. Faire corriger la fiche ou le document source erroné.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "criteres_absents_sante",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Le ton manque d'empathie face à la situation du client.",
+        "La réponse est confuse ou trop technique.",
+        "Conformité non évaluée sur une demande de santé.",
+        "Critères non évalués : pertinence, exactitude, groundedness, conformite."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Faire vérifier la conformité par le pharmacien conseil.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Le ton manque d'empathie face à la situation du client.",
+        "La réponse est confuse ou trop technique.",
+        "Conformité non évaluée sur une demande de santé.",
+        "Critères non évalués : pertinence, exactitude, groundedness, conformite."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Faire vérifier la conformité par le pharmacien conseil.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reformuler en étapes courtes, sans jargon.",
+          "priority": "basse"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "type_inconnu_non_conforme",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "garde_fou_sante_bon_score",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme sur une demande de santé."
+      ],
+      "actions": [
+        {
+          "type": "escalade_humain",
+          "description": "Transférer au pharmacien conseil avant tout envoi au client.",
+          "priority": "haute"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "zone_grise",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Qualité globale sous l'objectif, sans défaut isolé."
+      ],
+      "actions": [
+        {
+          "type": "ajuster_reponse",
+          "description": "Relire et améliorer la réponse avant envoi.",
+          "priority": "basse"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Qualité globale sous l'objectif, sans défaut isolé."
+      ],
+      "actions": [
+        {
+          "type": "ajuster_reponse",
+          "description": "Relire et améliorer la réponse avant envoi.",
+          "priority": "basse"
+        }
+      ]
+    }
+  },
+  {
+    "cas": "defauts_multiples_standard",
+    "source": "fallback",
+    "decision_regles": {
+      "problems": [
+        "Réponse non conforme aux règles PharmaShop (CGV, procédures).",
+        "La réponse ne traite pas vraiment la question posée.",
+        "Le ton manque d'empathie face à la situation du client.",
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche sur la vraie intention du client.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reprendre la réponse selon la procédure officielle. Reformuler en étapes courtes, sans jargon.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    },
+    "decision_redigee": {
+      "problems": [
+        "Réponse non conforme aux règles PharmaShop (CGV, procédures).",
+        "La réponse ne traite pas vraiment la question posée.",
+        "Le ton manque d'empathie face à la situation du client.",
+        "La réponse est confuse ou trop technique."
+      ],
+      "actions": [
+        {
+          "type": "relancer_rag",
+          "description": "Relancer la recherche sur la vraie intention du client.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "ajuster_reponse",
+          "description": "Reprendre la réponse selon la procédure officielle. Reformuler en étapes courtes, sans jargon.",
+          "priority": "moyenne"
+        },
+        {
+          "type": "formation",
+          "description": "Module de formation : accueil des clients inquiets ou mécontents.",
+          "priority": "moyenne"
+        }
+      ]
+    }
+  }
+]

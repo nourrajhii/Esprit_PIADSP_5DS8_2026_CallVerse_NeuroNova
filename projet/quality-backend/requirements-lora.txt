@@ -1,0 +1,8 @@
+# Dependances supplementaires facultatives pour inference locale sur CPU/GPU.
+# Installer avec : python -m pip install -r requirements-lora.txt
+# torch est volumineux; garder requirements.txt pour Gemini seul.
+torch>=2.3,<3
+transformers==4.51.3
+peft==0.15.2
+accelerate==1.6.0
+safetensors>=0.5.0

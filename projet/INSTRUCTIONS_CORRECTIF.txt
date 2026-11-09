@@ -1,0 +1,27 @@
+CORRECTIF FRONT QUALITY ANALYST — PHARMACIE EN LIGNE
+
+Portée : uniquement src/pages/agents/QualityAnalystPage.jsx
+Conserve FastAPI, SQLite, Gemini, benchmarks, autres interfaces des agents.
+6 boutons de scénarios tirés du dataset ECOSANTE ; garde les champs libres.
+Les autres conversations demeurent dans quality-backend/datasets/scenarios_ecommerce_sante.json.
+
+INSTALLATION (PowerShell, depuis n'importe quel répertoire) :
+
+$root = "C:\Users\user\Downloads\dt-front-quality-analyst-starter"
+Copy-Item "$root\src\pages\agents\QualityAnalystPage.jsx" "$root\src\pages\agents\QualityAnalystPage_backup.jsx" -Force
+Expand-Archive -LiteralPath "$env:USERPROFILE\Downloads\correctif_front_qa_ecosante.zip" -DestinationPath $root -Force
+
+Puis ouvrir le terminal frontend à la racine :
+cd $root
+npm run dev
+
+Le frontend peut tourner sur http://localhost:5173 ou :5174.
+Si :5174 est utilisé, FastAPI doit autoriser cet Origin CORS :
+Dans le terminal du backend, arrêter uvicorn par Ctrl+C puis définir :
+$env:QUALITY_CORS_ORIGINS = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174"
+$env:GEMINI_MODEL = "gemini-3.6-flash"
+.\.venv\Scripts\python.exe -m uvicorn app:app --host 127.0.0.1 --port 8001 --reload
+
+La clé GEMINI_API_KEY doit être définie dans ce même terminal, sans l'écrire dans le code.
+Vérifier /health et une analyse réelle depuis Twinly.
+Ne pas refaire le benchmark pour changer seulement les boutons du frontend.

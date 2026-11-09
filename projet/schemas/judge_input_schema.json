@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "AdvisorResponse": {
+      "properties": {
+        "answer": {
+          "maxLength": 12000,
+          "minLength": 1,
+          "title": "Answer",
+          "type": "string"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "maxItems": 12,
+          "title": "Sources",
+          "type": "array"
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "title": "AdvisorResponse",
+      "type": "object"
+    },
+    "CustomerRequest": {
+      "properties": {
+        "message": {
+          "maxLength": 8000,
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "profile": {
+          "default": "non_precise",
+          "maxLength": 100,
+          "title": "Profile",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "title": "CustomerRequest",
+      "type": "object"
+    },
+    "Source": {
+      "properties": {
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Score"
+        },
+        "content": {
+          "anyOf": [
+            {
+              "maxLength": 12000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Content"
+        }
+      },
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "request": {
+      "$ref": "#/$defs/CustomerRequest"
+    },
+    "response": {
+      "$ref": "#/$defs/AdvisorResponse"
+    },
+    "conversationId": {
+      "anyOf": [
+        {
+          "maxLength": 120,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Conversationid"
+    },
+    "reference_text": {
+      "anyOf": [
+        {
+          "maxLength": 18000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Reference Text"
+    },
+    "geminiScore": {
+      "anyOf": [
+        {
+          "maximum": 100,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Geminiscore"
+    }
+  },
+  "required": [
+    "request",
+    "response"
+  ],
+  "title": "SecondJudgeInput",
+  "type": "object"
+}

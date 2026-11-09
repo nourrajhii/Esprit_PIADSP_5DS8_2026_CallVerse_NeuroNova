@@ -1,0 +1,18 @@
+{
+  "evaluation": {
+    "globalScore": 60,
+    "criteria": {
+      "pertinence": 55,
+      "exactitude": 72,
+      "groundedness": 42,
+      "empathie": 68,
+      "clarte": 75,
+      "conformite": 62
+    },
+    "improvements": [
+      "Procédure de retour d'un dispositif médical non citée",
+      "Réponse sur un retour standard"
+    ]
+  },
+  "type_demande": "sante"
+}

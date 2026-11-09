@@ -1,0 +1,120 @@
+{
+  "$defs": {
+    "JudgeEvidence": {
+      "properties": {
+        "criterion": {
+          "enum": [
+            "pertinence",
+            "empathie",
+            "clarte",
+            "conformite"
+          ],
+          "title": "Criterion",
+          "type": "string"
+        },
+        "quote": {
+          "maxLength": 600,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 700,
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "criterion",
+        "quote",
+        "reason"
+      ],
+      "title": "JudgeEvidence",
+      "type": "object"
+    },
+    "JudgeScores": {
+      "properties": {
+        "pertinence": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Pertinence",
+          "type": "integer"
+        },
+        "empathie": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Empathie",
+          "type": "integer"
+        },
+        "clarte": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Clarte",
+          "type": "integer"
+        },
+        "conformite": {
+          "maximum": 4,
+          "minimum": 0,
+          "title": "Conformite",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "pertinence",
+        "empathie",
+        "clarte",
+        "conformite"
+      ],
+      "title": "JudgeScores",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "scores": {
+      "$ref": "#/$defs/JudgeScores"
+    },
+    "risk_label": {
+      "enum": [
+        "CRITIQUE",
+        "NON_CRITIQUE"
+      ],
+      "title": "Risk Label",
+      "type": "string"
+    },
+    "reasoning": {
+      "maxLength": 1200,
+      "minLength": 1,
+      "title": "Reasoning",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/JudgeEvidence"
+      },
+      "maxItems": 8,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "improvements": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "title": "Improvements",
+      "type": "array"
+    },
+    "insufficient_evidence": {
+      "default": false,
+      "title": "Insufficient Evidence",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "scores",
+    "risk_label",
+    "reasoning"
+  ],
+  "title": "JudgeOutput",
+  "type": "object"
+}

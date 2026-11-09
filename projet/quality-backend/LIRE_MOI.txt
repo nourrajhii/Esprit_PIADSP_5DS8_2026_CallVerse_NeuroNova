@@ -1,0 +1,32 @@
+Correctif pour conserver les 5 résultats réussis du Quality Analyst
+===============================================================
+
+Ce kit ne modifie ni le frontend ni app.py. Il reprend uniquement les lignes
+ERREUR du fichier datasets/benchmark_predictions.csv. Le CSV existant doit
+être présent dans quality-backend/datasets.
+
+1) Extraire ce ZIP dans :
+   C:\Users\user\Downloads\dt-front-quality-analyst-starter\quality-backend
+
+2) S'assurer que FastAPI tourne sur 127.0.0.1:8001 avec GEMINI_MODEL=gemini-3.6-flash.
+
+3) Dans un deuxième terminal PowerShell, dans quality-backend :
+   .\.venv\Scripts\python.exe .\reprendre_echecs.py --dry-run
+
+4) Si 5 cas restants sont affichés :
+   .\.venv\Scripts\python.exe .\reprendre_echecs.py
+
+5) Voir les lignes sauvegardées :
+   Import-Csv .\datasets\benchmark_predictions.csv | Format-Table conversation_id,statut,score_ia,priorite_ia -AutoSize
+
+Mesures de sécurité :
+- N'efface ni les scores OK ni le CSV existant.
+- Copie de sauvegarde benchmark_predictions_backup_avant_reprise.csv (une seule fois).
+- Sauvegarde le CSV après chaque nouvelle réponse.
+- 25 secondes entre les nouveaux appels, plus jusqu'à 3 tentatives internes dans app.py.
+- Stoppe en cas de deux HTTP 503/429 consécutives, sans inventer de scores.
+- Ne mélange pas plusieurs modèles dans la même baseline.
+- Une requête aboutie peut consommer du quota, même si l'évaluation est ensuite relancée.
+
+Si la surcharge persiste, ne répétez pas en boucle les appels. En attendant,
+annotez les cinq scénarios déjà évalués indépendamment du résultat du LLM.

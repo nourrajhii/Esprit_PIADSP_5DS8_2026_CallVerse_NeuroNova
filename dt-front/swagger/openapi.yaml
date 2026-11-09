@@ -1,0 +1,418 @@
+openapi: 3.0.3
+info:
+  title: Digital Twin – Centre de Relation Client API
+  description: |
+    API du Digital Twin d'un centre de relation client.
+    Workflow : Client Simulator Agent → Customer Advisor Agent (RAG) → Quality Analyst Agent
+    → Workforce Manager Agent → Résultat & Optimisation, le tout enregistré dans
+    l'environnement de simulation (boucle de feedback).
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api
+    description: Backend local
+tags:
+  - name: Profils
+    description: Profils clients disponibles pour la simulation
+  - name: Simulation
+    description: Lancer un scénario complet (client → conseiller → qualité → workforce)
+  - name: Agents
+    description: Appels unitaires à chaque agent
+  - name: Conversations
+    description: Historique des conversations simulées
+  - name: KPI
+    description: Indicateurs temps réel du centre
+  - name: Base de connaissances
+    description: Documents utilisés par le RAG
+
+paths:
+  /profiles:
+    get:
+      tags: [Profils]
+      summary: Lister les profils clients
+      responses:
+        '200':
+          description: Liste des profils
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ClientProfile' }
+
+  /simulations:
+    post:
+      tags: [Simulation]
+      summary: Lancer une simulation complète
+      description: Exécute les 4 agents en chaîne et retourne le résultat de chaque étape.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SimulationRequest' }
+      responses:
+        '201':
+          description: Simulation terminée
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulationResult' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+    get:
+      tags: [Simulation]
+      summary: Lister les simulations
+      parameters:
+        - in: query
+          name: profile
+          schema: { $ref: '#/components/schemas/ProfileType' }
+        - in: query
+          name: page
+          schema: { type: integer, default: 1 }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 20 }
+      responses:
+        '200':
+          description: Liste paginée
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total: { type: integer }
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/SimulationResult' }
+
+  /simulations/{id}:
+    get:
+      tags: [Simulation]
+      summary: Détail d'une simulation
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Simulation
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulationResult' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /agents/client-simulator:
+    post:
+      tags: [Agents]
+      summary: Générer un profil client et une demande
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                profile: { $ref: '#/components/schemas/ProfileType' }
+                topic: { type: string, example: facturation }
+      responses:
+        '200':
+          description: Scénario généré
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ClientRequest' }
+
+  /agents/customer-advisor:
+    post:
+      tags: [Agents]
+      summary: Traiter la demande (RAG) et générer une réponse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ClientRequest' }
+      responses:
+        '200':
+          description: Réponse du conseiller
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AdvisorResponse' }
+
+  /agents/quality-analyst:
+    post:
+      tags: [Agents]
+      summary: Évaluer la réponse et générer un score
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+      responses:
+        '200':
+          description: Évaluation
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/QualityEvaluation' }
+
+  /quality/health:
+    get:
+      tags: [Agents]
+      summary: Santé de l'Analyste Qualité (Gemini, LoRA)
+      responses:
+        '200': { description: Statut }
+
+  /quality/lora/check:
+    post:
+      tags: [Agents]
+      summary: Classification de risque Qwen-LoRA locale (CRITIQUE / NON_CRITIQUE)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+      responses:
+        '200': { description: Verdict LoRA }
+        '503': { description: QA_LORA_ENABLED=0 }
+
+  /quality/judge/evaluate:
+    post:
+      tags: [Agents]
+      summary: Second juge LLM indépendant (rubrique 0-4)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+                geminiScore: { type: integer }
+      responses:
+        '200': { description: Verdict du second juge }
+
+  /agents/workforce-manager:
+    post:
+      tags: [Agents]
+      summary: Analyser scores et KPI, prendre des décisions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+      responses:
+        '200':
+          description: Décisions
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkforceDecision' }
+
+  /conversations:
+    get:
+      tags: [Conversations]
+      summary: Historique des conversations
+      responses:
+        '200':
+          description: Conversations
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ConversationSummary' }
+
+  /kpi:
+    get:
+      tags: [KPI]
+      summary: KPI en temps réel
+      responses:
+        '200':
+          description: KPI globaux
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Kpi' }
+
+  /knowledge-base/documents:
+    get:
+      tags: [Base de connaissances]
+      summary: Lister les documents
+      responses:
+        '200':
+          description: Documents
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/KbDocument' }
+    post:
+      tags: [Base de connaissances]
+      summary: Ajouter un document
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file: { type: string, format: binary }
+      responses:
+        '201':
+          description: Document indexé
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/KbDocument' }
+
+components:
+  parameters:
+    Id:
+      in: path
+      name: id
+      required: true
+      schema: { type: string }
+  responses:
+    BadRequest:
+      description: Requête invalide
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    NotFound:
+      description: Introuvable
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+
+  schemas:
+    ProfileType:
+      type: string
+      enum: [calme, impatient, nerveux, mecontent, fidele, confus, exigeant]
+
+    ClientProfile:
+      type: object
+      properties:
+        id: { $ref: '#/components/schemas/ProfileType' }
+        label: { type: string, example: Mécontent }
+        description: { type: string }
+
+    SimulationRequest:
+      type: object
+      properties:
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        message:
+          type: string
+          description: Demande libre. Si absente, le Client Simulator Agent la génère.
+          example: Je voudrais comprendre pourquoi ma facture est plus élevée ce mois-ci ?
+        topic: { type: string, example: facturation }
+
+    ClientRequest:
+      type: object
+      required: [profile, message]
+      properties:
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        message: { type: string }
+        intent: { type: string, example: reclamation_facture }
+        entities:
+          type: object
+          additionalProperties: { type: string }
+
+    Source:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        score: { type: number, format: float }
+
+    AdvisorResponse:
+      type: object
+      properties:
+        answer: { type: string }
+        intent: { type: string }
+        sources:
+          type: array
+          items: { $ref: '#/components/schemas/Source' }
+        latencyMs: { type: integer }
+
+    QualityEvaluation:
+      type: object
+      properties:
+        globalScore: { type: integer, minimum: 0, maximum: 100, example: 85 }
+        criteria:
+          type: object
+          properties:
+            pertinence: { type: integer }
+            exactitude: { type: integer }
+            groundedness: { type: integer }
+            empathie: { type: integer }
+            clarte: { type: integer }
+            conformite: { type: integer }
+        strengths: { type: array, items: { type: string } }
+        improvements: { type: array, items: { type: string } }
+        recommendations: { type: array, items: { type: string } }
+
+    WorkforceDecision:
+      type: object
+      properties:
+        problems: { type: array, items: { type: string } }
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                enum: [ajuster_reponse, relancer_rag, escalade_humain, signaler_kb, formation]
+              description: { type: string }
+              priority: { type: string, enum: [basse, moyenne, haute] }
+
+    SimulationResult:
+      type: object
+      properties:
+        id: { type: string }
+        createdAt: { type: string, format: date-time }
+        request: { $ref: '#/components/schemas/ClientRequest' }
+        response: { $ref: '#/components/schemas/AdvisorResponse' }
+        evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+        decision: { $ref: '#/components/schemas/WorkforceDecision' }
+
+    ConversationSummary:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        score: { type: integer }
+        createdAt: { type: string, format: date-time }
+
+    Kpi:
+      type: object
+      properties:
+        qualiteReponses: { type: number, example: 82.4 }
+        tauxResolution: { type: number, example: 76.1 }
+        tempsTraitementSec: { type: number, example: 4.2 }
+        tauxEscalade: { type: number, example: 8.5 }
+        satisfactionClient: { type: number, example: 4.1 }
+        performanceParProfil:
+          type: array
+          items:
+            type: object
+            properties:
+              profile: { $ref: '#/components/schemas/ProfileType' }
+              score: { type: number }
+              count: { type: integer }
+
+    KbDocument:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        chunks: { type: integer }
+        updatedAt: { type: string, format: date-time }
+
+    Error:
+      type: object
+      properties:
+        code: { type: string }
+        message: { type: string }

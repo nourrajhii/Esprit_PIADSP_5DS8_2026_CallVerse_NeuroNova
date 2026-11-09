@@ -1,0 +1,5 @@
+{
+  "scenario": "sami_rupture_stock",
+  "policy": "ppo",
+  "seed": 0
+}

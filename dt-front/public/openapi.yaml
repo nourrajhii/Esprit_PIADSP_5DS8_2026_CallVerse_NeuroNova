@@ -1,0 +1,692 @@
+openapi: 3.0.3
+info:
+  title: Digital Twin – Centre de Relation Client API
+  description: |
+    API du Digital Twin d'un centre de relation client avec support des sessions de conversation multi-tours.
+    
+    Fonctionnalités clés :
+    - Simulation de conversations de 1 à 5 messages dans une seule session pour les profils clients (ex: Mécontent, Heureux, etc.).
+    - Workflow complet : Client Simulator Agent → Customer Advisor Agent (RAG) → Quality Analyst Agent → Workforce Manager Agent.
+    - Évaluation de chaque tour d'échange (pertinence, exactitude, groundedness, empathie, clarté, conformité).
+    - Boucle d'optimisation et tableau de bord des KPI.
+  version: 1.1.0
+servers:
+  - url: http://localhost:8000/api
+    description: Backend local
+tags:
+  - name: Profils
+    description: Profils clients disponibles (Mécontent, Heureux, Calme, Impatient, etc.)
+  - name: Simulation
+    description: Lancer des simulations simples ou des sessions de conversation multi-messages (1 à 5 tours)
+  - name: Conversations
+    description: Gestion et simulation des conversations interactives
+  - name: Agents
+    description: Appels unitaires à chaque agent du Digital Twin
+  - name: KPI
+    description: Indicateurs temps réel du centre de relation client
+  - name: Base de connaissances
+    description: Documents et référentiels exploités par le RAG
+
+paths:
+  /profiles:
+    get:
+      tags: [Profils]
+      summary: Lister les profils clients disponibles
+      description: Retourne tous les profils (mécontent, heureux, calme, impatient, nerveux, fidèle, confus, exigeant) avec leur description et support conversationnel.
+      responses:
+        '200':
+          description: Liste des profils
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ClientProfile' }
+
+  /simulations:
+    post:
+      tags: [Simulation]
+      summary: Lancer une simulation (mono-message ou conversation de 1 à 5 messages)
+      description: |
+        Exécute la chaîne d'agents. Si `conversationMode` est activé, simule une session multi-messages
+        dont la longueur (1 à 5 messages) est configurée via `messageCount`. Particulièrement adapté aux profils 'mecontent' et 'heureux'.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SimulationRequest' }
+            examples:
+              clientMecontentConversation:
+                summary: Client mécontent en session de 3 messages
+                value:
+                  profile: mecontent
+                  conversationMode: true
+                  messageCount: 3
+                  topic: facturation
+                  message: "Je ne comprends pas pourquoi ma facture est plus élevée ce mois-ci !"
+                  rag: true
+              clientHeureuxConversation:
+                summary: Client heureux en session de 4 messages
+                value:
+                  profile: heureux
+                  conversationMode: true
+                  messageCount: 4
+                  topic: fidelite
+                  message: "Bonjour, je suis ravi de vos services et je souhaite découvrir vos nouveautés !"
+                  rag: true
+      responses:
+        '201':
+          description: Simulation exécutée avec succès
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulationResult' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+    get:
+      tags: [Simulation]
+      summary: Lister les simulations
+      parameters:
+        - in: query
+          name: profile
+          schema: { $ref: '#/components/schemas/ProfileType' }
+        - in: query
+          name: page
+          schema: { type: integer, default: 1 }
+        - in: query
+          name: limit
+          schema: { type: integer, default: 20 }
+      responses:
+        '200':
+          description: Liste paginée
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total: { type: integer }
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/SimulationResult' }
+
+  /simulations/conversation:
+    post:
+      tags: [Simulation, Conversations]
+      summary: Lancer une simulation de conversation multi-tours (1 à 5 messages)
+      description: |
+        Endpoint dédié à la simulation de conversations complètes au sein d'une seule session.
+        Permet de choisir le profil client (ex: **mécontent** pour tester la désescalade ou **heureux** pour tester la fidélisation)
+        et de définir le nombre d'échanges dans la session de **1 à 5 messages**.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ConversationSimulationRequest' }
+            examples:
+              scenarioMecontent:
+                summary: Client mécontent (session de 3 messages)
+                value:
+                  profile: mecontent
+                  messageCount: 3
+                  topic: facturation
+                  message: "Je viens de voir un prélèvement imprévu de 35€, c'est inacceptable !"
+                  rag: true
+              scenarioHeureux:
+                summary: Client heureux (session de 5 messages)
+                value:
+                  profile: heureux
+                  messageCount: 5
+                  topic: fidelite
+                  message: "Bonjour ! Votre conseiller d'hier a été fantastique, je voulais le remercier et poser une question."
+                  rag: true
+      responses:
+        '201':
+          description: Session de conversation générée et évaluée
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ConversationSimulationResult' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+
+  /simulations/{id}:
+    get:
+      tags: [Simulation]
+      summary: Détail d'une simulation ou d'une conversation
+      parameters:
+        - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Simulation ou session de conversation
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulationResult' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /agents/client-simulator:
+    post:
+      tags: [Agents]
+      summary: Générer un profil client et une demande (mono ou multi-messages)
+      description: |
+        Simule le comportement du client. Permet de choisir le profil (notamment 'mecontent' ou 'heureux')
+        et de paramétrer le nombre de messages (de 1 à 5) si une conversation est demandée.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                profile:
+                  $ref: '#/components/schemas/ProfileType'
+                  description: "Profil sélectionné (ex: mecontent ou heureux)"
+                  example: mecontent
+                topic:
+                  type: string
+                  example: facturation
+                urgency:
+                  type: string
+                  enum: [basse, moyenne, haute]
+                  default: moyenne
+                customPrompt:
+                  type: string
+                  description: "Consigne libre pour orienter le persona"
+                isConversation:
+                  type: boolean
+                  default: false
+                  description: "Activer la génération d'une session de conversation"
+                messageCount:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  default: 3
+                  description: "Nombre de messages dans la session (de 1 à 5)"
+                  example: 3
+      responses:
+        '200':
+          description: Scénario client généré
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ClientRequest' }
+
+  /agents/customer-advisor:
+    post:
+      tags: [Agents]
+      summary: Traiter la demande (RAG) et générer les réponses (mono-message ou conversation de 1 à 5 messages)
+      description: |
+        Traite la demande client via le RAG documentaire. Supporte soit un message unique,
+        soit une séquence de 1 à 5 messages d'une session de conversation, et génère une réponse pour chaque tour.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                profile:
+                  $ref: '#/components/schemas/ProfileType'
+                  example: mecontent
+                message:
+                  type: string
+                  example: "Je voudrais comprendre pourquoi ma facture est plus élevée ce mois-ci ?"
+                conversationMessages:
+                  type: array
+                  items: { type: string }
+                  description: "Liste des 1 à 5 messages de la session à traiter par le conseiller"
+                  example:
+                    - "Je voudrais comprendre pourquoi ma facture est plus élevée ce mois-ci ?"
+                    - "C'est insuffisant comme explication, je demande un geste commercial !"
+                    - "Merci pour la remise, confirmez-vous son application immédiate ?"
+                topic:
+                  type: string
+                  example: facturation
+                rag:
+                  type: boolean
+                  default: true
+                isConversation:
+                  type: boolean
+                  default: false
+                messageCount:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+                  example: 3
+      responses:
+        '200':
+          description: Réponses du conseiller
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AdvisorResponse' }
+
+  /agents/quality-analyst:
+    post:
+      tags: [Agents]
+      summary: Évaluer la réponse et générer un score
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+      responses:
+        '200':
+          description: Évaluation qualité
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/QualityEvaluation' }
+
+  /quality/health:
+    get:
+      tags: [Agents]
+      summary: Santé de l'Analyste Qualité (Gemini, LoRA)
+      responses:
+        '200': { description: Statut }
+
+  /quality/lora/check:
+    post:
+      tags: [Agents]
+      summary: Classification de risque Qwen-LoRA locale (CRITIQUE / NON_CRITIQUE)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+      responses:
+        '200': { description: Verdict LoRA }
+        '503': { description: QA_LORA_ENABLED=0 }
+
+  /quality/judge/evaluate:
+    post:
+      tags: [Agents]
+      summary: Second juge LLM indépendant (rubrique 0-4)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [request, response]
+              properties:
+                request: { $ref: '#/components/schemas/ClientRequest' }
+                response: { $ref: '#/components/schemas/AdvisorResponse' }
+                geminiScore: { type: integer }
+      responses:
+        '200': { description: Verdict du second juge }
+
+  /agents/workforce-manager:
+    post:
+      tags: [Agents]
+      summary: Analyser scores et KPI, prendre des décisions opérationnelles
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+      responses:
+        '200':
+          description: Décisions workforce & RH
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkforceDecision' }
+
+  /conversations:
+    get:
+      tags: [Conversations]
+      summary: Historique des conversations et simulations
+      responses:
+        '200':
+          description: Liste des conversations passées
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ConversationSummary' }
+
+  /kpi:
+    get:
+      tags: [KPI]
+      summary: KPI en temps réel du centre
+      responses:
+        '200':
+          description: KPI globaux et par profil
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Kpi' }
+
+  /knowledge-base/documents:
+    get:
+      tags: [Base de connaissances]
+      summary: Lister les documents du RAG
+      responses:
+        '200':
+          description: Documents indexés
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/KbDocument' }
+    post:
+      tags: [Base de connaissances]
+      summary: Ajouter un document au RAG
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file: { type: string, format: binary }
+      responses:
+        '201':
+          description: Document indexé
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/KbDocument' }
+
+components:
+  parameters:
+    Id:
+      in: path
+      name: id
+      required: true
+      schema: { type: string }
+  responses:
+    BadRequest:
+      description: Requête invalide
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    NotFound:
+      description: Introuvable
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+
+  schemas:
+    ProfileType:
+      type: string
+      enum: [calme, impatient, nerveux, mecontent, fidele, confus, exigeant, heureux]
+      description: "Profil émotionnel du client. Notamment 'mecontent' ou 'heureux'."
+      example: mecontent
+
+    ClientProfile:
+      type: object
+      properties:
+        id: { $ref: '#/components/schemas/ProfileType' }
+        label: { type: string, example: Mécontent }
+        description: { type: string, example: "Exprime une forte insatisfaction et exige réparation" }
+        conversationSupported:
+          type: boolean
+          description: "Supporte les sessions de conversation de 1 à 5 messages"
+          example: true
+
+    SimulationRequest:
+      type: object
+      properties:
+        profile:
+          $ref: '#/components/schemas/ProfileType'
+          description: "Profil client choisi (ex: 'mecontent' ou 'heureux')"
+          example: mecontent
+        message:
+          type: string
+          description: Demande libre. Si absente, le Client Simulator Agent la génère.
+          example: Je voudrais comprendre pourquoi ma facture est plus élevée ce mois-ci ?
+        topic:
+          type: string
+          example: facturation
+        rag:
+          type: boolean
+          default: true
+          description: Activer la recherche RAG dans la base documentaire
+        conversationMode:
+          type: boolean
+          default: false
+          description: "Activer le mode conversationnel multi-messages dans une même session"
+          example: true
+        messageCount:
+          type: integer
+          minimum: 1
+          maximum: 5
+          default: 3
+          description: "Nombre de messages dans la session de conversation (de 1 à 5)"
+          example: 3
+
+    ConversationSimulationRequest:
+      type: object
+      required: [profile, messageCount]
+      properties:
+        profile:
+          $ref: '#/components/schemas/ProfileType'
+          description: "Profil du client pour la session (notamment 'mecontent' ou 'heureux')"
+          example: mecontent
+        messageCount:
+          type: integer
+          minimum: 1
+          maximum: 5
+          default: 3
+          description: "Nombre d'échanges / messages dans une seule session (de 1 à 5)"
+          example: 3
+        message:
+          type: string
+          description: "Premier message du client (optionnel, généré selon le profil si absent)"
+          example: "Je conteste la facture de ce mois-ci et les pénalités appliquées."
+        topic:
+          type: string
+          default: facturation
+          example: facturation
+        rag:
+          type: boolean
+          default: true
+          description: "Activer le RAG documentaire pour les réponses du conseiller"
+
+    ClientRequest:
+      type: object
+      required: [profile, message]
+      properties:
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        message: { type: string }
+        intent: { type: string, example: reclamation_facture }
+        entities:
+          type: object
+          additionalProperties: { type: string }
+
+    Source:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        score: { type: number, format: float }
+
+    AdvisorResponse:
+      type: object
+      properties:
+        answer: { type: string }
+        intent: { type: string }
+        sources:
+          type: array
+          items: { $ref: '#/components/schemas/Source' }
+        latencyMs: { type: integer }
+        isConversation: { type: boolean }
+        messageCount: { type: integer, minimum: 1, maximum: 5 }
+        conversationExchanges:
+          type: array
+          description: "Détail de chaque échange de la session avec la réponse correspondante du conseiller"
+          items:
+            type: object
+            properties:
+              turn: { type: integer, minimum: 1, maximum: 5 }
+              clientMessage: { type: string }
+              advisorAnswer: { type: string }
+              sources:
+                type: array
+                items: { $ref: '#/components/schemas/Source' }
+              latencyMs: { type: integer }
+
+    QualityEvaluation:
+      type: object
+      properties:
+        globalScore: { type: integer, minimum: 0, maximum: 100, example: 85 }
+        criteria:
+          type: object
+          properties:
+            pertinence: { type: integer, example: 88 }
+            exactitude: { type: integer, example: 82 }
+            groundedness: { type: integer, example: 85 }
+            empathie: { type: integer, example: 80 }
+            clarte: { type: integer, example: 90 }
+            conformite: { type: integer, example: 92 }
+        strengths: { type: array, items: { type: string } }
+        improvements: { type: array, items: { type: string } }
+        recommendations: { type: array, items: { type: string } }
+
+    WorkforceDecision:
+      type: object
+      properties:
+        problems: { type: array, items: { type: string } }
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                enum: [ajuster_reponse, relancer_rag, escalade_humain, signaler_kb, formation]
+              description: { type: string }
+              priority: { type: string, enum: [basse, moyenne, haute] }
+
+    ExchangeClient:
+      type: object
+      properties:
+        message: { type: string, example: "C'est inacceptable, je veux une solution !" }
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        profileLabel: { type: string, example: Mécontent }
+        sentiment: { type: string, example: negatif_fort }
+
+    ExchangeAdvisor:
+      type: object
+      properties:
+        answer: { type: string }
+        sources:
+          type: array
+          items: { $ref: '#/components/schemas/Source' }
+        latencyMs: { type: integer, example: 940 }
+
+    ExchangeEvaluation:
+      type: object
+      properties:
+        globalScore: { type: integer, minimum: 0, maximum: 100, example: 82 }
+        criteria:
+          type: object
+          properties:
+            pertinence: { type: integer }
+            exactitude: { type: integer }
+            groundedness: { type: integer }
+            empathie: { type: integer }
+            clarte: { type: integer }
+            conformite: { type: integer }
+
+    ConversationExchange:
+      type: object
+      description: "Détail d'un tour d'échange dans la session de conversation"
+      properties:
+        turn:
+          type: integer
+          minimum: 1
+          maximum: 5
+          example: 1
+          description: "Numéro du tour d'échange (1 à 5)"
+        client:
+          $ref: '#/components/schemas/ExchangeClient'
+        advisor:
+          $ref: '#/components/schemas/ExchangeAdvisor'
+        evaluation:
+          $ref: '#/components/schemas/ExchangeEvaluation'
+
+    ConversationSimulationResult:
+      type: object
+      description: "Résultat complet d'une simulation de conversation multi-messages (1 à 5 messages)"
+      properties:
+        id: { type: string, example: conv-1729801234567 }
+        createdAt: { type: string, format: date-time }
+        isConversation: { type: boolean, example: true }
+        messageCount:
+          type: integer
+          minimum: 1
+          maximum: 5
+          example: 3
+          description: "Nombre de messages dans la session de 1 à 5"
+        request: { $ref: '#/components/schemas/ClientRequest' }
+        exchanges:
+          type: array
+          description: "Suite des 1 à 5 échanges entre le client et le conseiller"
+          items: { $ref: '#/components/schemas/ConversationExchange' }
+        response: { $ref: '#/components/schemas/AdvisorResponse' }
+        evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+        decision: { $ref: '#/components/schemas/WorkforceDecision' }
+
+    SimulationResult:
+      type: object
+      properties:
+        id: { type: string }
+        createdAt: { type: string, format: date-time }
+        isConversation:
+          type: boolean
+          description: "Vrai si la simulation a été exécutée en mode conversation"
+        messageCount:
+          type: integer
+          minimum: 1
+          maximum: 5
+          description: "Nombre de messages (1 à 5) si session conversationnelle"
+        request: { $ref: '#/components/schemas/ClientRequest' }
+        response: { $ref: '#/components/schemas/AdvisorResponse' }
+        evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+        decision: { $ref: '#/components/schemas/WorkforceDecision' }
+        exchanges:
+          type: array
+          description: "Échanges successifs si mode conversation"
+          items: { $ref: '#/components/schemas/ConversationExchange' }
+
+    ConversationSummary:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        profile: { $ref: '#/components/schemas/ProfileType' }
+        score: { type: integer }
+        createdAt: { type: string, format: date-time }
+
+    Kpi:
+      type: object
+      properties:
+        qualiteReponses: { type: number, example: 82.4 }
+        tauxResolution: { type: number, example: 76.1 }
+        tempsTraitementSec: { type: number, example: 4.2 }
+        tauxEscalade: { type: number, example: 8.5 }
+        satisfactionClient: { type: number, example: 4.1 }
+        performanceParProfil:
+          type: array
+          items:
+            type: object
+            properties:
+              profile: { $ref: '#/components/schemas/ProfileType' }
+              score: { type: number }
+              count: { type: integer }
+
+    KbDocument:
+      type: object
+      properties:
+        id: { type: string }
+        title: { type: string }
+        chunks: { type: integer }
+        updatedAt: { type: string, format: date-time }
+
+    Error:
+      type: object
+      properties:
+        code: { type: string }
+        message: { type: string }

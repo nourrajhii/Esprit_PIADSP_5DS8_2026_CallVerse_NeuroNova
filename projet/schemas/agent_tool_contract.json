@@ -1,0 +1,26 @@
+{
+  "name": "evaluate_conversation_judge",
+  "version": "1.0",
+  "description": "Evaluation structuree et experimentation LLM-as-a-Judge d'une reponse de conseiller (sans certification).",
+  "transport": {"protocol": "HTTP", "method": "POST", "path": "/judge/evaluate"},
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "request": {
+        "type": "object",
+        "properties": {"message": {"type": "string", "minLength": 1}, "profile": {"type": "string"}},
+        "required": ["message"]
+      },
+      "response": {
+        "type": "object",
+        "properties": {"answer": {"type": "string", "minLength": 1}, "sources": {"type": "array", "items": {"type": "object"}}},
+        "required": ["answer"]
+      },
+      "conversationId": {"type": "string"},
+      "geminiScore": {"type": "integer", "minimum": 0, "maximum": 100}
+    },
+    "required": ["request", "response"]
+  },
+  "outputFields": ["status", "model", "weightedScore", "scores0to4", "riskLabel", "requiresHumanReview", "evidence", "deterministicAlerts"],
+  "note": "Contrat documentaire pour l'orchestration future; ce fichier n'enregistre PAS un serveur ou outil MCP."
+}

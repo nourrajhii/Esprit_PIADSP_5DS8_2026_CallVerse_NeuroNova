@@ -1,0 +1,142 @@
+{
+  "n_messages": 140,
+  "accuracy": 0.821,
+  "macro_f1": 0.819,
+  "hasard": 0.143,
+  "taux_invalide": 0.0,
+  "confiance_moyenne": 2.8,
+  "par_profil": {
+    "calme": {
+      "n": 20,
+      "rappel": 0.9,
+      "precision": 0.75,
+      "f1": 0.818,
+      "souvent_confondu_avec": "impatient"
+    },
+    "impatient": {
+      "n": 20,
+      "rappel": 1.0,
+      "precision": 0.588,
+      "f1": 0.741,
+      "souvent_confondu_avec": null
+    },
+    "nerveux": {
+      "n": 20,
+      "rappel": 0.75,
+      "precision": 0.938,
+      "f1": 0.833,
+      "souvent_confondu_avec": "confus"
+    },
+    "mecontent": {
+      "n": 20,
+      "rappel": 0.45,
+      "precision": 1.0,
+      "f1": 0.621,
+      "souvent_confondu_avec": "impatient"
+    },
+    "fidele": {
+      "n": 20,
+      "rappel": 0.85,
+      "precision": 1.0,
+      "f1": 0.919,
+      "souvent_confondu_avec": "calme"
+    },
+    "confus": {
+      "n": 20,
+      "rappel": 1.0,
+      "precision": 0.833,
+      "f1": 0.909,
+      "souvent_confondu_avec": null
+    },
+    "exigeant": {
+      "n": 20,
+      "rappel": 0.8,
+      "precision": 1.0,
+      "f1": 0.889,
+      "souvent_confondu_avec": "impatient"
+    }
+  },
+  "matrice_confusion": {
+    "lignes=vrai, colonnes=prédit": [
+      "calme",
+      "impatient",
+      "nerveux",
+      "mecontent",
+      "fidele",
+      "confus",
+      "exigeant",
+      "invalide"
+    ],
+    "calme": [
+      18,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "impatient": [
+      0,
+      20,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "nerveux": [
+      1,
+      1,
+      15,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    "mecontent": [
+      3,
+      7,
+      1,
+      9,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fidele": [
+      1,
+      1,
+      0,
+      0,
+      17,
+      1,
+      0,
+      0
+    ],
+    "confus": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      0,
+      0
+    ],
+    "exigeant": [
+      1,
+      3,
+      0,
+      0,
+      0,
+      0,
+      16,
+      0
+    ]
+  },
+  "juge": "qwen2.5:7b"
+}

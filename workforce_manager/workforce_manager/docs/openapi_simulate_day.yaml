@@ -1,0 +1,120 @@
+# Bloc à ajouter dans openapi.yaml (dt-front/swagger/ et dt-front/public/)
+# 1) sous "paths:", après "/agents/workforce-manager"
+# 2) sous "components: schemas:", à la fin
+
+# ----------------------------------------------------------------- 1) paths
+  /agents/workforce-manager/simulate-day:
+    post:
+      tags: [Agents]
+      summary: Simuler une journée du centre avec une politique de pilotage
+      description: |
+        Joue une journée de 8h à 20h (48 pas de 15 min) dans le simulateur du centre PharmaShop.
+        La politique choisie décide à chaque pas (réserve, priorités, heures sup, formation).
+        Les KPI finaux sont au format Kpi et deviennent la réponse de GET /kpi.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/SimulateDayRequest' }
+            example: { scenario: sami_rupture_stock, policy: ppo, seed: 0 }
+      responses:
+        '200':
+          description: Déroulé de la journée et KPI finaux
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SimulateDayResult' }
+        '422':
+          description: Requête invalide (scénario ou politique inconnus)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '503':
+          description: Modèle RL non entraîné (qlearning ou ppo)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+
+# ----------------------------------------------------------------- 2) components/schemas
+    SimulateDayRequest:
+      type: object
+      required: [scenario, policy]
+      properties:
+        scenario:
+          type: string
+          enum: [journee_normale, sami_rupture_stock, ines_urgence_heure_pointe, karim_retour_sensible,
+                 sous_effectif, incident_technique, campagne_commerciale, forte_affluence]
+        policy:
+          type: string
+          enum: [none, random, rules, qlearning, ppo, ppo_standard, responsable]
+          description: |
+            none = sans pilotage, rules = chef de plateau, qlearning = RL tabulaire,
+            ppo = PPO généraliste brut (journées connues + aléatoires, sans garde-fous),
+            ppo_standard = PPO entraîné sur les 8 journées types seulement,
+            responsable = PPO généraliste + garde-fous + journal de chaque décision (recommandé)
+        seed:
+          type: integer
+          minimum: 0
+          default: 0
+          description: Même graine = même journée (mêmes appels), pour comparer les politiques
+
+    SimulationStep:
+      type: object
+      properties:
+        pas: { type: integer, example: 9 }
+        heure: { type: string, example: 10h15 }
+        action:
+          type: string
+          enum: [maintenir_organisation, activer_conseiller_supplementaire, reduire_effectif,
+                 affecter_conseiller_file_sante, reaffecter_conseiller_file_standard, modifier_priorites,
+                 affecter_selon_competences, heures_supplementaires, planifier_renfort, formation]
+        action_possible: { type: boolean }
+        recompense: { type: number, example: -12.4 }
+        files:
+          type: object
+          properties:
+            standard: { type: integer }
+            sante: { type: integer }
+            urgence: { type: integer }
+        conseillers_actifs: { type: integer, example: 11 }
+        abandons_cumul: { type: integer, example: 14 }
+
+    SimulateDayResult:
+      type: object
+      properties:
+        scenario: { type: string }
+        policy: { type: string }
+        seed: { type: integer }
+        steps:
+          type: array
+          items: { $ref: '#/components/schemas/SimulationStep' }
+        kpi: { $ref: '#/components/schemas/Kpi' }
+        indicateurs:
+          type: object
+          description: KPI métier détaillés (taux_abandon, respect_sla_urgence, fcr, satisfaction, taux_occupation, cout, recompense_totale...)
+          additionalProperties: { type: number }
+        journal:
+          type: array
+          description: Uniquement pour policy=responsable, une entrée par décision
+          items:
+            type: object
+            properties:
+              heure: { type: string, example: 10h15 }
+              source: { type: string, example: agent PPO }
+              action_proposee: { type: string }
+              action_executee: { type: string }
+              confiance: { type: number, nullable: true, example: 0.87 }
+              peu_sur: { type: boolean }
+              explication: { type: string }
+              validation:
+                type: object
+                nullable: true
+                properties:
+                  accepte: { type: boolean }
+                  par: { type: string }
+                  raison: { type: string }
+              situation_inconnue: { type: array, items: { type: string } }
+              actions_masquees: { type: array, items: { type: string } }
+              situation: { type: object }
+        journal_resume:
+          type: object
+          additionalProperties: { type: integer }

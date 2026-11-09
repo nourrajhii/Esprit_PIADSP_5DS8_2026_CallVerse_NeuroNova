@@ -1,0 +1,1379 @@
+[
+ {
+  "heure": "08h00",
+  "source": "agent PPO",
+  "action_proposee": "affecter_selon_competences",
+  "action_executee": "affecter_selon_competences",
+  "confiance": 0.974,
+  "peu_sur": false,
+  "explication": "Chaque conseiller traite désormais d'abord sa spécialité (santé ou standard).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.0,
+   "prevision_appels_h": 44,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "08h15",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.653,
+  "peu_sur": false,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (2/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.88,
+   "prevision_appels_h": 44,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "08h30",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.202,
+  "peu_sur": true,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (4/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.11,
+   "prevision_appels_h": 44,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "08h45",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.426,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 44 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (8/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 44,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "09h00",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.497,
+  "peu_sur": true,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "09h15",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.731,
+  "peu_sur": false,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (10/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.9,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "09h30",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.616,
+  "peu_sur": false,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.67,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "09h45",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.639,
+  "peu_sur": false,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.73,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "10h00",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.322,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.2,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "10h15",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.747,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (5 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (14/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 1.2,
+   "occupation": 0.9,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "10h30",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.84,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (2 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (17/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 3.5,
+   "occupation": 1.0,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "10h45",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.871,
+  "peu_sur": false,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 64 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (21/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 3,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 1.5,
+   "occupation": 0.93,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "11h00",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.432,
+  "peu_sur": true,
+  "explication": "Priorités modifiées : les urgences et la santé passent de nouveau dans l'ordre d'arrivée.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 1,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 0.93,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "11h15",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.994,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 3,
+    "urgence": 1
+   },
+   "attente_min": 1.2,
+   "occupation": 0.86,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "11h30",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.732,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (12 appel(s) en attente, 3 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (25/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 6,
+    "sante": 6,
+    "urgence": 0
+   },
+   "attente_min": 3.2,
+   "occupation": 0.77,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "11h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.727,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (13 appel(s) en attente, 2 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (28/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 5,
+    "sante": 8,
+    "urgence": 0
+   },
+   "attente_min": 2.3,
+   "occupation": 0.85,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "12h00",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.941,
+  "peu_sur": false,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 48 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (32/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.71,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "12h15",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.716,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent de nouveau dans l'ordre d'arrivée.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 2.3,
+   "occupation": 1.0,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "12h30",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.993,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.86,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "12h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.962,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (4 appel(s) en attente, 2 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (36/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 4,
+    "urgence": 0
+   },
+   "attente_min": 2.5,
+   "occupation": 0.86,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "13h00",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.931,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (2 appel(s) en attente, 4 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (40/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 3.5,
+   "occupation": 0.71,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "13h15",
+  "source": "agent PPO",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.402,
+  "peu_sur": true,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 1,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 0.8,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "13h30",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.906,
+  "peu_sur": false,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 52 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (44/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.71,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "13h45",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.438,
+  "peu_sur": true,
+  "explication": "Priorités modifiées : les urgences et la santé passent de nouveau dans l'ordre d'arrivée.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.93,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante"
+   ]
+  }
+ },
+ {
+  "heure": "14h00",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.881,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 1.3,
+   "occupation": 0.92,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "14h15",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.715,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (4 appel(s) en attente, 3 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (47/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 1.3,
+   "occupation": 0.77,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "14h30",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.636,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": {
+   "accepte": false,
+   "par": "délégation (budget)",
+   "raison": "heures sup refusées : aucun client en attente, aucun événement, prévision normale"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.71,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "14h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.741,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": {
+   "accepte": false,
+   "par": "délégation (budget)",
+   "raison": "heures sup refusées : aucun client en attente, aucun événement, prévision normale"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.92,
+   "prevision_appels_h": 56,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "15h00",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.877,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (2 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (51/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 4.5,
+   "occupation": 0.92,
+   "prevision_appels_h": 60,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "15h15",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.483,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 60 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (55/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.79,
+   "prevision_appels_h": 60,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "15h30",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.668,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (3 appel(s) en attente, 3 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (58/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 1,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.77,
+   "prevision_appels_h": 60,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "15h45",
+  "source": "agent PPO",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.541,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.71,
+   "prevision_appels_h": 60,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "16h00",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.463,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.67,
+   "prevision_appels_h": 52,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "16h15",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.356,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.33,
+   "prevision_appels_h": 52,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "16h30",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.384,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 52 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (62/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 4,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 1.5,
+   "occupation": 0.82,
+   "prevision_appels_h": 52,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "16h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.78,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": {
+   "accepte": false,
+   "par": "délégation (budget)",
+   "raison": "heures sup refusées : aucun client en attente, aucun événement, prévision normale"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.82,
+   "prevision_appels_h": 52,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "17h00",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.483,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 40,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "17h15",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.471,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 40,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "17h30",
+  "source": "agent PPO",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.482,
+  "peu_sur": true,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.73,
+   "prevision_appels_h": 40,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "17h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.954,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (3 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (66/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 3,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 1.3,
+   "occupation": 1.0,
+   "prevision_appels_h": 40,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "18h00",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.369,
+  "peu_sur": true,
+  "explication": "Organisation maintenue.",
+  "validation": {
+   "accepte": false,
+   "par": "délégation (budget)",
+   "raison": "heures sup refusées : aucun client en attente, aucun événement, prévision normale"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.85,
+   "prevision_appels_h": 28,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "18h15",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.314,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 28 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (70/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.77,
+   "prevision_appels_h": 28,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "18h30",
+  "source": "agent PPO",
+  "action_proposee": "reduire_effectif",
+  "action_executee": "reduire_effectif",
+  "confiance": 0.441,
+  "peu_sur": true,
+  "explication": "8 conseillers libres et peu d'attente : un conseiller retourne en réserve pour réduire le coût.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.38,
+   "prevision_appels_h": 28,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "18h45",
+  "source": "agent PPO",
+  "action_proposee": "reduire_effectif",
+  "action_executee": "reduire_effectif",
+  "confiance": 0.367,
+  "peu_sur": true,
+  "explication": "6 conseillers libres et peu d'attente : un conseiller retourne en réserve pour réduire le coût.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 28,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "19h00",
+  "source": "agent PPO",
+  "action_proposee": "affecter_selon_competences",
+  "action_executee": "affecter_selon_competences",
+  "confiance": 0.338,
+  "peu_sur": true,
+  "explication": "Chaque conseiller traite de nouveau tous les appels.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.82,
+   "prevision_appels_h": 0,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "19h15",
+  "source": "agent PPO",
+  "action_proposee": "affecter_selon_competences",
+  "action_executee": "affecter_selon_competences",
+  "confiance": 0.969,
+  "peu_sur": false,
+  "explication": "Chaque conseiller traite désormais d'abord sa spécialité (santé ou standard).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.6,
+   "prevision_appels_h": 0,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "19h30",
+  "source": "agent PPO",
+  "action_proposee": "reduire_effectif",
+  "action_executee": "reduire_effectif",
+  "confiance": 0.615,
+  "peu_sur": false,
+  "explication": "8 conseillers libres et peu d'attente : un conseiller retourne en réserve pour réduire le coût.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.2,
+   "prevision_appels_h": 0,
+   "evenements": []
+  }
+ },
+ {
+  "heure": "19h45",
+  "source": "agent PPO",
+  "action_proposee": "reduire_effectif",
+  "action_executee": "reduire_effectif",
+  "confiance": 0.499,
+  "peu_sur": true,
+  "explication": "8 conseillers libres et peu d'attente : un conseiller retourne en réserve pour réduire le coût.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.11,
+   "prevision_appels_h": 0,
+   "evenements": []
+  }
+ }
+]

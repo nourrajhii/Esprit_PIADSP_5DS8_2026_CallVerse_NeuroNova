@@ -1,0 +1,60 @@
+# ============================================================
+#  PI – Environnement virtuel unifié (Python 3.12)
+#  Regroupe les dépendances de tous les sous-projets :
+#    - RAG/        (quality-backend backend + Gemini)
+#    - client/     (chatbot Ollama local)
+#    - workforce_manager/
+#    - projet/quality-backend/
+# ============================================================
+
+# --- API & Serveur ---
+fastapi>=0.110,<1.0
+uvicorn>=0.29,<1.0
+pydantic>=2.5,<3.0
+python-multipart
+
+# --- HTTP & Réseau ---
+httpx>=0.27,<1.0
+requests>=2.32
+
+# --- Configuration ---
+python-dotenv>=1.0
+pyyaml>=6.0
+
+# --- LLM & IA ---
+google-genai>=1.0.0
+groq
+ollama==0.6.3
+
+# --- Embeddings & RAG ---
+sentence-transformers
+chromadb
+
+# --- Base de données ---
+psycopg2-binary
+
+# --- Data & Stats ---
+pandas>=2.1
+numpy>=1.26,<2.0
+scipy>=1.11
+
+# --- Visualisation ---
+matplotlib>=3.8
+
+# --- Reinforcement Learning ---
+gymnasium>=0.29,<1.1
+stable-baselines3>=2.3,<2.5
+
+# --- Tests ---
+pytest>=8.0
+httpx>=0.27,<1.0
+
+# ============================================================
+#  OPTIONNEL – Inférence locale LoRA / GPU (lourd ~3 Go+)
+#  Décommenter si besoin d'inférence locale :
+# ============================================================
+# torch>=2.3
+# transformers>=4.51
+# peft>=0.15
+# accelerate>=1.6
+# safetensors>=0.5.0

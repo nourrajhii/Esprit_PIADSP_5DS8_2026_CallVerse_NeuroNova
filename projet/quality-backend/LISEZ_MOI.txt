@@ -1,0 +1,30 @@
+KIT QUALITY ANALYST — E-COMMERCE / SANTE (PHARMACIE EN LIGNE FICTIVE)
+
+Pourquoi : le dataset precedent est telecom. Ce kit ajoute 10 dialogues fictifs
+sur le metier pharmacie en ligne, sans ecraser le benchmark telecom.
+
+IMPORTANT : les exemples ne prouvent aucune conformite reglementaire, securite
+clinique ou exactitude de stock. Il faut une grille et des procedures reelles
+validees, des sources fiables, et des annotations humaines independantes.
+
+1) Copier le JSON sous quality-backend/datasets/.
+2) Copier benchmark_ecommerce_sante.py dans quality-backend/.
+3) Lancer :
+   .\.venv\Scripts\python.exe .\benchmark_ecommerce_sante.py --dry-run
+4) Avec FastAPI configure sur GEMINI_MODEL=gemini-3.6-flash et demarre :
+   .\.venv\Scripts\python.exe .\benchmark_ecommerce_sante.py
+   Le script peut consommer du quota. Il conserve les resultats reussis.
+5) Ouvrir annotateur_ecommerce_sante.html dans le navigateur. Annoter les dix
+   cas, puis exporter annotations_ecommerce_sante_A.csv.
+6) Placer le CSV dans quality-backend/datasets/ puis :
+   .\.venv\Scripts\python.exe .\benchmark.py .\datasets\annotations_ecommerce_sante_A.csv
+
+Deux limites a expliquer vendredi :
+- exactitude et ancrage documentaire NON verifies tant que RAG/fiches fiables
+  ne sont pas integres a l'evaluateur;
+- le controle critique deterministe actuel cible principalement la collecte de
+  secrets (mots de passe, codes). Les incidents medicaux doivent etre valides
+  et traites avec une politique de risque distincte, supervision humaine.
+
+NE PAS fusionner les deux CSV telecom et pharmacie pour annoncer des metriques
+du seul domaine pharmacie. Les 10 cas restent une evaluation pilote.

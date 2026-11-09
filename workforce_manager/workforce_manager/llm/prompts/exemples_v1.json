@@ -1,0 +1,115 @@
+[
+  {
+    "nom": "sami_rupture_stock",
+    "entree": {
+      "type_demande": "sante",
+      "profil": "fidele",
+      "contexte_centre": {
+        "evenement": "rupture de stock des capteurs de glycémie",
+        "heure": "10h30",
+        "appels_en_attente_file_sante": 12
+      },
+      "evaluation": {
+        "globalScore": 58,
+        "criteria": {"pertinence": 72, "exactitude": 40, "groundedness": 35, "empathie": 55, "clarte": 80, "conformite": 78},
+        "improvements": ["Disponibilité annoncée alors que le produit est en rupture", "Inquiétude de l'abonné non prise en compte"]
+      },
+      "constats": [
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée).",
+        "La réponse contient des informations inexactes.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {"id": 1, "type": "relancer_rag", "priority": "haute", "consigne": "Relancer la recherche documentaire avec une requête reformulée."},
+        {"id": 2, "type": "signaler_kb", "priority": "haute", "consigne": "Vérifier que la base contient bien l'information demandée. Faire corriger la fiche ou le document source erroné."},
+        {"id": 3, "type": "formation", "priority": "moyenne", "consigne": "Module de formation : accueil des clients inquiets ou mécontents."}
+      ]
+    },
+    "sortie": {
+      "problems": [
+        "La réponse ne s'appuie pas sur les documents de la base (groundedness 35/100) : elle risque de donner une information non vérifiée.",
+        "La réponse annonce le produit disponible alors qu'il est en rupture de stock (exactitude 40/100).",
+        "L'inquiétude de l'abonné, dont le traitement dépend de ce produit, n'est pas reconnue (empathie 55/100)."
+      ],
+      "actions": [
+        {"id": 1, "type": "relancer_rag", "priority": "haute", "description": "Relancer immédiatement la recherche documentaire sur l'état réel du stock avant de répondre à l'abonné."},
+        {"id": 2, "type": "signaler_kb", "priority": "haute", "description": "Signaler immédiatement à l'équipe de la base de connaissances que la fiche produit indique encore le produit en stock."},
+        {"id": 3, "type": "formation", "priority": "moyenne", "description": "Proposer à l'équipe le module d'accueil des clients inquiets, utile pendant cette rupture qui touche des abonnés."}
+      ]
+    }
+  },
+  {
+    "nom": "ines_urgence_heure_pointe",
+    "entree": {
+      "type_demande": "urgence",
+      "profil": "nerveux",
+      "contexte_centre": {
+        "evenement": "heure de pointe de fin de journée",
+        "heure": "18h20"
+      },
+      "evaluation": {
+        "globalScore": 49,
+        "criteria": {"pertinence": 30, "exactitude": 70, "groundedness": 75, "empathie": 45, "clarte": 78, "conformite": 35},
+        "improvements": ["Urgence pédiatrique non détectée", "Réponse générique de suivi de commande"]
+      },
+      "constats": [
+        "Réponse non conforme sur une demande de santé.",
+        "L'urgence du client n'a pas été prise en compte.",
+        "Le ton manque d'empathie face à la situation du client."
+      ],
+      "actions": [
+        {"id": 1, "type": "escalade_humain", "priority": "haute", "consigne": "Transférer au pharmacien conseil avant tout envoi au client. Prise en charge immédiate par un conseiller humain."},
+        {"id": 2, "type": "formation", "priority": "moyenne", "consigne": "Module de formation : accueil des clients inquiets ou mécontents."}
+      ]
+    },
+    "sortie": {
+      "problems": [
+        "La réponse ne respecte pas les règles applicables à une demande de santé (conformité 35/100).",
+        "L'urgence concernant un enfant n'a pas été détectée : le client a reçu une réponse générique de suivi de commande.",
+        "Le ton ne rassure pas un client visiblement inquiet (empathie 45/100)."
+      ],
+      "actions": [
+        {"id": 1, "type": "escalade_humain", "priority": "haute", "description": "Transférer immédiatement le client à un conseiller humain et au pharmacien conseil, avant tout envoi de réponse automatique."},
+        {"id": 2, "type": "formation", "priority": "moyenne", "description": "Inscrire l'équipe au module d'accueil des clients inquiets pour mieux repérer et rassurer ces appels."}
+      ]
+    }
+  },
+  {
+    "nom": "karim_retour_sensible",
+    "entree": {
+      "type_demande": "sante",
+      "profil": "mecontent",
+      "contexte_centre": {
+        "evenement": "lot de tensiomètres défectueux signalé",
+        "heure": "15h10"
+      },
+      "evaluation": {
+        "globalScore": 60,
+        "criteria": {"pertinence": 55, "exactitude": 72, "groundedness": 42, "empathie": 68, "clarte": 75, "conformite": 62},
+        "improvements": ["Procédure de retour d'un dispositif médical non citée", "Réponse sur un retour standard"]
+      },
+      "constats": [
+        "Réponse non conforme sur une demande de santé.",
+        "La réponse ne traite pas vraiment la question posée.",
+        "La réponse s'appuie peu sur les documents de la base (risque d'information inventée)."
+      ],
+      "actions": [
+        {"id": 1, "type": "escalade_humain", "priority": "haute", "consigne": "Transférer au pharmacien conseil avant tout envoi au client."},
+        {"id": 2, "type": "relancer_rag", "priority": "haute", "consigne": "Relancer la recherche sur la vraie intention du client. Relancer la recherche documentaire avec une requête reformulée."},
+        {"id": 3, "type": "signaler_kb", "priority": "haute", "consigne": "Vérifier que la base contient bien l'information demandée."}
+      ]
+    },
+    "sortie": {
+      "problems": [
+        "Le retour d'un tensiomètre défectueux est traité sans les précautions d'un dispositif médical (conformité 62/100).",
+        "La réponse traite un retour standard alors que le client signale des mesures fausses (pertinence 55/100).",
+        "La réponse n'est pas appuyée sur les documents de la base (groundedness 42/100)."
+      ],
+      "actions": [
+        {"id": 1, "type": "escalade_humain", "priority": "haute", "description": "Transférer le dossier au pharmacien conseil avant tout envoi au client : un appareil qui mesure mal présente un risque santé."},
+        {"id": 2, "type": "relancer_rag", "priority": "haute", "description": "Relancer immédiatement la recherche documentaire sur le retour d'un dispositif médical défectueux."},
+        {"id": 3, "type": "signaler_kb", "priority": "haute", "description": "Signaler à l'équipe de la base de connaissances que la procédure de retour des dispositifs médicaux est introuvable."}
+      ]
+    }
+  }
+]

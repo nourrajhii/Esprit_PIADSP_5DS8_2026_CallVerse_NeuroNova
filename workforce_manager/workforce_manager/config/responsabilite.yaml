@@ -1,0 +1,47 @@
+# Couche « agent responsable » autour du PPO (responsable/agent.py).
+# Chaque garde-fou est modifiable ici sans toucher au code.
+
+# ------------------------------------------------------------------ 1. Validation humaine
+# La grille parle de « PROPOSER l'activation de conseillers supplémentaires » et de
+# « PROPOSER des heures supplémentaires » : ces décisions engagent de l'argent, elles
+# sont donc soumises au superviseur (chef de plateau) avant d'être exécutées.
+actions_couteuses:
+  # coût engagé estimé, en points de récompense (cout_conseiller = 0,5 par quart d'heure)
+  activer_conseiller_supplementaire: 2.0   # au moins 1 h de présence : 4 x 0,5
+  heures_supplementaires: 3.6              # 1 h majorée : 4 x (0,5 + 0,4)
+  planifier_renfort: 4.0                   # 2 h planifiées au coût normal : 8 x 0,5
+
+# Délégation : sans superviseur humain connecté, l'agent dispose d'une enveloppe journalière.
+# 80 points couvrent ce que l'agent dépense en moyenne en plus des règles (44 à 64 points),
+# avec une marge pour les crises ; au-delà, le chef de plateau doit décider lui-même.
+delegation:
+  budget_engagement_jour: 80.0
+  # Les heures sup (coût majoré) doivent être JUSTIFIÉES : au moins un client en attente,
+  # un événement en cours ou une prévision supérieure à la capacité de l'équipe de base.
+  heures_sup_si_besoin_seulement: true
+  capacite_equipe_base_appels_h: 61        # 8 conseillers, ~7,9 min par appel
+
+# ------------------------------------------------------------------ 2. Situations inconnues
+# Bornes apprises sur les situations vécues à l'entraînement (responsable/domaine_connu.json).
+# Une variable surveillée qui dépasse sa borne haute de plus de `marge` (part de l'étendue
+# observée) signale une situation jamais vue : l'agent passe la main aux règles.
+domaine_connu:
+  quantile_haut: 0.999
+  marge: 0.10
+  variables_surveillees:
+    - clients_en_attente
+    - file_standard
+    - file_sante
+    - file_urgence
+    - attente_moyenne
+    - volume_entrant_recent
+    - prevision_charge
+    - taux_abandon_recent
+  # Plusieurs événements en même temps : jamais vu à l'entraînement (0 ou 1 par journée).
+  max_evenements_simultanes: 1
+  # Une fois en repli, on reste au moins 1 heure sur les règles (évite les allers-retours).
+  duree_repli_pas: 4
+
+# ------------------------------------------------------------------ 3. Journal
+# Une décision dont la probabilité est inférieure à ce seuil est signalée « peu sûre ».
+seuil_confiance: 0.5

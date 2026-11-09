@@ -1,0 +1,1526 @@
+[
+ {
+  "heure": "08h00",
+  "source": "agent PPO",
+  "action_proposee": "affecter_selon_competences",
+  "action_executee": "affecter_selon_competences",
+  "confiance": 0.817,
+  "peu_sur": false,
+  "explication": "Chaque conseiller traite désormais d'abord sa spécialité (santé ou standard).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "reduire_effectif"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.0,
+   "prevision_appels_h": 44,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "08h15",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.494,
+  "peu_sur": true,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (1 appel(s) en attente, 2 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (2/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "reduire_effectif"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.6,
+   "prevision_appels_h": 44,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "08h30",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.478,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 44 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (6/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 44,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "08h45",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.319,
+  "peu_sur": true,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 44 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (10/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.33,
+   "prevision_appels_h": 44,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "09h00",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.711,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "09h15",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.859,
+  "peu_sur": false,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (12/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "reduire_effectif",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 1.0,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "09h30",
+  "source": "agent PPO",
+  "action_proposee": "activer_conseiller_supplementaire",
+  "action_executee": "activer_conseiller_supplementaire",
+  "confiance": 0.562,
+  "peu_sur": false,
+  "explication": "Un conseiller supplémentaire rejoint le plateau (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (14/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.67,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "09h45",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.679,
+  "peu_sur": false,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.2,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "10h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.56,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "10h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 3,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 1.8,
+   "occupation": 1.0,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "10h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (8 appel(s) en attente, 2 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (18/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 3,
+    "sante": 5,
+    "urgence": 0
+   },
+   "attente_min": 3.0,
+   "occupation": 0.78,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "10h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (4 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (21/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.91,
+   "prevision_appels_h": 64,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "11h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.83,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "11h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 0.91,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "11h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 6,
+    "urgence": 0
+   },
+   "attente_min": 1.8,
+   "occupation": 0.6,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "11h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (8 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (25/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 8,
+    "urgence": 0
+   },
+   "attente_min": 4.0,
+   "occupation": 1.0,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "12h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (2 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (28/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 4.0,
+   "occupation": 0.89,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "12h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "affecter_conseiller_file_sante",
+  "action_executee": "affecter_conseiller_file_sante",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "File santé à 4 appel(s) : un conseiller est affecté à la file santé.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 4,
+    "urgence": 0
+   },
+   "attente_min": 2.8,
+   "occupation": 0.9,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "12h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "affecter_conseiller_file_sante",
+  "action_executee": "affecter_conseiller_file_sante",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "File santé à 5 appel(s) : un conseiller est affecté à la file santé.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 5,
+    "urgence": 0
+   },
+   "attente_min": 4.0,
+   "occupation": 0.9,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "12h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 1,
+    "sante": 4,
+    "urgence": 0
+   },
+   "attente_min": 1.4,
+   "occupation": 0.9,
+   "prevision_appels_h": 48,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "13h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (11 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (32/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 4,
+    "sante": 7,
+    "urgence": 0
+   },
+   "attente_min": 3.3,
+   "occupation": 1.0,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "13h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (10 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (36/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 5,
+    "sante": 5,
+    "urgence": 0
+   },
+   "attente_min": 2.4,
+   "occupation": 1.0,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "13h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 5.0,
+   "occupation": 0.7,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "13h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 5,
+    "sante": 5,
+    "urgence": 0
+   },
+   "attente_min": 2.6,
+   "occupation": 0.9,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "stock sante",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "14h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 6,
+    "sante": 1,
+    "urgence": 0
+   },
+   "attente_min": 3.3,
+   "occupation": 0.9,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "14h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (8 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (39/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 8,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 2.3,
+   "occupation": 1.0,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "14h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (12 appel(s) en attente, 4 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (43/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire"
+  ],
+  "situation": {
+   "files": {
+    "standard": 8,
+    "sante": 4,
+    "urgence": 0
+   },
+   "attente_min": 5.5,
+   "occupation": 0.56,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "14h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "reaffecter_conseiller_file_standard",
+  "action_executee": "reaffecter_conseiller_file_standard",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "File standard à 18 appel(s) : un conseiller est réaffecté à la file standard.",
+  "validation": null,
+  "situation_inconnue": [
+   "clients_en_attente = 0.55 (jamais plus de 0.47 à l'entraînement)",
+   "file_standard = 0.60 (jamais plus de 0.49 à l'entraînement)",
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 18,
+    "sante": 4,
+    "urgence": 0
+   },
+   "attente_min": 3.6,
+   "occupation": 0.7,
+   "prevision_appels_h": 56,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "15h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "reaffecter_conseiller_file_standard",
+  "action_executee": "reaffecter_conseiller_file_standard",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "File standard à 10 appel(s) : un conseiller est réaffecté à la file standard.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 10,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 2.8,
+   "occupation": 0.9,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "15h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.9,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "15h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (46/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 1.0,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "15h45",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (7 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (50/80 points engagés)"
+  },
+  "situation_inconnue": [
+   "2 événements simultanés (jamais plus de 1 à l'entraînement)"
+  ],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 4,
+    "sante": 3,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.89,
+   "prevision_appels_h": 60,
+   "evenements": [
+    "incident technique",
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "16h00",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.6,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "16h15",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 1.0,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "16h30",
+  "source": "règles (repli : situation inconnue)",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": null,
+  "peu_sur": false,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.8,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "16h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.811,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (aucune file pour l'instant, renfort préventif).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (54/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.78,
+   "prevision_appels_h": 52,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "17h00",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.865,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (4 appel(s) en attente, 2 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (57/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 0.78,
+   "prevision_appels_h": 40,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "17h15",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.826,
+  "peu_sur": false,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 40 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (61/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.6,
+   "prevision_appels_h": 40,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "17h30",
+  "source": "agent PPO",
+  "action_proposee": "planifier_renfort",
+  "action_executee": "planifier_renfort",
+  "confiance": 0.878,
+  "peu_sur": false,
+  "explication": "Planning modifié : un renfort arrivera dans 30 min pour 2 h (prévision : 40 appels l'heure suivante).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (65/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 5,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 2.0,
+   "occupation": 0.9,
+   "prevision_appels_h": 40,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "17h45",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.533,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent de nouveau dans l'ordre d'arrivée.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 2,
+    "urgence": 0
+   },
+   "attente_min": 2.3,
+   "occupation": 1.0,
+   "prevision_appels_h": 40,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "18h00",
+  "source": "agent PPO",
+  "action_proposee": "modifier_priorites",
+  "action_executee": "modifier_priorites",
+  "confiance": 0.859,
+  "peu_sur": false,
+  "explication": "Priorités modifiées : les urgences et la santé passent désormais en premier.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.7,
+   "prevision_appels_h": 28,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "18h15",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.357,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.3,
+   "prevision_appels_h": 28,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "18h30",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.941,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (1 appel(s) en attente, 1 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (69/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 1,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 0.89,
+   "prevision_appels_h": 28,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "18h45",
+  "source": "agent PPO",
+  "action_proposee": "heures_supplementaires",
+  "action_executee": "heures_supplementaires",
+  "confiance": 0.977,
+  "peu_sur": false,
+  "explication": "Un conseiller reste une heure de plus, coût majoré (2 appel(s) en attente, 0 conseiller(s) libre(s)).",
+  "validation": {
+   "accepte": true,
+   "par": "délégation (budget)",
+   "raison": "accepté par délégation (72/80 points engagés)"
+  },
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "reduire_effectif",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 2,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 1.0,
+   "occupation": 1.0,
+   "prevision_appels_h": 28,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "19h00",
+  "source": "agent PPO",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.436,
+  "peu_sur": true,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.5,
+   "prevision_appels_h": 0,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "19h15",
+  "source": "agent PPO",
+  "action_proposee": "maintenir_organisation",
+  "action_executee": "maintenir_organisation",
+  "confiance": 0.406,
+  "peu_sur": true,
+  "explication": "Organisation maintenue.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort",
+   "formation"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.33,
+   "prevision_appels_h": 0,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "19h30",
+  "source": "agent PPO",
+  "action_proposee": "formation",
+  "action_executee": "formation",
+  "confiance": 0.408,
+  "peu_sur": true,
+  "explication": "Creux d'activité : un généraliste part 30 min en formation santé (il sera plus rapide et plus juste ensuite).",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "heures_supplementaires",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.33,
+   "prevision_appels_h": 0,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ },
+ {
+  "heure": "19h45",
+  "source": "agent PPO",
+  "action_proposee": "reduire_effectif",
+  "action_executee": "reduire_effectif",
+  "confiance": 0.336,
+  "peu_sur": true,
+  "explication": "8 conseillers libres et peu d'attente : un conseiller retourne en réserve pour réduire le coût.",
+  "validation": null,
+  "situation_inconnue": [],
+  "actions_masquees": [
+   "activer_conseiller_supplementaire",
+   "planifier_renfort"
+  ],
+  "situation": {
+   "files": {
+    "standard": 0,
+    "sante": 0,
+    "urgence": 0
+   },
+   "attente_min": 0.0,
+   "occupation": 0.2,
+   "prevision_appels_h": 0,
+   "evenements": [
+    "sous effectif"
+   ]
+  }
+ }
+]

@@ -1,0 +1,50 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "method": "LoRA",
+  "data_provenance": "synthetic_curated+train_augmentation",
+  "train_size": 90,
+  "validation_size": 12,
+  "test_size": 14,
+  "before_test": {
+    "N": 14,
+    "TP": 0,
+    "FP": 1,
+    "FN": 6,
+    "TN": 7,
+    "invalides": 0,
+    "precision": 0.0,
+    "rappel": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.5
+  },
+  "after_validation": {
+    "N": 12,
+    "TP": 6,
+    "FP": 1,
+    "FN": 0,
+    "TN": 5,
+    "invalides": 0,
+    "precision": 0.857,
+    "rappel": 1.0,
+    "f1": 0.923,
+    "accuracy": 0.917
+  },
+  "after_test": {
+    "N": 14,
+    "TP": 5,
+    "FP": 2,
+    "FN": 1,
+    "TN": 6,
+    "invalides": 0,
+    "precision": 0.714,
+    "rappel": 0.833,
+    "f1": 0.769,
+    "accuracy": 0.786
+  },
+  "hyperparams": {
+    "epochs": 4,
+    "lora_r": 8,
+    "learning_rate": 0.0002
+  },
+  "limitations": "Small synthetic, rule-labeled dataset; benchmark exploratory; not validated for clinical decisions."
+}

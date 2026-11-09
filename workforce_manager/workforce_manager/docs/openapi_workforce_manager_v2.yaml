@@ -1,0 +1,108 @@
+# Proposition v2 du contrat Workforce Manager (remplace proposition_contrat_type_demande.md)
+#
+# Objectif : aligner le Swagger sur ce que le FRONT envoie et affiche déjà
+# (src/pages/agents/WorkforceManagerPage.jsx et src/api/mock.js).
+# Tous les ajouts sont OPTIONNELS -> rétrocompatible : une requête { evaluation } et une
+# lecture de { problems, actions } continuent de fonctionner.
+#
+# 3 remplacements dans openapi.yaml (dt-front/swagger/ ET dt-front/public/) :
+#   A) paths./agents/workforce-manager      -> remplacer le bloc entier
+#   B) components.schemas.WorkforceDecision -> remplacer le schéma entier
+#   C) components.schemas                   -> ajouter WorkforceManagerRequest
+
+# ----------------------------------------------------------------- A) paths
+  /agents/workforce-manager:
+    post:
+      tags: [Agents]
+      summary: Analyser scores et KPI, prendre des décisions
+      parameters:
+        - in: query
+          name: strict
+          schema: { type: boolean, default: false }
+          description: true = uniquement problems et actions (contrat v1)
+        - in: query
+          name: explications
+          schema: { type: boolean, default: true }
+          description: false = textes fixes, sans appel au LLM (réponse immédiate)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/WorkforceManagerRequest' }
+      responses:
+        '200':
+          description: Décisions
+          headers:
+            X-Explication-Source:
+              schema: { type: string, enum: [llm, fallback, sans_objet, desactive] }
+            X-Type-Demande-Source:
+              schema: { type: string, example: request.message }
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkforceDecision' }
+        '422':
+          description: Requête invalide
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+
+# ----------------------------------------------------------------- B) + C) components/schemas
+    WorkforceManagerRequest:
+      type: object
+      properties:
+        evaluation: { $ref: '#/components/schemas/QualityEvaluation' }
+        type_demande:
+          type: string
+          enum: [standard, sante, urgence]
+          description: >
+            Facultatif. Sinon déduit de request (entities.type_demande, puis mots-clés de
+            intent/message) ; sinon traité comme santé par précaution.
+        request:
+          type: object
+          description: >
+            Demande du client (ClientRequest). Ici tous les champs sont facultatifs :
+            le front peut n'envoyer que le profil.
+          properties:
+            profile: { $ref: '#/components/schemas/ProfileType' }
+            message: { type: string }
+            intent: { type: string }
+            entities:
+              type: object
+              additionalProperties: { type: string }
+        kpi:
+          allOf: [{ $ref: '#/components/schemas/Kpi' }]
+          nullable: true
+          description: Contexte du centre (utilisé seulement pour les explications)
+
+    WorkforceDecision:
+      type: object
+      properties:
+        problems: { type: array, items: { type: string } }
+        actions:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                enum: [ajuster_reponse, relancer_rag, escalade_humain, signaler_kb, formation]
+              description: { type: string }
+              priority: { type: string, enum: [basse, moyenne, haute] }
+              responsible:
+                type: string
+                description: Rôle chargé de l'action
+                example: Pharmacien conseil
+        agent: { type: string, example: Workforce Manager Agent }
+        auditScore: { type: integer, minimum: 0, maximum: 100, description: globalScore évalué }
+        status:
+          type: string
+          enum: [OPTIMAL, INTERVENTION_REQUISE]
+          description: OPTIMAL si aucune action n'est nécessaire
+        typeDemande: { type: string, enum: [standard, sante, urgence] }
+        workforceSummary:
+          type: object
+          properties:
+            staffingImpact: { type: string, example: "+1 prise en charge humaine (Pharmacien conseil)" }
+            trainingModuleSuggested: { type: string, example: Accueil des clients inquiets ou mécontents }
+            kbUpdateRequired: { type: boolean }
+        decidedAt: { type: string, format: date-time }

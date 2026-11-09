@@ -1,0 +1,14 @@
+google-genai>=1.0.0
+groq
+pandas
+numpy
+python-dotenv
+sentence-transformers
+fastapi
+uvicorn
+chromadb
+psycopg2-binary
+ollama
+
+pytest
+httpx

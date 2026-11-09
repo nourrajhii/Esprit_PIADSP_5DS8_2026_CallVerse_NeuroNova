@@ -1,0 +1,26 @@
+# Workforce Manager Agent – CallVerse / PharmaShop
+# Cible : Python 3.11 (compatible 3.12)
+
+# Environnement RL et apprentissage
+gymnasium>=0.29,<1.1
+stable-baselines3>=2.3,<2.5
+numpy>=1.26,<2.0
+
+# Données, statistiques, graphiques
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+
+# API et contrat
+fastapi>=0.110
+pydantic>=2.6,<3
+uvicorn>=0.29
+
+# Configuration (poids de la récompense)
+pyyaml>=6.0
+
+# Explications LLM (Gemini) – clé dans la variable d'environnement GEMINI_API_KEY
+google-genai>=1.0
+
+# Tests
+pytest>=8.0
