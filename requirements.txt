@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+ollama==0.6.3
+pydantic==2.13.5
+python-dotenv==1.2.4
+python-multipart
