@@ -1,206 +1,229 @@
-# CallVerse — Digital Twin d'un centre de contact
+# PI_ADSP_CallVerse_NeuroNova
 
-Projet de l'équipe *Neuro Nova* (Esprit). CallVerse rejoue des conversations sensibles d'une parapharmacie en ligne (PharmaShop) dans un environnement simulé, les évalue et décide d'actions correctives. Méthodologie : Design Thinking.
+CallVerse – AI-Powered Contact Center Digital Twin
 
-Quatre agents IA tournent dans *un seul serveur FastAPI* (port 8000), piloté par un front React :
+## Overview
 
-| # | Agent | Rôle | Techniques |
-|---|-------|------|------------|
-| 1 | *Client Simulator* | Joue 8 profils de clients (calme, impatient, nerveux...) | Qwen2.5-3B fine-tuné (Ollama), prompting par persona |
-| 2 | *Customer Advisor* | Répond à partir de documents | RAG : routeur + ChromaDB + MiniLM, LLM Groq ou Ollama |
-| 3 | *Quality Analyst* | Note chaque réponse, détecte les risques | Juge Gemini, règles de sécurité, classifieur Qwen-LoRA |
-| 4 | *Workforce Manager* | Transforme les scores en plan d'actions | Règles déterministes (sans LLM) |
+This project was developed as part of the PI – Applied Data Science Program at Esprit School of Engineering (Academic Year 2025–2026). CallVerse is an AI-powered Digital Twin of an online parapharmacy contact center (PharmaShop), designed to simulate sensitive customer interactions, evaluate customer service quality, detect potential risks, and generate corrective action plans through a unified multi-agent AI system.
 
-Chaîne d'une simulation globale : Client → Conseiller (RAG) → Analyste Qualité → Workforce Manager → historique + base de données.
+Built around a Design Thinking methodology, CallVerse combines conversational AI, Retrieval-Augmented Generation (RAG), LLM-based evaluation, fine-tuned language models, and rule-based decision-making to reproduce and analyze realistic customer service scenarios in a controlled simulation environment.
 
----
+## Features
 
-## 1. Prérequis
+***Client Simulator Agent*** — Simulates 8 distinct customer personas (calm, impatient, nervous, dissatisfied, etc.) using a fine-tuned Qwen2.5-3B model, Ollama, and persona-based prompting to generate realistic customer conversations.
 
-| Outil | Version | Usage |
-|-------|---------|-------|
-| Python | 3.10 ou plus | backend |
-| Node.js | 18 ou plus | front React |
-| [Ollama](https://ollama.com) | récent | modèles locaux (client simulé, conseiller local) |
-| Clé API Gemini | — | juge de l'Analyste Qualité (obligatoire pour noter) |
-| Clé API Groq | — | facultatif : LLM du conseiller dans le cloud |
-| PostgreSQL | 14 ou plus | facultatif : enregistrement des conversations / Power BI |
+***Customer Advisor Agent*** — Provides context-aware and document-grounded responses to customer inquiries using a Modular RAG pipeline, combining intelligent routing, ChromaDB vector search, MiniLM embeddings, and Groq or Ollama LLM inference.
 
-Les commandes ci-dessous sont pour **Windows PowerShell**.
+***Quality Analyst Agent*** — Automatically evaluates advisor responses, assigns quality scores, identifies potential risks, and detects inappropriate or unsafe responses using Gemini as an LLM judge, deterministic safety rules, and a fine-tuned Qwen-LoRA risk classifier.
 
+***Workforce Manager Agent*** — Transforms quality evaluation results into structured corrective action plans using deterministic business rules, without relying on an additional LLM.
 
----
+***Global Conversation Simulation*** — Orchestrates the four agents in a unified workflow, from customer message generation to advisor response, quality evaluation, and workforce action planning.
 
-## 2. Installation
+***Quality Monitoring & KPI Dashboard*** — Tracks conversation quality, evaluation scores, detected risks, and performance indicators through interactive dashboards.
 
-### 2.1 Backend
+***Conversation History & Analytics*** — Stores simulation sessions, customer profiles, conversation turns, evaluation results, and related sources for historical analysis and reporting.
 
+***Database Integration & Power BI Reporting*** — PostgreSQL integration for structured simulation data storage and analytical reporting, with a dedicated view for Power BI integration.
+
+## Tech Stack
+
+### Frontend
+
+*Main web interface* : React.js
+
+*Development server & proxy* : Vite
+
+*API communication* : REST API / HTTP client
+
+*Dashboards & KPI visualization* : React-based interactive dashboards
+
+### Backend
+
+*Primary language* : Python 3.10+
+
+*REST API backend* : FastAPI
+
+*API documentation* : Swagger / OpenAPI
+
+*Multi-agent orchestration* : Custom simulation orchestrator
+
+*RAG framework* : Modular RAG (intelligent router + retrieval pipeline)
+
+*Vector database* : ChromaDB
+
+*Embedding model* : Sentence Transformers / paraphrase-multilingual-MiniLM-L12-v2
+
+*Cloud LLM inference* : Groq
+
+*Local LLM inference* : Ollama
+
+*Customer simulation model* : Fine-tuned Qwen2.5-3B
+
+*Advisor LLM* : Qwen2.5-7B / Groq models
+
+*Quality evaluation* : Gemini API (LLM-as-a-Judge)
+
+*Risk classification* : Fine-tuned Qwen-LoRA
+
+*Decision-making & action planning* : Rule-based deterministic engine
+
+*Structured data storage* : PostgreSQL
+
+*Local evaluation storage* : SQLite
+
+*Simulation history* : JSON-based storage
+
+*Testing* : Pytest
+
+## Architecture
+
+```text
+CallVerse – Contact Center Digital Twin
+
+├── Agent 1: Client Simulator
+│   └── Qwen2.5-3B Fine-tuned · Ollama · Persona Prompting
+│
+├── Agent 2: Customer Advisor
+│   └── Modular RAG · Router · ChromaDB · MiniLM · Groq / Ollama
+│
+├── Agent 3: Quality Analyst
+│   └── Gemini LLM-as-a-Judge · Safety Rules · Qwen-LoRA
+│
+├── Agent 4: Workforce Manager
+│   └── Deterministic Rules · Corrective Action Plans
+│
+├── Global Simulation Orchestrator
+│   └── Client → Advisor → Quality Analyst → Workforce Manager
+│
+├── Data & Analytics
+│   └── PostgreSQL · SQLite · JSON · Power BI
+│
+├── Presentation
+│   └── React.js · Vite · Interactive Dashboards
+│
+└── Infrastructure
+    └── FastAPI · REST API · Ollama · ChromaDB
+```
+
+## Contributors
+
+**Ines Moalla** · **Nour Rajhi** · **Baha Saadaoui** · **Yosri Awedi** · **Safa Mahjoub** · **Samar Touil**
+
+**Team Neuro Nova**
+
+## Academic Context
+
+Developed at Esprit School of Engineering – Tunisia  
+PI – Applied Data Science Program (ADSP)  
+5DS8 | Academic Year 2025–2026
+
+## Getting Started
+
+**Prerequisites:**
+
+```bash
+python --version
+node --version
+ollama --version
+```
+
+**1. Clone the repository:**
+
+```bash
+git clone https://github.com/nourrajhii/Esprit_PIADSP_5DS8_2026_CallVerse_NeuroNova.git
+cd Esprit_PIADSP_5DS8_2026_CallVerse_NeuroNova
+```
+
+**2. Set up the Backend:**
+
+```powershell
 cd RAG
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
-Classifieur de risque LoRA (facultatif, lourd : PyTorch) :
+**3. Configure Environment Variables:**
 
-.\.venv\Scripts\python.exe -m pip install -r requirements-lora.txt
-
-### 2.2 Configuration (RAG/.env)
-
+```powershell
 copy .env.example .env
+```
 
-Puis ouvrir RAG/.env et renseigner au minimum GEMINI_API_KEY. *Ne jamais committer ce fichier* (il est dans .gitignore).
+Add your `GEMINI_API_KEY` to `RAG/.env`. Configure the optional Groq and PostgreSQL credentials if needed.
 
-| Variable | Rôle | Exemple |
-|----------|------|---------|
-| LLM_PROVIDER | LLM du conseiller : ollama, groq ou gemini | ollama |
-| GROQ_API_KEY, GROQ_MODEL | si groq | openai/gpt-oss-120b |
-| LLM_CHAIN, ROUTER_CHAIN | chaîne de modèles de secours, format fournisseur:modèle séparés par des virgules (facultatif) | groq:openai/gpt-oss-120b,gemini:gemini-2.5-flash |
-| OLLAMA_LLM_MODEL | modèle local du conseiller | qwen2.5:7b |
-| OLLAMA_MODEL | modèle du Client Simulator, 1er message | qwen-client-v2 |
-| OLLAMA_MODEL_SUITE | modèle du client, messages 2 à 5 | qwen2.5:7b |
-| AGENTIC | 0 = pipeline routeur → RAG (recommandé avec un 7B local) | 0 |
-| GEMINI_API_KEY | clé du juge Gemini (Analyste Qualité) | — |
-| QA_JUDGE_MODEL | modèle du juge | voir .env.example |
-| QA_LORA_ENABLED | 1 pour activer le classifieur LoRA | 0 |
-| DATABASE_URL | PostgreSQL (facultatif) | postgresql://user:pass@localhost:5432/callverse |
-| CORS_ORIGINS | origines du front autorisées | http://localhost:5173 |
+**4. Download the Ollama Model:**
 
-### 2.3 Modèles Ollama
-
+```bash
 ollama pull qwen2.5:7b
+```
 
-Modèle client fine-tuné (le fichier .gguf pèse environ 1,8 Go et n'est pas versionné : à récupérer auprès de l'équipe). Ouvrir client/modele/Modelfile, corriger la ligne FROM avec le chemin réel du .gguf, puis :
+For the fine-tuned client simulator, obtain the `.gguf` model file from the team, configure the `client/modele/Modelfile`, and run:
 
+```bash
 ollama create qwen-client-v2 -f client/modele/Modelfile
+```
 
-Sans ce modèle, mettre OLLAMA_MODEL=qwen2.5:7b dans .env : le simulateur fonctionne avec le modèle de base.
+**5. Start the Ollama Service:**
 
-### 2.4 Base PostgreSQL (facultatif)
+```bash
+ollama serve
+```
 
-Créer une base vide puis renseigner DATABASE_URL. Les tables (sim_clients, sim_conversations, sim_turns, sim_sources) et la vue v_powerbi_turns sont *créées automatiquement* au démarrage. Sans DATABASE_URL, tout fonctionne : seul l'enregistrement PostgreSQL est désactivé. L'historique est gardé dans RAG/.cache/simulations.json et les évaluations qualité dans SQLite.
+**6. Run the Backend:**
 
-### 2.5 Front end
+From the `RAG` directory:
 
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn server:app --port 8000
+```
+
+**7. Run the Frontend:**
+
+Open another terminal:
+
+```bash
 cd dt-front
 npm install
-copy .env.example .env     # puis mettre VITE_USE_MOCK=false pour utiliser le vrai backend
+```
 
----
+Configure `VITE_USE_MOCK=false` in `dt-front/.env`, then run:
 
-## 3. Exécution
-
-Trois terminaux.
-
-*Terminal 1 — Ollama* (s'il n'est pas déjà lancé en service) :
-
-ollama serve
-
-*Terminal 2 — Backend* (toujours depuis le dossier RAG) :
-
-cd RAG
-.\.venv\Scripts\python.exe -m uvicorn server:app --port 8000
-
-ou .\run.ps1 (même chose avec rechargement automatique). Au premier lancement, le modèle d'embeddings est téléchargé et l'index ChromaDB est construit dans RAG/.cache/ : compter quelques minutes.
-
-*Terminal 3 — Front* :
-
-cd dt-front
+```bash
 npm run dev
+```
 
-| Adresse | Contenu |
-|---------|---------|
-| http://localhost:5173 | application web |
-| http://localhost:8000/docs | documentation Swagger de l'API |
-| http://localhost:8000/api/health | état du backend |
-| http://localhost:8000/api/quality/health | état de l'Analyste Qualité |
+**8. Access the Application:**
 
-Le front appelle /api/... ; Vite redirige vers le port 8000 (voir dt-front/vite.config.js).
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:8000
+- Swagger Documentation: http://localhost:8000/docs
+- Backend Health: http://localhost:8000/api/health
+- Quality Analyst Health: http://localhost:8000/api/quality/health
 
-### Tests
+**9. Run Tests:**
 
-cd RAG
+From the `RAG` directory:
+
+```powershell
 .\.venv\Scripts\python.exe -m pytest
+```
 
-41 tests (Analyste Qualité, Workforce Manager, simulation globale). Ils utilisent des fournisseurs simulés : aucune clé API n'est nécessaire.
+The test suite includes 41 tests covering the Quality Analyst, Workforce Manager, and global simulation workflow. Tests use mocked providers and do not require API keys.
 
----
+## Acknowledgments
 
-## 4. Structure du projet
-
-.
-├── RAG/                        Backend unique (FastAPI) : à lancer depuis ce dossier
-│   ├── server.py               point d'entrée : uvicorn server:app
-│   ├── run.ps1                 lance le serveur avec rechargement
-│   ├── requirements.txt        dépendances (+ requirements-lora.txt, facultatif)
-│   ├── .env.example            modèle de configuration
-│   ├── data/                   catalogue produits, maladies, modules de service (CSV)
-│   ├── .cache/                 index vectoriel, historique des simulations (généré)
-│   ├── backend/
-│   │   ├── main.py             application, routeurs, CORS, gestion d'erreurs
-│   │   ├── settings.py         chemins et variables d'environnement
-│   │   ├── schemas.py          modèles Pydantic des requêtes et réponses
-│   │   ├── routes/             une route par agent + historique, base de connaissances, santé
-│   │   ├── services/           logique métier : advisor, simulation, workforce, history
-│   │   ├── core/               agent.py (RAG), orchestrator.py (client ↔ conseiller), db.py (PostgreSQL)
-│   │   └── quality/            Analyste Qualité : juge Gemini, classifieur LoRA, modèles
-│   └── tests/                  tests pytest
-│
-├── client/                     Client Simulator
-│   ├── app/                    profils, prompts, génération des messages (Ollama)
-│   ├── evaluation/             scripts : construire, nettoyer, évaluer le jeu de profils
-│   ├── eval/results/           résultats d'évaluation des modèles clients
-│   └── modele/                 Modelfile Ollama (le .gguf n'est pas versionné)
-│
-├── dt-front/                   Front React (Vite)
-│   ├── src/pages/              Simulation globale, Tableau de bord, Historique, API, pages des agents
-│   ├── src/api/                client HTTP et mode démo (mock)
-│   └── swagger/                contrat OpenAPI
-│
-├── projet/                     version autonome d'origine de l'Analyste Qualité (référence)
-├── workforce_manager/          version autonome d'origine du Workforce Manager (référence)
-├── rapport_callverse.tex       rapport du projet (LaTeX, anglais)
-└── architecture.png            schéma d'architecture globale
-
-L'Analyste Qualité et le Workforce Manager vivent désormais dans RAG/backend/ ; projet/ et workforce_manager/ ne servent plus à l'exécution.
-
----
-
-## 5. Routes principales de l'API
-
-| Route | Rôle |
-|-------|------|
-| POST /api/agents/client-simulator | message d'un client virtuel |
-| POST /api/agents/customer-advisor | réponse du conseiller (RAG) |
-| POST /api/agents/quality-analyst | évaluation d'une réponse |
-| POST /api/agents/workforce-manager | problèmes et plan d'actions |
-| POST /api/simulations et /api/simulations/conversation | simulation globale (1 à 5 messages) |
-| GET /api/simulations, /api/simulations/{id} | historique |
-| GET /api/kpi | indicateurs calculés sur les évaluations |
-| GET /api/health, /api/quality/health | état des services |
-
-Liste complète : http://localhost:8000/docs.
-
----
-
-## 6. Dépannage
-
-| Problème | Solution |
-|----------|----------|
-| Could not import module "server" | lancer uvicorn **depuis le dossier RAG**, pas depuis la racine |
-| Erreur 503 du juge Gemini | indisponibilité temporaire du fournisseur : réessayer ; aucun score n'est inventé |
-| GEMINI_API_KEY absente : juge non exécuté | renseigner la clé dans RAG/.env |
-| Réponses très lentes | chaque tour appelle un LLM local puis le juge : utiliser LLM_PROVIDER=groq pour le conseiller |
-| Front sans données réelles | vérifier VITE_USE_MOCK=false dans dt-front/.env et que le backend tourne |
-| qwen-client-v2 introuvable | créer le modèle (section 2.3) ou utiliser OLLAMA_MODEL=qwen2.5:7b |
-
----
-
-## 7. Limites connues
-
-- Les scores du juge ne sont pas calibrés sur des annotations humaines ; exactitude et ancrage documentaire ne sont pas vérifiés de façon indépendante (affichés « Non vérifié »).
-- Le classifieur LoRA a été évalué sur 14 exemples synthétiques : résultats exploratoires, non validés pour un usage médical.
-- Le client simulé est un modèle de langage ; aucun test n'a encore été fait avec de vrais conseillers ou clients.
-- Le système n'est pas certifié pour un usage médical et ne doit pas recevoir de conversations réelles identifiables.
-
-## Équipe
-
-Ines Moalla · Nour Rajhi · Baha Saadaoui · Yosri Awedi · Safa Mahjoub · Samar Touil — Neuro Nova, Esprit.
+- **Esprit School of Engineering – Tunisia** — Academic supervision and institutional support.
+- **PharmaShop** — Business context and customer service scenarios used for the simulation.
+- **Alibaba Cloud / Qwen Team** — Qwen2.5 language models and fine-tuning ecosystem.
+- **Google Gemini** — LLM-as-a-Judge for automated quality evaluation.
+- **Groq** — Fast cloud-based LLM inference.
+- **Ollama** — Local LLM execution and model management.
+- **Sentence Transformers** — Multilingual embedding model for semantic retrieval.
+- **ChromaDB** — Vector database for the RAG retrieval pipeline.
+- **Hugging Face** — Model ecosystem and fine-tuning tools.
+- **FastAPI** — Backend API framework.
+- **React.js & Vite** — Frontend development and interface.
+- **PostgreSQL** — Structured simulation data storage.
+- **SQLite** — Local quality evaluation storage.
+- **Power BI** — Business intelligence and analytical reporting.
+- **Pytest** — Automated testing framework.
