@@ -1,6 +1,6 @@
-# PI_ADSP_CallVerse_NeuroNova
+# CallVerse
 
-CallVerse – AI-Powered Contact Center Digital Twin
+Contact Center Digital Twin
 
 ## Overview
 
