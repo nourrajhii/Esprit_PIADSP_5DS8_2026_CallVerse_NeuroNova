@@ -1,0 +1,1028 @@
+﻿disease_id,disease,specialties,symptoms,n_symptoms
+Q164655,abcès,chirurgie générale et digestive | dermatologie | infectiologie,douleur | fièvre rémittente | tuméfaction | érythème,4
+Q1877550,abcès du poumon,pneumologie,nécrose,1
+Q19972185,abcès tubo-ovarien,gynécologie | urologie,douleur abdominale | fièvre,2
+Q460591,accident de décompression,médecine d'urgence | médecine du travail | médecine hyperbare,altération visuelle | amnésie | arthralgie | confusion | convulsion | céphalée | douleur | dyspnée | fatigue | formication | hyperesthésie | nausée | paralysie | paresthésie | perte de conscience | prurit | saute d'humeur | signe du godet | surdité | trouble de la continence | vertige | vomissement | étourdissement,23
+Q340548,achlorhydrie,gastro-entérologie,diarrhée,1
+Q432396,achromatopsie,ophtalmologie,amblyopie | nystagmus | photophobie,3
+Q877827,acidocétose diabétique,endocrinologie,confusion | douleur abdominale | polyurie | vomissement,4
+Q5957852,acidose hyperchlorémique,endocrinologie | néphrologie,hyperchlorémie,1
+Q55784284,acidémie combinée malonique et méthylmalonique,endocrinologie | génétique médicale,acidocétose | coma | convulsion | dystonie | hypoglycémie | microcéphalie | retard de croissance staturo-pondérale,7
+Q79928,acné,dermatologie | médecine générale,bouton,1
+Q55788919,acquired central diabetes insipidus,endocrinologie | neurochirurgie,hyposthénurie | nycturie | polydipsie | polyurie,4
+Q937818,acrodermatite entéropathique,endocrinologie,alopécie | cerebral cortical atrophy | diarrhée chronique | insuffisance staturale | phlyctène | pimple | sourcil anormal | syndrome de malabsorption | xérodermie | érythème,10
+Q207783,acrophobie,psychiatrie,peur,1
+Q422268,actinomycose,infectiologie,Inflammation granulomateuse | abcès | fatigue chronique idiopathique | fistule,4
+Q272741,adénome,oncologie,inflammation,1
+Q4678337,adénopathie cervicale tuberculeuse chronique,infectiologie,adénopathie | gonflement des ganglions lymphatiques,2
+Q837054,adénovirose,infectiologie | pédiatrie,adénopathie | congestion nasale | conjonctivite | diarrhée | fièvre légère | mal de gorge | nausée | rhinite | rhinorrhée | xérostomie,10
+Q18556352,affection myotonique,neurologie | rhumatologie,myotonie,1
+Q166907,algie vasculaire de la face,neurologie,agitation psychomotrice | congestion nasale | céphalée | irritabilité | larmoiement | photophobie | ptosis | rhinorrhée | transpiration animale | œil rouge,10
+Q970203,allergie au lait,allergologie,diarrhée | nausée | vomissement,3
+Q1286499,allergie aux acariens,médecine d'urgence,congestion nasale | toux | éternuement,3
+Q9148587,alleschériose,infectiologie,abcès,1
+Q2146228,amaurose fugace,neurologie | ophtalmologie,cécité transitoire,1
+Q949694,amoebose,infectiologie,amaigrissement | diarrhée | douleur abdominale | fièvre | hépatomégalie | léthargie | raspberry jelly stool | sang dans les selles | sensation d'évacuation incomplète des selles,9
+Q5038315,amylose cardiaque,cardiologie,détresse respiratoire | fatigue | trouble du rythme cardiaque | œdème,4
+Q186470,angine,infectiologie | médecine générale | otorhinolaryngologie,frissonnement | inflammation,2
+Q603644,angiocholite,gastro-entérologie,douleur abdominale | fièvre | frissonnement | ictère,4
+Q2033138,angiokératome,dermatologie | oncologie,Acanthose | hyperkératose | télangiectasie,3
+Q191562,angiopathie amyloide cérébrale,neurologie,dysfonctionnement cognitif | saignement,2
+Q1469637,angor de Prinzmetal,cardiologie,douleur thoracique,1
+Q2360849,anguillulose,helminthologiste | infectiologie,arthralgie | asthénie | bronchite | conjonctivite | céphalée | diarrhée | douleur abdominale | fièvre | hépatomégalie | iritis | myalgie | myocardite | méningite | nausée | prurit | sepsis | toux | ulcère | urticaire | vertige,20
+Q3091959,anisakiase,infectiologie,allergie | diarrhée | douleur abdominale | fièvre | nausée | vomissement | éosinophilie,7
+Q11679861,ankylostomose,infectiologie | parasitologie,anémie | diarrhée | hémorragie,3
+Q137597,ankylostomose à Ankylostoma duodenale,infectiologie | médecine tropicale | parasitologie,chlorose | douleur abdominale | fatigue,3
+Q4118581,ankylostomose à Necator americanus,infectiologie,crampe abdominale | diarrhée | severe abdominal cramp,3
+Q5182137,anomalie craniofaciale,génétique médicale,dysmorphie faciale,1
+Q6029027,anomalie de la biogénèse du péroxysome type 3B,neurologie,hépatosplénomégalie,1
+Q7688951,anomalie de Taussig Bing,génétique médicale,communication inter-ventriculaire | ventricule droit à double sortie,2
+Q2852249,anomalie du développement,tératologie,anophtalmie | cataracte | handicap mental | microcéphalie | phocomélie | spina bifida | surdité | syndrome d'alcoolisation fœtale,8
+Q574329,anthracose,pneumologie,expectoration noirâtre,1
+Q154430,anxiété,psychiatrie | psychologie clinique | psychothérapie,dépersonnalisation | déréalisation | désorientation | nausée | tachycardie | vertige | vomissement,7
+Q2070695,anémie macrocytaire,hématologie,macrocytose,1
+Q3298999,anémie microcytaire,hématologie,microcytose,1
+Q1198391,anévrisme intracrânien,neurochirurgie | neurologie | neuroradiologie interventionnelle,confusion | diplopie | neuropathie périphérique | vomissement,4
+Q20707611,aphantasie,neurologie | neuropsychologie,non-être,1
+Q2836,aphasie,logopédie | neurologie | neuropsychologie,mutisme,1
+Q121041,appendicite,chirurgie générale et digestive,anorexie | douleur abdominale | nausée | vomissement,4
+Q648982,argyrisme,médecine d'urgence,couleur anormale de la peau,1
+Q202837,arrêt cardiorespiratoire,cardiologie | médecine d'urgence,insuffisance cardiaque | perte de conscience,2
+Q170990,arthrite,rhumatologie,inflammation articulaire,1
+Q924421,arthrite septique,infectiologie,arthrite,1
+Q62736,arthrose,médecine générale | orthopédie | rhumatologie,arthrite,1
+Q378681,artériopathie périphérique,chirurgie vasculaire,claudication intermittente,1
+Q4797546,artériosclérose oblitérante,cardiologie,claudication intermittente,1
+Q707816,artérite à cellules géantes,immunologie | rhumatologie,amaigrissement | céphalée | diplopie | douleur de la mâchoire | douleur à la palpation | fatigue | fièvre,7
+Q664174,asbestose,pneumologie,dyspnée,1
+Q842428,ascaridiose,helminthologiste | infectiologie,crampe abdominale | diarrhée | douleur abdominale | fièvre légère | malaise | nausée | toux | urticaire | vomissement,9
+Q3625278,aspergillose invasive,infectiologie,pneumonie | saignement,2
+Q35869,asthme,immunologie | pneumologie,douleur thoracique | inflammation | sibilance | toux,4
+Q12301086,asthme allergique,pneumologie,réaction allergique,1
+Q18558110,asthme intrinsèque,pneumologie,Hyperventilation | anxieux,2
+Q387082,ataxie télangiectasie,génétique médicale | neurologie,hypoplasie du thymus,1
+Q12252367,athérosclérose,cardiologie,athérome,1
+Q38404,autisme,neuropsychiatrie | psychologie du développement | pédagogie,autistic rage | auto-stimulation | centres d'intérêt restreints | crise autistique | hyperfocus | repli autistique | syndrome sémantique pragmatique | trouble de l'intégration sensorielle | trouble des fonctions exécutives | écholalie | équinisme,11
+Q4827032,auto-vampirisme,psychiatrie,automutilation,1
+Q60794258,Autoimmune GFAP Astrocytopathy,immunologie,ataxie | céphalée | fièvre | myélite,4
+Q797668,babésiose,infectiologie,anorexie | céphalée | dépression | fatigue | fièvre | myalgie | nausée | vomissement,8
+Q4841462,bagassose,pneumologie,faiblesse musculaire | frissonnement,2
+Q2447562,balantidiase,infectiologie,amaigrissement | crampe abdominale | diarrhée | douleur abdominale | empoisonnement | fièvre | hépatomégalie | nausée | sang dans les selles | sensation d'évacuation incomplète des selles | xérostomie,11
+Q120973015,Beck–Fahrner syndrome,génétique médicale,Dysmorphie | Retard psychomoteur | hypotonie musculaire | retard global de développement | trouble du neurodéveloppement | épilepsie,6
+Q682798,bejel,infectiologie,adénopathie | cicatrice | foyer d'infection primaire | périostite,4
+Q221159,bilharziose,infectiologie,diarrhée | frissonnement | hématurie | nausée,4
+Q18553329,bilharziose intestinale,infectiologie,diarrhée | hématochézie | hépatosplénomégalie | rectorragie,4
+Q845698,blépharite,ophtalmologie,inflammation,1
+Q154865,botulisme,infectiologie,constipation | diplopie | dysarthrie | dystonie neurovégétative | faiblesse musculaire | insuffisance respiratoire aiguë | mydriase | météorisme abdominal | ptosis | rétention aiguë d'urine | vision floue | xérostomie,12
+Q64513386,boulimie nerveuse,psychiatrie,vomissement,1
+Q2012642,bronchiolite oblitérante avec organisation pneumonique,pneumologie,amaigrissement | inflammation,2
+Q199804,broncho-pneumopathie chronique obstructive,pneumologie,dyspnée | sibilance | toux,3
+Q4375,bronchoconstriction,pneumologie,sibilance,1
+Q734512,bronchopneumonie,pneumologie,pneumonie,1
+Q156050,brucellose,infectiologie | médecine vétérinaire,adénopathie | anorexie | arthrite | fatigue | fièvre continue | fièvre ondulante | hépatomégalie | myalgie | névrite | orchite | splénomégalie,11
+Q1550844,brucellose canine,infectiologie,amaigrissement | faiblesse musculaire | splénomégalie,3
+Q1355765,brucellose à Brucella melitensis,infectiologie,mal de dos,1
+Q994942,bruxisme,odontologie,attrition dentaire,1
+Q115744557,brèche crânienne,neurologie,anosmie | goût métallique | otorrhée | rhinorrhée | salé,5
+Q684810,bérylliose,pneumologie,réaction allergique,1
+Q1022718,CADASIL,cardiologie | génétique médicale | neurologie,accident vasculaire cérébral | céphalée | démence,3
+Q239027,calcinose,endocrinologie,calcification métastatique,1
+Q683861,campylobactériose,infectiologie,arthralgie | crampe abdominale | céphalée | diarrhée | douleur abdominale | empoisonnement | fièvre | myalgie | sang dans les selles | sepsis,10
+Q18556209,cancer de l'orbite,oncologie,exophtalmie | ptosis,2
+Q192102,cancer de la peau,dermatologie,lésion cutanée | nodule | nævus | prurit | sensation de brûlure | ulcère,6
+Q181257,cancer de la prostate,oncologie | urologie,amaigrissement | douleur osseuse | douleur pelvienne | dysfonction érectile | mal de dos | pollakiurie | éjaculation douloureuse,7
+Q826522,cancer de la thyroïde,oncologie,cervicalgie | dysphagie | enrouement | gonflement des ganglions lymphatiques | nodule thyroïdien,5
+Q9303627,cancer du cerveau,neurologie | oncologie,convulsion | céphalée | douleur | douleur chronique | handicap visuel | insomnie | mal de dos | sciatique | syncope | tremblement | vertige | vomissement | étourdissement,13
+Q18555025,cancer du côlon,oncologie,amaigrissement | fatigue physiologique | inconfort abdominal | nausée | sang dans les selles,5
+Q623031,cancer du foie,oncologie,amaigrissement | douleur abdominale | hépatomégalie | ictère,4
+Q212961,cancer du pancréas,gastro-entérologie | oncologie,anorexie | douleur abdominale | ictère | pancréatite aiguë | syndrome de Trousseau,5
+Q47912,cancer du poumon,oncologie | pneumologie,amaigrissement | anorexie | douleur thoracique | dyspnée | fatigue | hémoptysie | sibilance | toux,8
+Q3242950,cancer du rein,oncologie | urologie,amaigrissement | anorexie | fatigue | fièvre | hématurie | mal de dos | transpiration animale,7
+Q128581,cancer du sein,oncologie,Mastodynie | boule dans la poitrine | irritation | thélalgie | tuméfaction | tuméfaction mammaire | écoulement mamelonnaire,7
+Q2292945,cancer papillaire de la thyroïde,oncologie,nodule thyroïdien,1
+Q5398631,candidose œsophagienne,infectiologie,hémorragie,1
+Q2270671,capillariose intestinale,helminthologie | infectiologie,amaigrissement | diarrhée | douleur abdominale | déshydratation | œdème,5
+Q337585,carcinome canalaire in situ,oncologie,asymptomatique,1
+Q18555222,carcinome de l'endomètre,endocrinologie | gynécologie obstétrique | oncologie,douleur pelvienne | saignement vaginal | sécrétion vaginale | trouble de la fonction urinaire,4
+Q1148337,carcinome hépatocellulaire,oncologie,amaigrissement | douleur abdominale | hépatomégalie | ictère | sueur,5
+Q3658562,carcinome pulmonaire à cellules non petites,oncologie,amaigrissement | anorexie | douleur thoracique | dyspnée | fatigue | hémoptysie | sibilance | toux,8
+Q1364270,cardiomyopathie hypertrophique,cardiologie,douleur | dyspnée | fatigue physiologique | insuffisance cardiaque | tachycardie | vertige | œdème,7
+Q190805,cardiopathie,cardiologie,angine de poitrine | ascite | douleur thoracique | dyspnée | hypertension artérielle | syncope | tachycardie | trouble de l'équilibre | trouble du rythme cardiaque | œdème,10
+Q2186829,cardiopathie congénitale cyanogène,diagnostic,cyanose,1
+Q1444550,cardiopathie ischémique,cardiologie,angine de poitrine | cervicalgie | dyspnée | fatigue | nausée | sensation de tête légère,6
+Q1473025,carence en magnésium,endocrinologie,Hypomagnésémie,1
+Q3234995,carence en vitamine B12,endocrinologie,anémie | cardiomyopathie | dysfonctionnement cognitif | déficit sensoriel | glossite | hyperpigmentation | ostéoporose | perte de mémoire,8
+Q4138767,carence en vitamine K,endocrinologie,diarrhée | hémorragie,2
+Q127724,cataracte,ophtalmologie,diplopie | handicap visuel | éblouissement,3
+Q55834490,catarrhe oculo-nasal,infectiologie,conjonctivite | rhinite | toux,3
+Q28024494,catecholaminergic polymorphic ventricular tachycardia 1,cardiologie,tachycardie ventriculaire,1
+Q28024495,catecholaminergic polymorphic ventricular tachycardia 2,cardiologie,tachycardie ventriculaire,1
+Q28024497,catecholaminergic polymorphic ventricular tachycardia 4,cardiologie,tachycardie ventriculaire,1
+Q28024498,catecholaminergic polymorphic ventricular tachycardia 5,cardiologie,tachycardie ventriculaire,1
+Q12859193,cauchemars pathologiques,psychiatrie,cauchemar,1
+Q622969,cellulite orbitaire,ophtalmologie,inflammation | ptosis,2
+Q2463884,cervicite,gynécologie,inflammation,1
+Q31798,chancre mou,dermatologie | infectiologie,Papule | foyer d'infection primaire | lymphadénite | pimple | ulcère | érosion,6
+Q18554504,charbon gastro-intestinal,infectiologie,diarrhée | vomissement,2
+Q243257,chikungunya,infectiologie,arthralgie | conjonctivite | céphalée | exanthème | fatigue | fièvre | myalgie | nausée | trouble neurologique,9
+Q2306782,chlorose,hématologie,hypochromie,1
+Q1076369,choc cytokinique,immunologie,fièvre,1
+Q558230,cholestéatome,otorhinolaryngologie,acouphène | ear fullness | otalgie | otorragie | surdité | vertige,6
+Q5104403,cholurie,gastro-entérologie,urines sombres,1
+Q376666,cholécystite,chirurgie générale et digestive | gastro-entérologie,inflammation,1
+Q12090,choléra,infectiologie | médecine d'urgence,crampe | cyanose | diarrhée | déshydratation | déshydratation terminale | hypotension artérielle | hypovolémie | inconfort | oligurie | soif | spasme | vomissement,12
+Q559082,chondrocalcinose,rhumatologie,arthrite,1
+Q1076060,chondrodysplasie ponctuée,génétique médicale,épiphyse ponctuée,1
+Q1878776,chorioméningite lymphocytaire,infectiologie,céphalée | examen des signes méningés | fièvre | nausée | photophobie | tremblement | vomissement,7
+Q522163,chorée de Sydenham,neurologie,chorée,1
+Q2964544,chorée fibrillaire de Morvan,neurologie,agrypnia excitata,1
+Q107214568,chrono-impairment disorder,rythme circadien,téléportation en fiction | voyage dans le temps en fiction,2
+Q117472178,Chung–Jansen syndrome,génétique médicale | neurologie,dysmorphophobie | handicap intellectuel | obésité | trouble des conduites,4
+Q1068997,chéilite,dermatologie,inflammation,1
+Q181831,ciguatera,toxicologie,gastro-entérite | maladie cardio-vasculaire | trouble neurologique,3
+Q141595190,Classical Ehlers-Danlos Syndrome,génétique médicale,Atrophic scars | contusion | douleur chronique | fatigue | hernie | hypermobilité articulaire | hyperélasticité cutanée | hypotonie musculaire | instabilité articulaire | métaplasie de l'œsophage | pied plat | pseudotumeur | scoliose | syndrome algo-dysfonctionnel de l'appareil manducateur | élastome perforant serpigineux,15
+Q1102300,clonorchiase,helminthologiste | infectiologie | parasitologie médicale,angiocholite | cancer | cholécystite | cirrhose | diarrhée | douleur abdominale | fièvre | hépatite | ictère | nausée | pancréatite chronique,11
+Q616066,coarctation de l'aorte,génétique médicale,cardiomégalie | claudication intermittente | céphalée | douleur thoracique | dyspnée | fatigue | perte d'appétit | retard de croissance staturo-pondérale | épistaxis | étourdissement,10
+Q868137,coccidioïdomycose,infectiologie,arthrite | conjonctivite,2
+Q18553712,colite de Crohn,gastro-entérologie,abcès | diarrhée | hémorragie | inflammation,4
+Q574905,colite pseudo-membraneuse,infectiologie,constipation | diarrhée | douleur abdominale | fièvre | ictère | indigestion | nausée | prurit | pyrosis | vomissement,10
+Q777717,coma diabétique,endocrinologie,hyperglycémie | perte de conscience,2
+Q326921,commotion cérébrale,médecine d'urgence | neurologie,céphalée | nausée | saute d'humeur | trouble du sommeil | vision floue,5
+Q4411766,compression du cerveau,neurologie,abcès,1
+Q5151410,comédocarcinome,oncologie,nécrose,1
+Q1910771,conflit fémoro-acétabulaire,rhumatologie,douleur,1
+Q167844,conjonctivite,ophtalmologie,inflammation | œil rouge,2
+Q11491562,conjonctivite aiguë hémorragique,infectiologie,photophobie,1
+Q471521,conjonctivite allergique,allergologie | ophtalmologie,réaction allergique,1
+Q18554031,conjonctivite séreuse non virale,neurologie,inflammation,1
+Q1779300,connectivité,rhumatologie,inflammation,1
+Q18554988,constipation terminale,gastro-entérologie,constipation,1
+Q2117286,Contraction de Braxton Hicks,obstétrique,contraction utérine,1
+Q141268474,convergence spasm,neuro-ophthalmologie | neurologie | psychiatrie,diplopie | vision floue | étourdissement,3
+Q852376,convulsion,neurologie | psychiatrie,spasme,1
+Q134859,coqueluche,infectiologie,apnée | fatigue | fièvre | rhinorrhée | toux | vomissement,6
+Q4865826,"coussinet des phalanges, leuconychie et surdité neurosensorielle",dermatologie,coussinet des phalanges,1
+Q84263196,Covid-19,infectiologie | médecine d'urgence | pneumologie | virologie | épidémiologie,agueusie | anorexie | anosmie | anémie | congestion nasale | conjonctivite | céphalée | diarrhée | douleur abdominale | dysfonction érectile | dyspnée | encéphalite | fatigue | fièvre | frissonnement | hypoxie | hémoptysie | insuffisance respiratoire | lymphopénie | lésion cérébrale | myalgie | nausée | pneumonie virale | psychose | syndrome confusionnel (délirium) | syndrome d'épuisement professionnel | thromboinflammation | toux | trouble neurologique | énanthème,30
+Q1066011,Cowpox,infectiologie | médecine vétérinaire,fièvre légère | vésicule,2
+Q836356,croup,pneumologie | pédiatrie,enrouement | stridor | toux,3
+Q1359898,cryptosporidiose,infectiologie,ascite | diarrhée | déshydratation | fièvre | ictère | nausée | vomissement,7
+Q3008595,cyclosporose,infectiologie,diarrhée | douleur abdominale | déshydratation | flatulence | nausée | syndrome grippal | vomissement,7
+Q246084,cystite,urologie,inflammation,1
+Q1338684,céphalée de tension,neurologie,céphalée,1
+Q1123139,cétose,endocrinologie,Cétonémie | cétonurie,2
+Q221547,Cœnurose,helminthologiste | infectiologie | médecine vétérinaire,ataxie | crise d'épilepsie | cécité | céphalée | examen des signes méningés | exophtalmie | hypercinésie | myalgie | paralysie | parésie | syndrome de Bruns | vomissement,12
+Q1131786,cœur pulmonaire,cardiologie,insuffisance cardiaque,1
+Q113439653,deep endometriosis,médecine de la reproduction,douleur pelvienne | dysménorrhée | dyspareunie | infertilité feminine,4
+Q209647,delirium tremens,psychiatrie,agrypnia excitata,1
+Q30953,dengue,infectiologie,adynamie | adénopathie | anorexie | arthralgie | bradycardie | céphalée | fatigue | hémorragie | myalgie | nausée | vomissement | éruption maculopapuleuse,12
+Q18554268,dengue hémorragique,infectiologie,thrombopénie,1
+Q268667,dermatite atopique,dermatologie,dermatite | réaction allergique,2
+Q681160,dermatomyosite,dermatologie | immunologie | neurologie | rhumatologie,faiblesse musculaire | papules de Gottron | érythème,3
+Q124407,diabète de type 1,diabétologie,amaigrissement | fatigue | polydipsie | polyphagie | polyurie,5
+Q3025883,diabète de type 2,endocrinologie | médecine générale,polydipsie | polyphagie | polyurie,3
+Q220551,diabète insipide,endocrinologie | génétique médicale | neurochirurgie | néphrologie,hyposthénurie | nycturie | polydipsie | polyurie,4
+Q12412172,diabète insipide central,endocrinologie | génétique médicale | neurochirurgie,hyposthénurie | nycturie | polydipsie | polyurie,4
+Q55790157,diabète insipide dipsogénique,endocrinologie,hypervolémie | polydipsie | polyurie | xérostomie,4
+Q55790286,diabète insipide gestationnel,endocrinologie | gynécologie | obstétrique,polydipsie | polyurie,2
+Q2892779,diabète insipide néphrogénique,endocrinologie | génétique médicale | néphrologie | urologie,hyposthénurie | nycturie | polydipsie | polyurie,4
+Q12206,diabète sucré,diabétologie | endocrinologie,polydipsie | polyphagie | polyurie,3
+Q18553209,diarrhée due à une accélération du transit intestinal,gastro-entérologie,diarrhée,1
+Q18554070,diarrhée fonctionnelle,gastro-entérologie,diarrhée,1
+Q18553211,diarrhée inflammatoire,gastro-entérologie,diarrhée,1
+Q1210303,dicrocoeliose,helminthologie | infectiologie,abcès | douleur abdominale | fièvre | hépatomégalie | ictère | nausée | pyrosis | splénomégalie | vertige | vomissement | xérostomie,11
+Q5274956,dientamœbose,infectiologie,crampe abdominale | diarrhée | nausée,3
+Q134649,diphtérie,infectiologie,angine | fièvre | insuffisance cardiaque | mal de gorge | neuropathie périphérique | pseudomembrane | toux aboyante | tuméfaction,8
+Q1227160,diphyllobothriose,helminthologiste | infectiologie,anémie | diarrhée | douleur abdominale | exanthème | nausée,5
+Q444662,dipylidiose,helminthologiste | infectiologie | médecine vétérinaire,diarrhée | douleur abdominale | prurit,3
+Q443929,dirofilariose,infectiologie,fièvre | frissonnement | toux,3
+Q3704805,disforia de xénero en nenos,psychiatrie | psychologie | sexologie,dysphorie | dépression | idée suicidaire | trouble anxieux,4
+Q2140729,distomatose à Fasciolopsis buski,infectiologie,apathie | cachexie | diarrhée | douleur abdominale | dysurie | faim | flatulence | insomnie | nausée | prurit | soif | tuméfaction | vomissement,13
+Q4137692,distomatose à Heterophyes heterophyes,infectiologie,adénopathie | constipation | diarrhée | douleur abdominale,4
+Q18554479,diverticulite du colon,gastro-entérologie,inflammation,1
+Q1066061,diverticulite du sigmoïde,chirurgie générale et digestive | gastro-entérologie,constipation | diarrhée | douleur abdominale | fièvre | melæna | nausée,6
+Q653383,doigt en maillet,chirurgie plastique | médecine d'urgence,contusion | douleur,2
+Q3508658,douleur de la ceinture pelvienne,gynécologie | kinésithérapie | neurologie | obstétrique | orthopédie,Groin Pains | anomalie de la démarche | coxalgie | douleur pelvienne | lombalgie,5
+Q388646,dracunculose,helminthologie | infectiologie | médecine tropicale,fièvre | myalgie | nausée | prurit | urticaire allergique | vomissement,6
+Q129279,dysenterie,infectiologie,diarrhée | diarrhée hémorragique,2
+Q6402731,dysgueusie,neurologie,aigre | goût métallique,2
+Q7316718,dysgénésie réticulaire,hématologie,lymphopénie,1
+Q132971,dyslexie,neuropsychologie | pédiatrie,trouble de la lecture,1
+Q836379,dysphonie,logopédie | neurologie | otorhinolaryngologie,enrouement,1
+Q290620,dysphorie,psychiatrie | psychologie | psychologie clinique,anxiété | insatisfaction | irritabilité | tristesse | état dépressif,5
+Q1049021,dysphorie de genre,psychiatrie | psychologie | sexologie,dysphorie | dépression | idée suicidaire | trouble anxieux,4
+Q1452604,dysplasie polyépiphysaire,génétique médicale,arthralgie,1
+Q1811189,dystocie,gynécologie obstétrique,travail prolongé,1
+Q1399182,dystrophie facio-scapulo-humérale,neurologie,cécité | faiblesse musculaire | pied tombant | scapula ailée | surdité,5
+Q1335642,dystrophie musculaire d'Emery-dreifuss,neurologie,faiblesse musculaire | trouble du rythme cardiaque,2
+Q2484592,dystrophie musculaire de Becker,neurologie,cardiomyopathie | faiblesse musculaire,2
+Q1531322,dystrophie musculaire des ceintures,myologie | neurologie,faiblesse musculaire,1
+Q3042171,dystrophie musculaire oculo-pharyngée,neurologie,dysarthrie | dysphagie | ptosis,3
+Q1860507,dystrophie myotonique de Steinert,neurologie,cardiomyopathie | cataracte | dysphagie | faiblesse musculaire | fonte musculaire | insuffisance respiratoire | stérilité | trouble du rythme cardiaque,8
+Q1154422,déficit d'adhérence leucocytaire,immunologie,retard de la chute du cordon ombilical,1
+Q858426,déficit en 5-alpha-réductase,génétique médicale,ambiguous genitalia,1
+Q30989658,déficit en décarboxylase des acides aminés aromatiques,neurologie,ptosis,1
+Q18555032,déficit en facteur VII,génétique médicale | hématologie,hémorragie,1
+Q4634217,déficit en HMG CoA lyase,pédiatrie,fatigue | vomissement,2
+Q6951345,déficit en N-Acétylglutamate synthase,génétique médicale,hyperammoniémie,1
+Q11773731,dégénérescence de disque intervertébral,rhumatologie,déshydratation,1
+Q1132536,délire de persécution,psychiatrie | psychologie clinique,anxiété | dépression | mal-être | rumination | trouble du sommeil,5
+Q1331905,démence parkinsonienne et démence à corps de Lewy,neurologie | psychiatrie,démence | hallucination | syndrome parkinsonien,3
+Q583908,démence vasculaire,neurologie | psychiatrie,démence,1
+Q108197277,Dépendance aux médicaments sur ordonnance,psychiatrie,syndrome de sevrage,1
+Q42844,dépression,psychiatrie,syndrome dépressif,1
+Q2657784,dépression atypique,psychiatrie,hypersomnie | paralysie,2
+Q935129,dépression post-partum,psychiatrie | psychologie clinique | psychothérapie,fatigue | pleurs | état dépressif,3
+Q6817452,détresse mentale,psychiatrie | psychologie,anorexie | anxiété | compulsion | céphalée | fatigue | saute d'humeur | sommeil perturbé | état dépressif,8
+Q27675547,effets secondaires du vaccin antivariolique,infectiologie,exanthème | fièvre,2
+Q2845432,ehrlichiose,infectiologie,céphalée | fatigue | fièvre | myalgie | nausée | toux,6
+Q2298020,elliptocytose héréditaire,hématologie,Ovalocyte,1
+Q220570,embolie pulmonaire,cardiologie | hématologie | pneumologie,Hampton hump | signe de Westermark,2
+Q1412866,emphysème sous-cutané,médecine d'urgence,douleur thoracique | dysphagie | dyspnée | sibilance,4
+Q4896104,empoisonnement aigü au béryllium,médecine d'urgence,amaigrissement | anorexie | bérylliose | cyanose | dermatite | douleur thoracique | fatigue | hippocratisme digital | insuffisance de la valvule pulmonaire | irritation oculaire | toux,11
+Q18386197,empoisonnement à l'acide sulfurique,toxicologie,bronchite | brûlure | brûlures oculaires | conjonctivite | dermatite | dermatite irritative | emphysème pulmonaire | irritation de la gorge | irritation nasale | irritation oculaire | stomatite | érosion dentaire | œdème du poumon,13
+Q7030575,empoisonnement à la nicotine,médecine d'urgence,agitation | agitation psychomotrice | allergie | altération visuelle | apnée | asthénie | ataxie | bradycardie | bronchorrhée | brûlure chimique | choc circulatoire | coma | confusion | convulsion | céphalée | diarrhée | douleur abdominale | dyspnée | fasciculation | fatigue | hallucination sonore | hyperpnée | hypersialorrhée | hypertension artérielle | hyporéflexie | hypotension artérielle | hypotonie musculaire | hypoventilation | irritation | maladie du tabac vert | nausée | paralysie | surdité | tachycardie | tachypnée | tremblement | trouble de l'équilibre | trouble du rythme cardiaque | vasoconstriction | vomissement | érythème | étourdissement,42
+Q5596834,encéphalite amibienne granulomateuse,infectiologie,coma | céphalée | examen des signes méningés | fièvre | nausée | paralysie | spasme | vomissement,8
+Q60250812,Encéphalite de Californie,infectiologie,altération de l'état de conscience | conjonctivite | céphalée | désorientation | examen des signes méningés | exanthème | fièvre | nausée | parésie | spasme | vomissement,11
+Q2713959,encéphalite de La Crosse,infectiologie,coma | paralysie,2
+Q782898,encéphalite de la Murray Valley,infectiologie,Phase prodromique | altération de l'état de conscience | coma | confusion | céphalée | délire | examen des signes méningés | faiblesse musculaire | fièvre | irritabilité | malaise | nausée | somnolence | sopor | tremblement | vomissement,16
+Q567660,encéphalite de Saint-Louis,infectiologie,coma | confusion | céphalée | examen des signes méningés | fièvre | myalgie | nausée | vertige | vomissement,9
+Q18555063,encéphalite du Nil occidental,infectiologie,coma | confusion | faiblesse musculaire | paralysie,4
+Q738292,encéphalite japonaise,infectiologie,arthralgie | coma | confusion | céphalée | fatigue | fièvre | frissonnement | raideur de la nuque | vomissement,9
+Q7235947,encéphalite Powassan,infectiologie,altération de l'état de conscience | ataxie | attaque | coma | céphalée | fièvre | frissonnement | hémiparésie | mal de gorge | myalgie | somnolence | spasme | vomissement,13
+Q326663,encéphalite à tiques,infectiologie | neurologie,coma | confusion | céphalée | examen des signes méningés | fatigue | fièvre | myalgie | nausée | paralysie | photophobie | somnolence | syndrome méningé | vomissement,13
+Q18924547,encéphalite à virus Rocio,infectiologie,Phase prodromique | coma | conjonctivite | céphalée | examen des signes méningés | fièvre | nausée | vomissement,8
+Q18553951,encéphalite équine de l'Est,infectiologie,céphalée | examen des signes méningés | fièvre | frissonnement | paralysie | parésie | spasme | vomissement,8
+Q18553953,encéphalite équine de l'Ouest,infectiologie,ataxie | céphalée | dysarthrie | faiblesse musculaire | fièvre | indigestion | malaise | myalgie | nausée | nystagmus | paralysie | somnolence | tremblement | vomissement,14
+Q18558169,encéphalite équine vénézuélienne,infectiologie,coma | céphalée | diarrhée | diplopie | encéphalomyélite | examen des signes méningés | fièvre | mal de gorge | malaise | myalgie | nausée | parésie | photophobie | réflexe cutané plantaire | spasme | tremblement | vomissement,17
+Q424242,encéphalomyélite aiguë disséminée,neurologie,inflammation,1
+Q21014159,encéphalomyélite myalgique,neurologie,fatigue | infection à virus d'Epstein Barr | malaise post-effort | problème de concentration | syndrome de tachycardie orthostatique posturale | syndrome grippal,6
+Q209733,encéphalomyélite myalgique/syndrome de fatigue chronique,endocrinologie | immunologie | infectiologie | médecine physique et de réadaptation | neurologie | pédiatrie | rhumatologie | épidémiologie,autre | fatigue | malaise post-effort | trouble du sommeil,4
+Q642548,encéphalopathie hépatique,gastro-entérologie | hépatologie | infectiologie | médecine d'urgence,coma | euphorie | fœtor hepaticus | ictère | tremblement,5
+Q154666,encéphalopathie spongiforme bovine,médecine | médecine vétérinaire | neurologie | pathogenèse | pathologie | épidémiologie,anxiété | ataxie | hypersensibilité,3
+Q17119115,encéphalopathie éthylmalonique,neurologie,diarrhée,1
+Q82504,endocardite,cardiologie | maladie infectieuse,inflammation,1
+Q2271749,endocardite bactérienne subaiguë,cardiologie,endocardite,1
+Q4710773,endocardite de Loeffler,cardiologie,endocardite,1
+Q2450598,endocardite infectieuse,cardiologie | infectiologie,fièvre,1
+Q73518,endocardite non infectieuse,cardiologie,endocardite,1
+Q113664490,endometriosis-related infertility,gynécologie,asymptomatique | infertilité feminine | stérilité d'origine tubaire,3
+Q1294912,endophtalmie,ophtalmologie,inflammation,1
+Q3055380,entéropathie,gastro-entérologie,inflammation,1
+Q21281026,entéropathie environnementale,gastro-entérologie,trouble spécifique du développement,1
+Q18557538,episclérite nodulaire,neurologie,inflammation,1
+Q14509067,exanthème,médecine générale,exanthème,1
+Q720032,exanthème subit,infectiologie,convulsion hyperthermique | fièvre | éruption maculopapuleuse,3
+Q18199350,Faroe SUCLA2 related disease,génétique médicale,faiblesse musculaire | surdité,2
+Q6972442,fasciolose,helminthologiste | infectiologie,anémie | diarrhée | douleur abdominale | exanthème | fièvre | hépatomégalie | ictère | left upper quadrant abdominal rigidity | nausée | vomissement,10
+Q815819,fibrillation atriale,cardiologie,palpitation,1
+Q5432932,fibrillation auriculaire familiale,génétique médicale,fibrillation atriale,1
+Q848662,fibrillation ventriculaire,cardiologie,syncope | vertige,2
+Q1410831,fibrodysplasie ossifiante progressive,rhumatologie,ankylose | difformité | myosite ossifiante circonscrite,3
+Q4097126,filariose de Malaisie,infectiologie | médecine tropicale,cellulite | fièvre | lymphadénite | lymphangite | éléphantiasis | érythème,6
+Q192100,filariose lymphatique,infectiologie,abcès | lymphadénite | éléphantiasis | épididymite,4
+Q16333787,filariose à Wuchereria bancrofti,infectiologie,filariose lymphatique | lymphœdème | œdème,3
+Q152401,fièvre aphteuse,infectiologie | médecine vétérinaire,aphte | arthralgie | empoisonnement | fièvre | myalgie | salivation,6
+Q895297,fièvre boutonneuse méditerranéenne,infectiologie,Papule | adénopathie | empoisonnement | exanthème | fièvre | foyer d'infection primaire | macule | ulcère,8
+Q474070,fièvre d'Oropuche,infectiologie,arthralgie | fièvre | frissonnement | vomissement,4
+Q3798547,fièvre de Haverhill,infectiologie,arthrite | exanthème | fièvre | frissonnement | myalgie,5
+Q1432397,fièvre de Kyasanur,infectiologie,adénopathie | conjonctivite | céphalée | diarrhée | douleur abdominale | déshydratation | examen des signes méningés | fièvre | frissonnement | hyperesthésie | hémorragie | hémorragie interne | myalgie | nausée | photophobie | toux | tremblement | vomissement,18
+Q55411849,fièvre de la forêt de Semliki,infectiologie,arthralgie | céphalée | examen des signes méningés | exanthème | fièvre légère | myalgie | nausée | vomissement,8
+Q326638,fièvre de la vallée du Rift,infectiologie | médecine vétérinaire,altération de l'état de conscience | arthralgie | coagulation intravasculaire disséminée | cécité | céphalée | exanthème | fièvre | hémorragie | hémorragie gastrique | ictère | melæna | myalgie | méningoencéphalite | ménorragie | raideur de la nuque | syndrome méningé | épistaxis,17
+Q706845,fièvre de Lassa,infectiologie,alopécie | ascite | choc hypovolémique | coagulation intravasculaire disséminée | conjonctivite | céphalée | diarrhée | douleur abdominale | douleur thoracique | empoisonnement | encéphalopathie | exanthème | fatigue | fièvre | hyperémie | hémorragie | hémorragie interne | hépatite | insuffisance cardiaque | mal de gorge | myalgie | myocardite | nausée | pleurésie | pneumonie | stomatite | surdité | toux | vertige | vomissement | œdème | œdème du poumon,32
+Q167264,fièvre de Marbourg,infectiologie,empoisonnement,1
+Q3073143,fièvre de Mayaro,infectiologie,arthralgie | céphalée | douleur | fièvre | étourdissement | œdème,6
+Q2744442,fièvre de Ross River,infectiologie,adénopathie | arthralgie | diarrhée | empoisonnement | encéphalite | exanthème | fièvre | glomérulonéphrite | mal de gorge | méningite | rhinite | splénomégalie,12
+Q393477,fièvre des tranchées,infectiologie | médecine militaire,adénopathie | angiomatose bacillaire | arthralgie | céphalée | diarrhée | examen des signes méningés | exanthème | faiblesse musculaire | fièvre | hypersomnie | hypotension artérielle | hépatomégalie | myalgie | somnolence | splénomégalie | tachycardie | tuméfaction | vomissement,18
+Q11627066,fièvre du Nil occidental,infectiologie | neurologie,adénopathie | arthralgie | conjonctivite | céphalée | empoisonnement | encéphalite | examen des signes méningés | exanthème | fièvre | hépatomégalie | myalgie | méningite | méningoencéphalite | nausée | splénomégalie | vomissement,16
+Q2700304,fièvre hémorragique bolivienne,infectiologie,alopécie | exanthème | fièvre | hémorragie | hémorragie digestive | épistaxis,6
+Q2583514,fièvre hémorragique d'Argentine,infectiologie,anorexie | céphalée | exanthème | fatigue | fièvre | hémorragie gastrique | insuffisance rénale aiguë | leucopénie | malaise | melæna | myalgie | nausée | pétéchie | stupeur | syndrome confusionnel (délirium) | thrombopénie | vomissement | œdème du poumon,18
+Q2741820,fièvre hémorragique d'Omsk,infectiologie,céphalée | exanthème | fièvre | frissonnement | myalgie | nausée | syndrome méningé | étourdissement,8
+Q1077505,fièvre hémorragique de Crimée-Congo,infectiologie,anurie | arthralgie | bradycardie | conjonctivite | cyanose | céphalée | douleur abdominale | examen des signes méningés | fièvre | flatulence | frissonnement | hyperémie | hypotension artérielle | hématome | hématurie | hémorragie | ictère | mal de dos | myalgie | nausée | oligurie | pétéchie | tachycardie | vomissement | xérostomie,25
+Q4958833,fièvre hémorragique du Brésil,infectiologie,conjonctivite | céphalée | diarrhée | douleur abdominale | fièvre | hémorragie | mal de gorge | myalgie | pétéchie,9
+Q51993,fièvre hémorragique Ebola,infectiologie,arthralgie | conjonctivite | céphalée | diarrhée | douleur abdominale | dyspnée | empoisonnement | exanthème | fièvre | hémorragie | hémorragie interne | myalgie | nausée | vomissement | épistaxis,15
+Q3067401,fièvre hémorragique vénézuelienne,infectiologie,adénopathie | arthralgie | crampe | céphalée | douleur abdominale | faiblesse musculaire | fièvre | hématémèse | hémorragie | mal de gorge | malaise | melæna | ménorragie | nausée | pétéchie | vomissement | épistaxis,17
+Q18324719,fièvre hémorragique à arénavirus Chapare,infectiologie,arthralgie | choc circulatoire | hémorragie | vomissement,4
+Q9002005,fièvre hémorragique à Hantavirus avec syndrome renal,infectiologie | néphrologie,arthralgie | céphalée | douleur | douleur abdominale | fièvre | hood symptom | hémorragie | hémorragie interne | insuffisance rénale aiguë | myalgie | photophobie | protéinurie | pétéchie,13
+Q154874,fièvre jaune,infectiologie,anorexie | anurie | arthralgie | asthénie | bradycardie | choc circulatoire | cyanose | céphalée | douleur abdominale | douleur générale | encéphalite | fatigue | fièvre | frissonnement | hyperémie | hypotension artérielle | hémorragie | hépatomégalie | ictère | mal de dos | melæna | myalgie | nausée | oligurie | signe de Faget | splénomégalie | tachycardie | tuméfaction | urines sombres | vomissement,30
+Q18553284,fièvre O'Nyong'Nyong,infectiologie,arthralgie | exanthème | fièvre | lymphadénite | polyarthrite,5
+Q1813747,fièvre pappataci,infectiologie,Pick symptom | Taussig symptoms | arthralgie | asthénie | bradycardie | conjonctivite | céphalée | examen des signes méningés | exanthème | fièvre | foyer d'infection primaire | frissonnement | hood symptom | hypotension artérielle | insomnie | irritabilité | myalgie | photophobie | tachycardie,19
+Q705906,fièvre paratyphoïde,infectiologie,bradycardie | constipation | céphalée | diarrhée | empoisonnement | exanthème | fièvre | hépatomégalie | pharyngite | splénomégalie,10
+Q744387,fièvre pourprée des montagnes Rocheuses,infectiologie,Phase prodromique | arthralgie | coma | constipation | céphalée | exanthème | fièvre | foyer d'infection primaire | frissonnement | gangrène | hyperesthésie | hémiparésie | ictère | insomnie | myalgie | nausée | paralysie | paraplégie | splénomégalie | tachycardie | vomissement | épistaxis,22
+Q4958908,fièvre purpurique brésilienne,infectiologie,choc septique | conjonctivite | cyanose | douleur abdominale | exanthème | fièvre | nausée | nécrose | vomissement,9
+Q3278145,fièvre périodique autoinflammatoire,rhumatologie,Fièvre récurrente,1
+Q164818,fièvre Q,infectiologie,anorexie | bradycardie | céphalée | diarrhée | douleur abdominale | douleur musculo-squelettique secondaire chronique | douleur thoracique | exanthème | fièvre | frissonnement | hypotension artérielle | hépatomégalie | nausée | splénomégalie | toux | vomissement,16
+Q18371582,fièvre scarlatiniforme d'Extrême-Orient,infectiologie,arthralgie | conjonctivite | céphalée | diarrhée | douleur abdominale | exanthème | fièvre | hood symptom | hépatite | hépatomégalie | ictère | langue framboisée | ligne de Pastia | maladie de Reiter | myalgie | myocardite | méningite | nausée | pharyngite | pâleur périorale | splénomégalie | syndrome papulo-purpurique en gants et chaussettes | vomissement | érythème noueux,24
+Q83319,fièvre typhoïde,infectiologie,altération de l'état de conscience | bradycardie | constipation | céphalée | diarrhée | distension abdominale | délire | exanthème | fatigue | fièvre continue | hémorragie digestive | hépatomégalie | insomnie | leucopénie | perforation intestinale | prostration | pâleur | splénomégalie,18
+Q8071861,fièvre Zika,infectiologie | néonatalogie,arthralgie | conjonctivite | céphalée | fièvre | éruption maculopapuleuse,5
+Q4690047,fièvre à tiques africaine,infectiologie,céphalée | exanthème | fièvre | myalgie,4
+Q319315,fièvre à tiques du Colorado,infectiologie,céphalée | douleur abdominale | encéphalite | exanthème | fièvre | frissonnement | hyperémie | mal de gorge | myalgie | méningite | méningoencéphalite | nausée | photophobie | signe de Faget | vomissement,15
+Q6587253,fièvre à tiques du Queensland,infectiologie,adénopathie | céphalée | exanthème | foyer d'infection primaire | gonflement des ganglions lymphatiques | myalgie,6
+Q18554418,fièvres récurrentes à poux,infectiologie,adénopathie | arthralgie | exanthème | fièvre | frissonnement | hépatosplénomégalie | ictère | insomnie | myalgie | tachycardie | tachypnée | vomissement,12
+Q18554419,fièvres récurrentes à tiques,infectiologie,adénopathie | arthralgie | bradycardie | céphalée | diarrhée | douleur abdominale | fièvre | foyer d'infection primaire | hépatomégalie | myalgie | tachypnée,11
+Q110391577,Flurona,médecine générale | pneumologie | poussée épidémique,céphalée | diarrhée | étourdissement,3
+Q1435409,folie à deux,psychiatrie | psychologie clinique,délire,1
+Q5940721,fracture de l'humérus,orthopédie,contusion | douleur | tuméfaction,3
+Q72296483,fracture de l'orteil,médecine d'urgence,contusion | douleur | tuméfaction | érythème,4
+Q5018671,fracture du calcanéum,médecine d'urgence | orthopédie | traumatologie,contusion cérébrale | douleur,2
+Q1320101,fracture du nez,médecine d'urgence,hématome | épistaxis | œdème,3
+Q1453590,freemartinisme,endocrinologie | gynécologie obstétrique | médecine vétérinaire,androgynie,1
+Q2106232,frissons postopératoires,anesthésie,frisson,1
+Q5064113,fuite de liquide céphalo-rachidien,neurologie,cranial nerve dysfunction | céphalée posturale orthostatique | hypotension intracrânienne | radicular arm pain | raideur de la nuque,5
+Q774483,galactosémie,endocrinologie,intolérance au lactose,1
+Q167178,gale,infectiologie,exanthème | fièvre | prurit,3
+Q1495085,gangrène gazeuse,infectiologie,gangrène | nécrose,2
+Q156103,gastro-entérite,gastro-entérologie,crampe abdominale | diarrhée | douleur abdominale | déshydratation | fièvre | nausée | pyrosis | spasme | vomissement,9
+Q7370337,gastro-entérites à Rotavirus,infectiologie | intensive therapy | pédiatrie,diarrhée | déshydratation | déshydratation terminale | vomissement,4
+Q943897,gastroparésie,gastro-entérologie,constipation | diarrhée | douleur abdominale | incontinence fécale | métaplasie de l'œsophage | nausée | satiété | vomissement,8
+Q326071,giardiase,gastro-entérologie | infectiologie,anorexie | asthénie | ballonnement abdominal | céphalée | diarrhée | douleur abdominale | fatigue physiologique | flatulence | irritabilité | nausée | trouble du sommeil | vomissement,12
+Q605006,glomérulonéphrite,néphrologie,néphrite,1
+Q230047,glossodynie,stomatologie,sensation de brûlure de la bouche,1
+Q2665559,gnathostomose,helminthologie | infectiologie,dermatite | douleur abdominale | nausée | tuméfaction | vomissement,5
+Q7830387,goitre nodulaire toxique,endocrinologie,adénome toxique,1
+Q101896,gonorrhée,dermatologie | gynécologie | urologie,douleur | douleur pelvienne | douleur testiculaire | dysurie | excrétion | sécrétion vaginale,6
+Q133087,goutte,médecine interne | rhumatologie,arthralgie | hydarthrose | tuméfaction | érythème,4
+Q16968974,Gouverneur’s syndrome,urologie,dysurie | pollakiurie | sensation de vidange incomplète de la vessie | épreinte,4
+Q1161568,granulomatose avec polyangéite,immunologie | médecine interne,Inflammation granulomateuse | vascularite,2
+Q5509166,granulome de Majocchi,dermatologie,abcès,1
+Q2840,grippe,infectiologie | médecine d'urgence | médecine générale | pneumologie,congestion nasale | céphalée | douleur thoracique | fatigue | fièvre | frissonnement | myalgie | rhinite | toux,9
+Q43987,grippe aviaire,pneumologie,diarrhée | nausée | pneumonie | vomissement,4
+Q36855,grippe porcine,infectiologie | pneumologie,diarrhée | léthargie | nausée | vomissement,4
+Q207087,grossesse extra-utérine,gynécologie | maïeutique,douleur abdominale,1
+Q1010522,gymnophobie,psychiatrie,vêtement,1
+Q7624020,Harper australien,médecine équine,contraction clonique,1
+Q113976884,heat-related death,pathologie légale,arrêt respiratoire,1
+Q138495840,hereditary central diabetes insipidus,endocrinologie | génétique médicale,hyposthénurie | nycturie | polydipsie | polyurie,4
+Q6473911,herpès,dermatologie | infectiologie,adénopathie | exanthème | fièvre légère | phlyctène,4
+Q2364836,herpès labial,dermatologie | infectiologie,lip  blister,1
+Q2298953,hidrosadénite,dermatologie,inflammation,1
+Q1567709,hitting the wall,médecine du sport,fatigue physiologique,1
+Q11790313,hydarthrose intermittente,rhumatologie,hydarthrose,1
+Q1712213,hydrocéphalie à pression normale,neurologie,altération de l'état de concience | anomalie de la démarche | incontinence urinaire,3
+Q12656487,hyménolépiase,helminthologiste | infectiologie,amaigrissement | anorexie | anémie | asthénie | céphalée | diarrhée | douleur abdominale | nausée | vomissement,9
+Q1421356,hyperacousie,otorhinolaryngologie,anxiété | otalgie | phonophobie | stress | état dépressif,5
+Q331231,hyperactivité vésicale,urologie,impériosité urinaire,1
+Q1640868,hyperammoniémie,endocrinologie,confusion | céphalée | léthargie | troubles d'élocution | vomissement,5
+Q10529545,hyperandrogénisme,endocrinologie | gynécologie obstétrique,acné | aménorrhée | hirsutisme,3
+Q935781,hyperhidrose,dermatologie,sudation abondante,1
+Q3801522,hyperostose corticale infantile,rhumatologie,irritabilité,1
+Q761862,hypersialorrhée,chirurgie maxillo-faciale,baver,1
+Q3144201,hypersomnolence,neurologie,somnolence,1
+Q473456,hypersplénisme,hématologie,splénomégalie,1
+Q124604,hypertension portale,gastro-entérologie | procédures de chirurgie digestive,ascite | ictère | splénomégalie | télangiectasie,4
+Q242165,hyperthermie,médecine de soins critiques,crise d'épilepsie | insuffisance d'organe | perte de conscience | syndrome confusionnel (délirium) | tachycardie | tachypnée | épuisement dû à la chaleur,7
+Q1585081,hyperthermie maligne,médecine d'urgence | neurologie,acidose | hypercapnie | hyperkaliémie | hyperthermie | myoglobinurie,5
+Q3100515,hypervitaminose A,endocrinologie,left upper quadrant abdominal rigidity,1
+Q1641171,hypervitaminose D,endocrinologie,nausée,1
+Q391556,hyperémèse gravidique,obstétrique,hyperémèse,1
+Q928697,hypoacousie,otorhinolaryngologie,acouphène | anxiété | ear fullness | surdité | vertige | état dépressif,6
+Q1472818,hypogammaglobulinémie commune d'expression variable,immunologie,fatigue | hyperplasie nodulaire régénérative | hypogammaglobulinémie | maladie opportuniste | malignité,5
+Q202758,hypoglycémie,endocrinologie,tremblement,1
+Q1698867,hypoplasie pontocérébelleuse,neurologie,handicap mental,1
+Q3801629,hypoprothrombinémie,hématologie,hémorragie,1
+Q1641429,hyposthénurie,endocrinologie | néphrologie,valeur anormalement basse,1
+Q1036696,hypothermie,médecine d'urgence,hallucination,1
+Q973425,hémicrânie continue,neurologie,céphalée,1
+Q1642147,hémoglobinopathie,hématologie,abnormal hemoglobins,1
+Q1393718,hémophilie C,hématologie,hémorragie,1
+Q55042693,hémorragie des ganglions de la base,cardiologie | neurologie,céphalée | dyskinésie | hémiparésie,3
+Q2915863,hémorragie digestive basse,gastro-entérologie,hématochézie,1
+Q693442,hémorragie méningée,médecine d'urgence | neurochirurgie | neurologie,photophobie | vomissement,2
+Q1052626,hémosidérose pulmonaire idiopathique,pneumologie,hémorragie,1
+Q131742,hépatite,gastro-entérologie | hépatologie | infectiologie | médecine générale | médecine interne,anorexie | douleur abdominale | hépatomégalie | ictère,4
+Q157661,hépatite A,infectiologie,anorexie | fièvre | hépatite | ictère | malaise | nausée | vomissement,7
+Q786844,hépatite auto-immune,gastro-entérologie | hépatologie,hépatite,1
+Q6853,hépatite B,infectiologie,anorexie | arthralgie | encéphalopathie hépatique | hépatite | hépatomégalie | ictère | insuffisance hépatique aiguë | nausée | splénomégalie | vomissement,10
+Q154869,hépatite C,infectiologie,Caput medusae | anorexie | arthralgie | ascite | cancer | cirrhose | douleur abdominale | fatigue | hypertension portale | hépatite | ictère | nausée | vomissement,13
+Q327281,hépatite D,infectiologie,hépatite | nausée | surinfection,3
+Q326643,hépatite E,gynécologie obstétrique | infectiologie,anorexie | encéphalopathie hépatique | fièvre | hépatite | hépatomégalie | ictère | insuffisance hépatique aiguë | nausée | vomissement,9
+Q3796380,iléite,gastro-entérologie,diarrhée | douleur abdominale,2
+Q5913958,iléo-colite,gastro-entérologie,diarrhée,1
+Q5915679,infarctus avec sus-décalage du segment ST,cardiologie,sus-décalage du segment ST,1
+Q18555944,infarctus du cerveau,cardiologie | neurologie,nécrose,1
+Q12152,infarctus du myocarde,cardiologie,angine de poitrine | douleur thoracique | nausée | nécrose | œdème,5
+Q18553285,infection au virus de la forêt de Barmah,infectiologie,arthralgie | arthrite | céphalée | fatigue | fièvre | myalgie,6
+Q5160416,infection congénitale à cytomégalovirus,pédiatrie,convulsion | exanthème | hépatomégalie,3
+Q4454701,infection par Taenia saginata,infectiologie,constipation | diarrhée | douleur abdominale | nausée,4
+Q12198,infection sexuellement transmissible,infectiologie,amaigrissement soudain | dyspnée | encéphalomyélite myalgique/syndrome de fatigue chronique | hémorragie | infection | lésion | tumeur,7
+Q221668,infection urinaire,urologie,douleur abdominale | dysurie | fièvre | hématurie | pollakiurie,5
+Q56244339,infection à Bocavirus,infectiologie,diarrhée | fièvre | pneumonie atypique | rhinorrhée | toux | éternuement,6
+Q2076966,infection à cytomégalovirus,gynécologie obstétrique | infectiologie | pédiatrie,adénopathie | angine | anémie | cataracte | colobome | cécité | exanthème | fibrose pulmonaire | fièvre | holoproencéphalie | hydrocéphalie | hépatomégalie | ictère | maladie congénitale | microcéphalie | neuropathie périphérique | parotidite | pharyngite | rétinite | syndactylie | syndrome de Guillain-Barré | thrombopénie,22
+Q4143044,infection à Gongylonema pulchrum,helminthologiste | infectiologie,anorexie | douleur | glossite | laryngite | pharyngite | stomatite,6
+Q21774074,infection à herpèsvirus humain type 6,infectiologie | pédiatrie,adénopathie | crise d'épilepsie | exanthème | fièvre | érythème,5
+Q21774070,infection à herpèsvirus humain type 7,infectiologie,exanthème,1
+Q18975234,infection à herpèsvirus humain type 8,infectiologie | oncologie,adénopathie | amaigrissement | anasarque | anorexie | ascite | exanthème | fièvre | hépatite | hépatomégalie | lymphome | maladie de Kaposi | splénomégalie | thrombopénie | tuméfaction | épanchement pleural,15
+Q18924544,infection à Mansonella streptocerca,infectiologie | médecine tropicale,dépigmentation | exanthème | prurit,3
+Q79054860,infection à Mycoplasma pneumoniae,infectiologie | pneumologie,arthralgie | bronchite | céphalée | douleur | fatigue | fièvre | malaise | rhinorrhée | toux,9
+Q56634075,infection à métapneumovirus,infectiologie | médecine générale | pneumologie | pédiatrie,bronchiolite | congestion nasale | dyspnée | empoisonnement | fièvre | pneumonie | rhinite | rhinorrhée | toux | éternuement,10
+Q22461944,infection à rhinovirus,infectiologie | médecine générale | otorhinolaryngologie,congestion nasale | rhinorrhée | éternuement,3
+Q55787600,infection à virus Hendra,infectiologie,insuffisance rénale | mal de gorge | méningite | syndrome grippal | toux,5
+Q53926008,infection à virus Nipah,infectiologie,coma | céphalée | douleur abdominale | dyspnée | fièvre | nausée | somnolence | toux | trouble du sommeil | vomissement,10
+Q18554367,infection à virus respiratoire syncytial,infectiologie | pédiatrie,apnée | bronchite | congestion nasale | cyanose | dyspnée | fièvre légère | rhinorrhée | toux | éternuement,9
+Q18554757,infections à Dipetalonema,infectiologie,nécrose,1
+Q19000403,infections à entérovirus,cardiologie | infectiologie | neurologie | pédiatrie,aphte | conjonctivite | céphalée | diarrhée | examen des signes méningés | exanthème | fièvre | laryngite | mal de gorge | myalgie | paralysie | parésie | pharyngite | somnolence | spasme | stomatite | érosion,17
+Q18555383,infections à haemonchus,infectiologie,diarrhée,1
+Q18553869,infections à Legionella,infectiologie | pneumologie,diarrhée,1
+Q4459615,infections à Toxascaris leonina,infectiologie,diarrhée | vomissement,2
+Q52440562,infections à virus Sindbis,infectiologie,arthralgie | examen des signes méningés | exanthème | fièvre | myalgie,5
+Q210427,infirmité motrice cérébrale,neurologie | pédiatrie,rigidité musculaire | spasme | tic | trouble de la parole | équinisme,5
+Q4813631,infirmité motrice cérébrale dyskinétique,neurologie,athétose,1
+Q18554039,inflammation aiguë de l'orbite,neurologie,inflammation,1
+Q6931269,inflammation de la muqueuse,gastro-entérologie,inflammation,1
+Q337554,insolation,médecine d'urgence,confusion | nausée | syndrome confusionnel (délirium) | étourdissement,4
+Q862872,insomnie fatale familiale,hypnologie | neuropathologie | psychiatrie,agrypnia excitata | anxiété généralisée | crise de panique | démence | fièvre | hallucination | hypertension artérielle | insomnie | phobie | vieillissement,10
+Q181754,insuffisance cardiaque,cardiologie,anasarque | ascite | dyspnée | fatigue | œdème,5
+Q19000661,insuffisance cardiaque congestive,cardiologie,insuffisance cardiaque,1
+Q18554702,insuffisance cardiaque rhumatismale,cardiologie,insuffisance cardiaque,1
+Q17326470,insuffisance cardiaque systolique,cardiologie,insuffisance cardiaque,1
+Q3799239,insuffisance cardiaque à fraction d'éjection préservée,cardiologie,insuffisance cardiaque,1
+Q1780241,insuffisance tricuspide,cardiologie,insuffisance cardiaque,1
+Q219223,intolérance au lactose,endocrinologie,ballonnement abdominal | borborygme | diarrhée | douleur abdominale | flatulence,5
+Q272002,intoxication alimentaire,toxicologie médicale,céphalée | diarrhée | douleur abdominale | empoisonnement | vomissement,5
+Q5138720,intoxication au cobalt,médecine d'urgence,amaigrissement | asthme | dermatite | dyspnée | fibrose nodulaire progressive | hypersensibilité respiratoire | insuffisance pulmonaire | sibilance | toux,9
+Q883082,intoxication au cyanure,médecine d'urgence,convulsion,1
+Q408089,intoxication au mercure,médecine d'urgence,altération visuelle | amaigrissement | anorexie | asthénie | bronchite | crampe abdominale | céphalée | dermatite irritative | dermite de contact | diarrhée | douleur thoracique | dysgueusie | dysphagie | dyspnée | exanthème | fatigue | hypertension artérielle | indécision | insomnie | insuffisance respiratoire | insuffisance rénale chronique | irritabilité | irritation | irritation oculaire | néphropathie | pneumopathie chimique | protéinurie | salivation | stomatite | tachycardie | toux | tremblement | trouble gastro-intestinal | œdème du poumon,34
+Q125367,intoxication au monoxyde de carbone,médecine d'urgence,angine de poitrine | confusion | cyanose | céphalée | fatigue | hallucination | nausée | sous-décalage du segment ST | syncope | tachypnée | étourdissement,11
+Q3631225,intoxication au méthanol,médecine d'urgence,acidose métabolique | agitation psychomotrice | altération de l'état de concience | altération visuelle | amnésie | anorexie | arrêt respiratoire | ataxie | bradycardie | coma | confusion | convulsion | cécité | céphalée | dermatite | dermatite irritative | diarrhée | douleur | douleur abdominale | douleur oculaire | dépression du système nerveux central | déséquilibres hydro-électrolytiques | hallucination | handicap visuel | hypotension artérielle | hématurie | hémorragie digestive | insuffisance cardiaque | insuffisance respiratoire | insuffisance rénale | irritation | irritation des voies respiratoires supérieures | irritation oculaire | manie | mydriase | nausée | neuropathie optique | pancréatite | photophobie | rhabdomyolyse | somnolence | tachycardie | tachypnée | vision floue | vomissement | étourdissement | œil rouge,47
+Q2572879,intoxication au paracétamol,médecine d'urgence | toxicologie,coagulopathie | douleur abdominale | encéphalopathie hépatique | ictère | nausée,5
+Q374832,intoxication au thallium,médecine d'urgence,acné | alopécie | altération visuelle | anomalie de la couleur des urines | anorexie | asthénie | atteinte cardiaque | coma | convulsion | céphalée | douleur | hypersialorrhée | hypertension artérielle | hémolyse | inflammation | insuffisance respiratoire | irritation oculaire | lésion des nerfs | myalgie | nausée | néphropathie | syndrome confusionnel (délirium) | tachycardie | trouble du rythme cardiaque | vomissement | xérodermie,26
+Q3153686,intoxication au toluène,médecine d'urgence,anxiété | confusion | céphalée | dermatite | euphorie | fatigue | fatigue musculaire | hépatotoxicité | insomnie | irritation nasale | irritation oculaire | larmoiement | mydriase | néphropathie | paresthésie | étourdissement,16
+Q730249,intoxication à l'arsenic,médecine d'urgence,asthénie | choc circulatoire | dermatite | diarrhée | douleur abdominale | dyspnée | déshydratation | gastro-entérite | hyperpigmentation | irritation des voies respiratoires | mal de gorge | nausée | neuropathie périphérique | perte de conscience | toux | ulcération du septum nasal | vomissement | érythème | œil rouge,19
+Q7807844,intoxication à l'étain,médecine d'urgence | toxicologie,dermatite irritative | irritation des voies respiratoires | irritation oculaire,3
+Q7625508,intoxication à la strychnine,médecine d'urgence,acidose métabolique | acidose respiratoire | agitation | agitation psychomotrice | anxiété | arrêt cardiorespiratoire | contractures tétaniques | convulsion | crampe | cyanose | diaphorèse | exophtalmie | hyperleucocytose | hyperréflexie | hypertension artérielle | hyperthermie | hypervigilance | insuffisance respiratoire | lésion cérébrale | mydriase | myoglobinurie | nausée | nystagmus | néphropathie | opisthotonos | raideur | raideur de la nuque | rhabdomyolyse | rigidité des muscles faciaux | rire sardonique | spasme | syndrome de défaillance multiviscérale | tachycardie | tachypnée | trismus | vomissement,36
+Q1424612,invagination intestinale,chirurgie générale et digestive | gastro-entérologie | pédiatrie,douleur abdominale | vomissement,2
+Q145790,iridocyclite,ophtalmologie,douleur oculaire | photophobie,2
+Q428447,isosporose,infectiologie,amaigrissement | crampe abdominale | diarrhée | douleur abdominale | déshydratation,5
+Q110624138,Jamestown Canyon encephalitis,infectiologie | neurologie,céphalée | examen des signes méningés | fièvre | mal de gorge | nausée | rhinite | toux | vomissement,8
+Q18553709,jéjunite,gastro-entérologie,crampe abdominale | diarrhée,2
+Q1275814,konzo,médecine d'urgence,ataxie | paraparésie | paraplégie spastique familiale,3
+Q126539679,kufungisisa,psychiatrie,apathie | fatigue | perte de mémoire | tristesse,4
+Q274615,kuru,infectiologie | neurologie,arthralgie | céphalée | diplopie | démence | dépression | escarre | faiblesse musculaire | obésité | saute d'humeur | strabisme | tremblement | trouble de la parole | étourdissement,13
+Q757838,kératite,ophtalmologie,inflammation,1
+Q6057162,kératite interstitielle,neurologie,inflammation,1
+Q1117652,kératite ponctuée superficielle de Thygeson,ophtalmologie,érosion épithéliale cornéenne,1
+Q18554762,kératite sclérosante,neurologie,inflammation,1
+Q7128426,kératodermie palmoplantaire,dermatologie,hyperkératose palmo-plantaire,1
+Q2521341,kératolyse ponctuée,dermatologie,foetor,1
+Q65053368,kératose obturante de l'oreille externe,otorhinolaryngologie,douleur | hypoacousie,2
+Q2038371,labyrinthite,otorhinolaryngologie,inflammation,1
+Q18554305,labyrinthite virale,neurologie,nausée | vomissement,2
+Q6469283,Ladd's bands,gastro-entérologie,douleur abdominale | vomissement,2
+Q1239242,lathyrisme,médecine d'urgence,paralysie,1
+Q331283,leishmaniose,infectiologie,anémie | fièvre | hépatomégalie | splénomégalie | ulcère | ulcère de la bouche,6
+Q2590966,leishmaniose cutanée,infectiologie,Papule | cicatrice | ulcère,3
+Q2046113,leishmaniose viscérale,infectiologie,amaigrissement | anorexie | anémie | ascite | diarrhée | fièvre | hypertension portale | hypotension artérielle | hépatomégalie | splénomégalie | tachycardie,11
+Q6523341,lentiginose,dermatologie,lentigo,1
+Q155098,leptospirose,infectiologie,coagulation intravasculaire disséminée | céphalée | empoisonnement | exanthème | fièvre | frissonnement | insuffisance rénale | myalgie | myocardite,9
+Q1120682,leucodystrophie métachromatique,endocrinologie | neurologie,démence,1
+Q18966598,leucoencéphalite aiguë hémorragique,immunologie | neurologie,saignement,1
+Q29496,leucémie,hématologie,amaigrissement | angine de poitrine | douleur osseuse | douleur thoracique | étourdissement | œdème,6
+Q180664,leucémie aiguë lymphoblastique,oncologie,amaigrissement | anorexie | asthénie | douleur abdominale | douleur osseuse | dyspnée | fatigue | fièvre,8
+Q264118,leucémie aiguë myéloïde,hématologie | oncologie,amaigrissement | anorexie | anémie | fatigue | hémorragie | splénomégalie,6
+Q111681631,Lipaemia retinalis,ophtalmologie,incolore,1
+Q1607635,lipidose hépatique féline,médecine vétérinaire,déshydratation | hypercholestérolémie | hypertriglycéridémie | hépatomégalie | ictère,5
+Q17540092,lipomatose encéphalo-crânio-cutanée,neurologie,hamartome lipomateux,1
+Q160653,listériose,gynécologie obstétrique | infectiologie | néonatalogie | périnatalogie,adénopathie | angine | anisocorie | arachnoïdite | avortement | conjonctivite | diarrhée | empoisonnement | encéphalite | fièvre | hépatomégalie | méningite | méningoencéphalite | nausée | ptosis | sang dans les selles | sepsis | splénomégalie | strabisme | vomissement,20
+Q1760607,loase,infectiologie | médecine tropicale,abcès | douleur | œdème,3
+Q123750979,low-grade serous carcinoma,oncologie,ballonnement abdominal | incontinence fécale,2
+Q188297,lupus érythémateux,rhumatologie,arthralgie | masque lupique | tuméfaction,3
+Q1087632,lymphocytopénie CD4+ idiopathique,hématologie | immunologie,lymphopénie,1
+Q694552,lymphogranulome vénérien,infectiologie,abcès,1
+Q1642170,lymphohistiocytose hémophagocytaire,hématologie | pédiatrie,adénopathie | fièvre | hépatomégalie | splénomégalie | thrombopénie,5
+Q208414,lymphome,hématologie | oncologie,amaigrissement | douleur thoracique | fatigue | fièvre | prurit | sueurs nocturnes | tuméfaction,7
+Q36956,lèpre,infectiologie,contracture | dystrophie | dépigmentation | fonte musculaire | hypoesthésie | kératite | lagophtalmie | mutilation | paresthésie | perforation septale | polyneuropathie | épistaxis,12
+Q154882,légionellose,infectiologie | pneumologie,céphalée | fièvre | frissonnement | myalgie | pneumonie | toux,6
+Q2945973,lésion des nerfs,médecine d'urgence | neurologie,hypoesthésie,1
+Q4699003,mal de l'air,médecine d'urgence,céphalée | étourdissement,2
+Q624497,mal des montagnes,médecine d'urgence,anorexie | faiblesse | fatigue | glaire | insomnie | nausée | tachycardie | tachypnée | toux | trouble de la conscience | vomissement | épistaxis | étourdissement | œdème cérébral,14
+Q2348506,maladie aléoutienne,immunologie | infectiologie | médecine vétérinaire,amaigrissement | anémie | hépatomégalie | left upper quadrant abdominal rigidity,4
+Q389735,maladie cardio-vasculaire,cardiologie,douleur thoracique | dyspnée | fatigue | perte de conscience,4
+Q11088,maladie cœliaque,gastro-entérologie,constipation | diarrhée | nausée | vomissement,4
+Q8282,maladie d'Addison,endocrinologie,amaigrissement | anorexie | douleur abdominale | faiblesse musculaire | fatigue,5
+Q11081,maladie d'Alzheimer,neurologie,"altération du jugement | changements d'humeur et de la personnalité | difficulté à exécuter les tâches familières à la maison, au travail ou durant les loisirs | difficulté à planifier ou à résoudre des problèmes | difficultés à interpréter les images et évaluer les distances | démence | désengagement du travail ou des activités sociales | désorientation dans le temps et dans l’espace | objets égarés et perte de la capacité à reconstituer un parcours | perte de mémoire qui perturbe la vie quotidienne | problèmes d'expression orale ou écrite",11
+Q7080278,maladie d'Oguchi type 1,neurologie,phénomène de Mizuo-Nakamura,1
+Q2388598,maladie d'Ollier,génétique médicale,enchondromatose | enchondrome,2
+Q2153391,maladie de Bang,infectiologie,amaigrissement | arthralgie | frissonnement,3
+Q911427,maladie de Behçet,immunologie | rhumatologie,acné | aphte | arthrite | diarrhée | douleur abdominale | douleur chronique généralisée | fièvre | hypopion | hémoptysie | inflammation | méningite aseptique | méningoencéphalite | nausée | pathergie | pleurésie | péricardite | toux | ulcération de la vulve | uvéite | vascularite pustuleuse | vascularite rétinienne | érythème noueux,22
+Q822228,maladie de Bernard et Soulier,hématologie,hémorragie,1
+Q746001,maladie de Buerger,cardiologie | rhumatologie,gangrène,1
+Q601037,maladie de Carré,infectiologie,anorexie | diarrhée | déshydratation | fatigue | hyperthermie | toux | vomissement | écoulement nasal,8
+Q649558,maladie de Chagas,infectiologie | parasitologie,cardiomyopathie | chagome | diarrhée | fièvre | hépatomégalie | myocardite | mégacôlon toxique | signe de Romana | splénomégalie | vomissement,10
+Q1052687,maladie de Charcot-Marie-Tooth,neurologie,déficit sensoriel | faiblesse musculaire | fonte musculaire | hyporéflexie | pied creux | scoliose,6
+Q49989,maladie de Creutzfeldt-Jakob,infectiologie | neurologie,acalculie | amaigrissement | anisocorie | anxiété | apathie | ataxie | crise de panique | diplopie | dyslexie | dystonie | délire | démence | hémianopsie | mutisme akinétique | myoclonie | paralysie | paranoïa | paresthésie | phobie | prosopagnosie | psychose | scotome | signe pyramidal | stridor | tremblement | trouble de la vision | trouble moteur,27
+Q1472,maladie de Crohn,gastro-entérologie,amaigrissement | diarrhée | douleur abdominale | fatigue,4
+Q18553711,maladie de Crohn duodénale,gastro-entérologie,inflammation | nausée | vomissement,3
+Q615645,maladie de Fabry,cardiologie | dermatologie | endocrinologie | néphrologie,angiokératome | anhidrose | cardiomyopathie restrictive | cornée verticillée | douleur | douleur neuropathique chronique | fatigue | hypertension artérielle | insuffisance rénale | nausée | neuropathie périphérique | vertige,12
+Q3281274,maladie de Griscelli,pédiatrie,albinisme,1
+Q190564,maladie de Huntington,neurologie,amaigrissement | chorée | démence | modification de la personnalité,4
+Q725345,maladie de Kaposi,oncologie,adénopathie | cachexie | empoisonnement | fièvre | métastase | tumeur,6
+Q265936,maladie de Kawasaki,immunologie | pédiatre,adénopathie | diarrhée | fièvre | inflammation | langue framboisée,5
+Q127556,maladie de König,orthopédie,nécrose,1
+Q5325633,maladie de l'oreille,otorhinolaryngologie,surdité,1
+Q874586,maladie de La Peyronie,urologie,dysfonction érectile,1
+Q7204732,maladie de la plèvre,pneumologie,inflammation | insuffisance cardiaque,2
+Q1815019,maladie de Leigh,neurologie,vomissement,1
+Q201989,maladie de Lyme,cardiologie | dermatologie | infectiologie | neurologie,arthralgie | arthrite | cardiomyopathie hypertrophique | céphalée | douleur neuropathique chronique | encéphalomyélite | fasciculation | fatigue | fièvre | myalgie | myocardite | méningite | méningoencéphalite | névrite | paresthésie | trouble du rythme cardiaque | vertige | érythème chronique migrant,18
+Q460167,maladie de Menière,logopédie | otorhinolaryngologie,acouphène | hypoacousie | vertige,3
+Q11903425,maladie de Newcastle,infectiologie | médecine vétérinaire,conjonctivite | diarrhée | paralysie,3
+Q11085,maladie de Parkinson,neurologie,anomalie de la démarche | hypokinésie | spasticité | tremblement,4
+Q4346007,maladie de Pogosta,infectiologie,arthralgie | arthrite | céphalée | exanthème | fièvre | frissonnement | myalgie,7
+Q3281303,maladie de Still,rhumatologie,arthralgie | douleur musculo-squelettique secondaire chronique | exanthème | fièvre | inflammation | mal de gorge | myalgie,7
+Q1187697,maladie de Still de l'adulte,rhumatologie,adénopathie | fièvre rémittente | hyperleucocytose | hépatomégalie | hépatopathie | lymphohistiocytose hémophagocytaire | pharyngite | polyarthrite | splénomégalie | éruption rose saumon,10
+Q948318,maladie de Vaquez,hématologie,céphalée | fatigue | prurit | topstitching | trouble du sommeil | érythème,6
+Q341999,maladie de Verneuil,dermatologie,abcès | inflammation,2
+Q1778287,maladie de Waldenström,angiologie | cardiologie | hématologie | immunologie | oncologie,macroglobulinémie,1
+Q709360,maladie de Willebrand,hématologie,hémarthrose | hématome | hémorragie | hémorragie digestive | hémorragie interne | hémorragie intra-cérébrale | hémorragie méningée | troubles hémorragiques | épistaxis,9
+Q117121,maladie de Wilson,endocrinologie,anneaux de Kayser-Fleischer | ictère | modification de la personnalité | ongles bleus | signe du panda géant | œdème,6
+Q1952467,maladie des exostoses multiples,génétique médicale,exostose,1
+Q639776,maladie des griffes du chat,infectiologie,frissonnement,1
+Q2529980,maladie des éleveurs d'oiseaux,pneumologie,dyspnée,1
+Q129104,maladie du charbon,infectiologie | médecine vétérinaire,diarrhée | examen des signes méningés | hématochézie | lymphadénite | nausée | rectorragie | tuméfaction | ulcère,8
+Q17153765,maladie du lait,toxicologie médicale,amaigrissement | douleur abdominale | fatigue | polydipsie,4
+Q402575,maladie du sirop d'érable,endocrinologie,vomissement,1
+Q203133,maladie du sommeil,infectiologie,anémie | arthralgie | cachexie | céphalée | fièvre périodique | foyer d'infection primaire | malaise | signe de Winterbottom | sopor | tachycardie | trouble du sommeil | tuméfaction | étourdissement,13
+Q6708237,maladie du système lymphatique,angiologie,inflammation,1
+Q2006636,maladie hydrique,infectiologie,diarrhée,1
+Q7113244,maladie ovarienne,gynécologie,inflammation,1
+Q1144618,maladie périodique,rhumatologie,douleur abdominale | douleur thoracique | exanthème | fièvre | inflammation | myalgie,6
+Q1423167,maladie thromboembolique,phlébologie,inflammation,1
+Q558404,maladies alcooliques du foie,gastro-entérologie,ictère | nausée,2
+Q18554617,maladies des glandes sudoripares,dermatologie,en sueur,1
+Q18554947,maladies des trompes de Fallope,gynécologie obstétrique,inflammation,1
+Q113361605,malaria prevalence,épidémiologie,fièvre,1
+Q582904,marasme nutritionnel,endocrinologie,constipation,1
+Q107008921,massive perivillous fibrin deposition,obstétrique | pathologie,asymptomatique,1
+Q113164521,mercury exposure,toxicologie,tremblement,1
+Q2559038,Metastrongylose,helminthologiste | infectiologie,amaigrissement | anorexie | bronchite chronique | toux,4
+Q1091552,microcytose,hématologie,microcytes,1
+Q133823,migraine,neurologie,céphalée | nausée | photophobie | vomissement | éructation,5
+Q18553762,migraine avec aura,neurologie,aura migraineux,1
+Q3312899,migraine hémiplégique familiale,neurologie,confusion | faiblesse musculaire | hémiparésie | somnolence,4
+Q6901244,monocytopénie avec susceptibilité aux infections,génétique médicale,monocytopénie,1
+Q207367,mononucléose infectieuse,infectiologie,Hyperlymphocytose | adénopathie | angine | exanthème | fièvre | gonflement des ganglions lymphatiques | hyperleucocytose | hépatomégalie | splénomégalie,9
+Q21154070,monosomie distale 3p,génétique médicale,ptosis,1
+Q54911704,morsures et piqûres,toxicologie médicale,abrasion | hémorragie | lacération | tuméfaction,4
+Q745832,mortinaissance,obstétrique | pédiatrie,hémorragie,1
+Q327005,morve,infectiologie | médecine vétérinaire,abcès | adénopathie | arthralgie | céphalée | fièvre | foyer d'infection primaire | frissonnement | lymphangite | myalgie | splénomégalie | ulcère,11
+Q65066312,MPI-CDG,génétique médicale,hémorragie | vomissement,2
+Q178194,mucoviscidose,génétique médicale | pneumologie | pédiatrie,atélectasie | bronchectasie | bronchite | calcul biliaire | cholestase | cirrhose | cyanose | dyspnée | faiblesse musculaire | fibrose pulmonaire | hépatite | insuffisance cardiaque | occlusion intestinale | ostéoporose | pneumonie | ulcère gastro-duodénal,16
+Q775927,mycose de la peau glabre,infectiologie,exanthème,1
+Q116275,myoclonie,neurologie,clonus,1
+Q15731364,Myopathie atypique des équidés,médecine vétérinaire,congestion | douleur | faiblesse musculaire | mort | tachycardie | transpiration animale | tremblement,7
+Q1648484,myopathie de Duchenne,neurologie,amyotrophie | cardiomyopathie | faiblesse musculaire,3
+Q55785927,myopathie nécrosante à médiation auto-immune,neurologie,faiblesse musculaire,1
+Q93346177,myopathie stéroïdienne,neurologie,faiblesse musculaire,1
+Q1848471,myosite à inclusions,neurologie | rhumatologie,dysphagie | faiblesse musculaire | fonte musculaire,3
+Q587420,myotonie congénitale,neurologie,myotonie,1
+Q551085,myélite,neurologie,inflammation,1
+Q202217,myélite transverse,neurologie,asthénie,1
+Q3331923,myélophtisie,hématologie,anémie,1
+Q1581845,médiastinite,pneumologie,inflammation,1
+Q1547111,méga-uretère,urologie,colique néphrétique | douleur au flanc | hématurie | infection urinaire,4
+Q753654,mégalérythème infectieux aigu,infectiologie | pédiatrie,arthralgie | exanthème | fièvre légère | syndrome papulo-purpurique en gants et chaussettes,4
+Q356372,mélanome de l'uvée,oncologie,cécité | handicap visuel,2
+Q963944,mélioïdose,infectiologie,abcès du poumon | diarrhée | déshydratation terminale | fièvre | pimple | pleurésie | vomissement,7
+Q48143,méningite,infectiologie | neurologie,céphalée | fièvre | nausée | photophobie | syndrome méningé | vomissement,6
+Q4804182,méningite aseptique,infectiologie | neurologie,céphalée | examen des signes méningés | photophobie,3
+Q109466005,méningite purulente,infectiologie | neurologie,coma | crampe | céphalée | fièvre | hyperacousie | nausée | photophobie | vomissement,8
+Q3854684,méningite syphilitique,infectiologie,inflammation,1
+Q890785,méningococcie,infectiologie,choc septique | céphalée | examen des signes méningés | exanthème | fièvre | mal de gorge | méningite,7
+Q922927,méningoencéphalite amibienne primitive,infectiologie,agueusie | coma | céphalée | examen des signes méningés | fièvre | frissonnement | nausée | rhinopharyngite | spasme | syncope | ulcère | vomissement,12
+Q1077603,mésothéliome,oncologie | pneumologie,amaigrissement | douleur thoracique | dyspnée | sibilance | toux sèche | épanchement pleural,6
+Q11542703,métagonimiase,helminthologiste | infectiologie,Papule | anorexie | céphalée | diarrhée | douleur abdominale | fièvre | nausée | urticaire allergique | éosinophilie,9
+Q223591,métaplasie de l'œsophage,gastro-entérologie,douleur précordiale | pyrosis | reflux gastro-œsophagien | toux,4
+Q748442,méthémoglobinémie,hématologie | toxicologie,céphalée | faiblesse musculaire | nausée | vertige,4
+Q194101,nanisme,génétique médicale,insuffisance staturale,1
+Q4312883,Nanophyétiase,helminthologiste | infectiologie,amaigrissement | diarrhée | fatigue physiologique | nausée | vomissement | éosinophilie,6
+Q760367,neige visuelle,ophtalmologie,visual snow,1
+Q746781,neuroacanthocytose,génétique médicale | neurologie,acanthocytose,1
+Q18554094,neuropathie autonome diabétique,endocrinologie | neurologie,douleur neuropathique chronique,1
+Q2642518,neuropathie des petites fibres,neurologie,douleur neuropathique chronique,1
+Q2046550,neuropathie diabétique,endocrinologie,douleur neuropathique chronique,1
+Q18553767,neurosyphilis asymptomatique,infectiologie,méningite,1
+Q1856914,nocardiose,infectiologie,abcès cérébral | abcès du poumon | fièvre légère | kératite | malaise | mycétome | méningite | toux,8
+Q1919462,nodule du trayeur,infectiologie,adénopathie | gonflement des ganglions lymphatiques,2
+Q994794,noma,odontologie | otorhinolaryngologie | pédiatrie,adénopathie | anorexie | fièvre | gangrène | gingivite | halitose | trismus | œdème facial,8
+Q1426443,nycturie,endocrinologie | néphrologie,diurèse,1
+Q2425407,nécrose tubulaire aiguë,néphrologie,nécrose,1
+Q401402,néphrite,néphrologie | urologie,hématurie | inflammation | oligurie,3
+Q1621830,néphropathie lupique,néphrologie | rhumatologie,inflammation,1
+Q1331116,néphropathie par anomalie du collagène IV,génétique médicale,déficience auditive | glomérulonéphrite | hématurie | insuffisance rénale,4
+Q931323,néphropathie épidémique,infectiologie,mal de dos | nausée | saignement | vomissement,4
+Q15061465,obusite,psychiatrie,thousand-yard stare,1
+Q116167729,obésité féline,médecine vétérinaire,obésité | sédentarité,2
+Q1137321,onchocercose,infectiologie | médecine tropicale,cécité | dépigmentation | exanthème | lichénification | lymphadénite | nodule,6
+Q1757549,onychotillomanie,dermatologie | psychiatrie,automutilation,1
+Q21110038,opacification de la cornée,ophtalmologie,cécité,1
+Q1340722,ophtalmopathie basedowienne,ophtalmologie,asynergie oculopalpébrale | signe de von Graefe,2
+Q1048084,opisthorchiase,helminthologiste | infectiologie,arthralgie | cholécystite | constipation | diarrhée | douleur abdominale | dyskinésie biliaire | fièvre | hépatite | ictère | indigestion | myalgie | nausée | pancréatite | right upper quadrant abdominal rigidity | vomissement | éosinophilie,16
+Q176741,oreillons,infectiologie | pédiatrie,fièvre | malaise | méningite | orchite | pancréatite | tuméfaction | xérostomie | épididymite,8
+Q912344,orientation sexuelle égodystonique,psychiatrie | psychologie,anxieux,1
+Q164727,ornithose,infectiologie,arthralgie | bradycardie | conjonctivite | constipation | céphalée | diarrhée | episclérite | examen des signes méningés | fièvre | frissonnement | hypotension artérielle | hépatomégalie | insomnie | mal de gorge | malaise | myalgie | méningite | nausée | polyneuropathie | saute d'humeur | splénomégalie | toux | vomissement,23
+Q1178507,ostéite,rhumatologie,inflammation,1
+Q799615,ostéite fibrokystique,endocrinologie,hyperactivité | tumeur brune,2
+Q1641153,ostéoarthropathie hypertrophiante,rhumatologie,hippocratisme digital,1
+Q5071123,ostéochondrite disséquante,orthopédie,douleur,1
+Q7107610,ostéochondromatose,génétique médicale,ostéochondrome,1
+Q1154055,ostéochondrose,orthopédie | rhumatologie,nécrose,1
+Q503629,ostéonécrose aseptique,orthopédie,nécrose,1
+Q55082435,ostéophytose vertébrale,rhumatologie,ostéophyte,1
+Q32144976,ostéopétrose autosomique dominante type 2,génétique médicale,abcès,1
+Q680873,otite externe,otorhinolaryngologie,ear fullness | otalgie | prurit | surdité de transmission | œdème,5
+Q223254,otite moyenne,audiologie | otorhinolaryngologie,céphalée | ear fullness | fièvre | irritabilité | otalgie | surdité de transmission,6
+Q18556051,otite moyenne aiguë sanglante allergique,neurologie,réaction allergique,1
+Q18558205,otite moyenne mucoide aiguë allergique,neurologie,réaction allergique,1
+Q18554109,otite séreuse allergique,neurologie,réaction allergique,1
+Q560456,otomycose,infectiologie,inflammation | prurit,2
+Q756610,otospongiose,otorhinolaryngologie,acouphène | surdité | vertige,3
+Q3358864,ovalocytose mélanésienne,hématologie,Ovalocyte,1
+Q1992236,oxyurose,infectiologie,asthénie | constipation | douleur abdominale | irritabilité | prurit,5
+Q119882516,Oz virus disease,médecine interne,anorexie | arthralgie | fièvre | hépatopathie | malaise | myocardite | néphropathie | thrombopénie | vomissement,9
+Q7243138,pachydermopériostose,rhumatologie,hippocratisme digital,1
+Q12156,paludisme,infectiologie | médecine tropicale | parasitologie,anémie | coma | fièvre | fièvre intermittente | fièvre périodique | frissonnement | hépatomégalie | ictère | splénomégalie,9
+Q18554399,paludisme à Plasmodium ovale,infectiologie,frissonnement,1
+Q2528129,paragonimose,helminthologie | infectiologie,abcès du poumon | bronchite | diarrhée | douleur abdominale | dyspnée | encéphalite | fièvre | flatulence | hémoptysie | hépatite | myalgie | méningoencéphalite | nodule | pleurésie | pneumonie | pneumothorax | éosinophilie,17
+Q2051533,parainfluenza,infectiologie | médecine générale | pédiatrie,aphonie | conjonctivite | croup | fièvre légère | mal de gorge | rhinorrhée | toux aboyante,7
+Q3895159,paralysie de Zenker,neurologie,Steppage,1
+Q7562539,paralysie faciale,neurologie,dormance | dysgueusie | dysphagie | faciès hypotonique,4
+Q5456583,paralysie flasque,neurologie,flaccidité musculaire,1
+Q3269843,paralysie périodique hyperkaliémique,neurologie,faiblesse musculaire | hyperkaliémie | myotonie | trouble du rythme cardiaque,4
+Q622828,paralysie périodique hypokaliémique,neurologie | neuromuscular medicine,faiblesse musculaire | hypokaliémie,2
+Q1229994,paranoïa,psychiatrie | psychologie | psychothérapie,comportement paranoïaque,1
+Q1476361,paraparésie spastique tropicale,neurologie,faiblesse musculaire,1
+Q657516,paraplégie spastique familiale,neurologie,paraplégie | spasticité,2
+Q707388,paratuberculose,infectiologie | médecine vétérinaire,amaigrissement | asymptomatique | diarrhée,3
+Q1975850,parotidite,infectiologie,inflammation,1
+Q2589418,pasteurellose,infectiologie | médecine vétérinaire,arthralgie | fièvre | pneumonie | tachycardie,4
+Q221441,pellagre,endocrinologie,diarrhée | hallucination,2
+Q7165022,pentalogie de Cantrell,génétique médicale,ectopie cardiaque | fente sternale | hernie diaphragmatique | omphalocèle,4
+Q1456558,perlèche,dermatologie,inflammation,1
+Q118418,personnalité antisociale,psychiatrie | psychologie | psychologie clinique,comportement antisocial | fraude | impulsivité | irritabilité | violence,5
+Q1475712,perte auditive provoquée par le bruit,audiologie | médecine du travail | otorhinolaryngologie,acouphène | ear fullness | hyperacousie | otalgie | surdité | étourdissement,6
+Q12829964,Pes,dermatologie,dépigmentation,1
+Q133780,peste,infectiologie,bubon | choc circulatoire | céphalée | empoisonnement | exanthème | fièvre | hyperémie | hémoptysie | hémorragie | myalgie | syndrome confusionnel (délirium) | toux | vomissement,13
+Q217519,peste bubonique,infectiologie,frissonnement | prostration,2
+Q2986781,peste pneumonique,infectiologie,frissonnement,1
+Q3100117,peste septicémique,infectiologie,choc circulatoire | frissonnement | prostration,3
+Q2089599,phaeohyphomycose,infectiologie,abcès,1
+Q840143,pharyngite à streptocoques,infectiologie | otorhinolaryngologie,angine | céphalée | douleur abdominale | empoisonnement | fièvre | mal de gorge | nausée,7
+Q18554607,pharyngoconjonctivite à adénovirus,infectiologie,adénopathie | gonflement des ganglions lymphatiques,2
+Q281928,phobie sociale,psychiatrie | psychologie | psychologie clinique,anxiété sociale,1
+Q712320,phénomène d'Arthus,médecine d'urgence,nécrose | saignement,2
+Q1066143,Phénomène d'Uhthoff,neurologie,douleur | fatigue | impériosité urinaire,3
+Q536269,phéochromocytome,endocrinologie | oncologie,hypertension artérielle,1
+Q76973,pian,infectiologie,adénopathie | arthralgie | cicatrice | fièvre | foyer d'infection primaire,5
+Q1134891,pica,psychiatrie | psychologie,alimentation,1
+Q1942814,pied tombant,neurologie,faiblesse musculaire,1
+Q922029,pinta,infectiologie,adénopathie | foyer d'infection primaire | prurit,3
+Q7204730,pleuropneumonie,pneumologie,inflammation,1
+Q3392410,pleurésie tuberculeuse,infectiologie,réaction allergique | épanchement pleural,2
+Q7204944,plica du genou,rhumatologie,douleur au genou,1
+Q12192,pneumonie,infectiologie | pneumologie,dyspnée | fièvre | frissonnement | hémoptysie | ronflement | tachypnée | toux,7
+Q3776920,pneumonie bactérienne,pneumologie,pneumonie,1
+Q2603200,pneumonie virale,infectiologie | pneumologie | pédiatrie,pneumonie,1
+Q10591185,pneumonie à mycoplasme,infectiologie | pneumologie,frissonnement,1
+Q15401586,pneumonie à Pneumocystis jirovecii,infectiologie | pneumologie,fièvre légère | insuffisance respiratoire | pneumonie atypique | toux,4
+Q35890,pneumopathie d'hypersensibilité,pneumologie,amaigrissement | frissonnement | réaction allergique,3
+Q1153419,pneumopathie interstitielle,pneumologie,inflammation,1
+Q1790424,pneumopathie interstitielle diffuse idiopathique,pneumologie,pneumonie,1
+Q18558008,pneumopathie à germes anaérobies,pneumologie,abcès,1
+Q32540,pneumopathie à éosinophiles,pneumologie,pneumonite,1
+Q203601,pneumothorax,chirurgie thoracique | médecine d'urgence | pneumologie,douleur thoracique | dyspnée | toux sèche,3
+Q12195,poliomyélite,infectiologie | neurologie | orthopédie,diarrhée | examen des signes méningés | faiblesse musculaire | fièvre | paralysie | parésie | vomissement,7
+Q18556572,poliomyélite aiguë non paralytique,infectiologie,vomissement,1
+Q187255,polyarthrite rhumatoïde,immunologie | rhumatologie,douleur musculo-squelettique secondaire chronique,1
+Q635195,polydipsie,endocrinologie | psychiatrie | psychologie clinique,soif,1
+Q246002,polykystose hépatique,génétique médicale,kyste hépatique,1
+Q980926,polymyosite,neurologie | rhumatologie,faiblesse musculaire | fièvre | myocardite,3
+Q1124286,polyurie,endocrinologie | néphrologie | urologie,diurèse,1
+Q3399863,postmaturité,gynécologie obstétrique,diminution | dystocie des épaules | macrosomie fœtale | oligoamnios | syndrome d'inhalation méconiale,5
+Q929963,potomanie,endocrinologie | psychiatrie | psychologie clinique,altération du comportement | hypervolémie | polydipsie | polyurie | xérostomie,5
+Q140564336,pregnancy-induced GERD,gastro-entérologie,pyrosis | régurgitation,2
+Q1756133,presbyacousie,gériatrie | logopédie | otorhinolaryngologie,acouphène | hypoacousie,2
+Q941770,proctite,gastro-entérologie,hémorragie,1
+Q180777,prolapsus utérin,gynécologie,constipation,1
+Q3137609,pseudo anévrisme,angiologie | cardiologie | chirurgie vasculaire,tuméfaction,1
+Q376092,pseudo-folliculite de la barbe,dermatologie,poil incarné,1
+Q1752891,pseudo-polyarthrite rhizomélique,rhumatologie,douleur musculo-squelettique secondaire chronique,1
+Q179945,psoriasis,dermatologie,arthrite | desquamation | inflammation | prurit,4
+Q10355322,psoriasis érythrodermique,dermatologie,érythrodermie,1
+Q4062514,psychose alcoolique,addictologie médicale | narcologie | psychiatrie,hallucination,1
+Q45462238,psychose de Korsakoff induite par l'alccolisme,psychiatrie,Polynévrite | amnésie de fixation | confabulation,3
+Q3043345,psychose paranoïde,psychiatrie,délire paranoïde,1
+Q3410985,purpura fulminans,infectiologie,nécrose,1
+Q1147908,pyomètre,gynécologie,inflammation,1
+Q532158,pédiculose du cuir chevelu,infectiologie,irritabilité,1
+Q3080319,pénicillose,infectiologie,hépatosplénomégalie,1
+Q745162,périartérite noueuse,immunologie | rhumatologie,inflammation,1
+Q501561,péricardite,cardiologie,inflammation,1
+Q3232575,péricardite aiguë,cardiologie,douleur thoracique,1
+Q7850856,péricardite tuberculeuse,infectiologie,épanchement péricardique,1
+Q1480377,périostite,rhumatologie,inflammation,1
+Q223102,péritonite,gastro-entérologie,douleur abdominale à la palpation | nausée | vomissement,3
+Q9692,péritonite infectieuse féline,infectiologie,abattement | amaigrissement | anorexie | ascite | dyspnée | hyperthermie | ictère | lymphadénomégalie | perte d'appétit,9
+Q18558227,péritonite tuberculeuse,infectiologie,distension abdominale | inconfort abdominal,2
+Q3985306,quadriplégie spastique,neurologie,tétraspasticité,1
+Q39222,rage,infectiologie | médecine vétérinaire,arrêt cardiorespiratoire | arrêt respiratoire | augmentation | céphalée | douleur | fièvre | frissonnement | hallucination | hydrophobie rabique | hyperactivité | hypersialorrhée | insomnie | irritabilité | mydriase | paralysie | paresthésie | peur | phonophobie | photophobie | vomissement,20
+Q114085,rhinite,allergologie | rhinology,congestion nasale | céphalée | fatigue | irritation nasale | rhinorrhée | éternuement | œdème,7
+Q272436,rhinite allergique,immunologie,rhinite | réaction allergique | toux | éternuement,4
+Q12167939,rhinite chronique,pneumologie,hémorragie,1
+Q9335080,rhinite de la lune de miel,otorhinolaryngologie,congestion nasale,1
+Q2403156,rhinite vasomotrice,otorhinolaryngologie,choc circulatoire,1
+Q3936113,rhinopharyngite,pneumologie,congestion nasale | rhinorrhée | éternuement,3
+Q3658498,rhumatisme cardiaque,cardiologie | infectiologie,inflammation,1
+Q3495854,rhumatisme palindromique,rhumatologie,arthrite,1
+Q12125,rhume,infectiologie | médecine générale | otorhinolaryngologie,acouphène | congestion nasale | céphalée | fièvre | mal de gorge | rhinorrhée | ronflement | toux | éternuement,9
+Q1048101,rickettsiose vésiculeuse,infectiologie,Papule | adénopathie | aphte | céphalée | exanthème | fièvre | foyer d'infection primaire | frissonnement | macule | vésicule,10
+Q79793,rougeole,infectiologie,adénopathie | anorexie | catarrhe oculo-nasal | conjonctivite | diarrhée | fièvre | rhinorrhée | toux | éruption maculopapuleuse,9
+Q155857,rubéole,infectiologie | néonatalogie,exanthème | fatigue | fièvre | mal de gorge,4
+Q243877,rupture diaphragmatique,chirurgie thoracique,douleur | occlusion intestinale | orthopnée | sepsis | toux,5
+Q11703370,rupture prématurée des membranes,obstétrique,rupture des membranes,1
+Q500695,rétinoblastome,oncologie,buphtalmie | glaucome néovasculaire | leucocorie | strabisme,4
+Q2544879,rétrécissement tricuspide,cardiologie | génétique médicale,endocardite,1
+Q326648,salmonellose,infectiologie,crampe abdominale | diarrhée | douleur abdominale | déshydratation | fièvre | frissonnement | nausée | vomissement,8
+Q9333895,sarcocystose,infectiologie,diarrhée | frissonnement | vomissement,3
+Q193894,sarcoïdose,dermatologie | hématologie | ophtalmologie | pneumologie,dyspnée | toux,2
+Q110315,saturnisme,médecine d'urgence,amaigrissement | anorexie | anémie | colique | constipation | douleur abdominale | encéphalopathie | fatigue | hypertension artérielle | insomnie | irritation oculaire | liseré de Burton | malnutrition | néphropathie | paralysie | pâleur du visage | tremblement,17
+Q180266,scarlatine,infectiologie | pédiatrie,adénopathie | angine | douleur abdominale | exanthème | fièvre | langue framboisée | ligne de Pastia | mal de gorge | pâleur périorale | tachycardie | vomissement,11
+Q41112,schizophrénie,psychiatrie | psychologie clinique,dysfonctionnement cognitif | délire | hallucination | hallucination sonore | inappropriate affect | psychose | trouble de la pensée | émoussement affectif,8
+Q1432717,schizophrénie catatonique,psychiatrie,Pavlov's symptom | catalepsie | catatonie agitée | flexibilité cireuse | mutisme | négativisme | oreiller psychique,7
+Q9334248,schizophrénie cénestopathique,psychiatrie,cénestopathie,1
+Q2606101,schizophrénie paranoïde,psychiatrie | psychologie,hallucination,1
+Q1286320,schwannomatose,oncologie,neurinome,1
+Q18554619,sclérite avec atteinte cornéenne,neurologie,inflammation,1
+Q5340515,sclérodermie systémique,rhumatologie,vascular alteration,1
+Q18554713,scléromalacie perforante,neurologie,nécrose,1
+Q4421929,sclérose de l'hippocampe,neurologie,convulsion hyperthermique | crise d'épilepsie | démence,3
+Q8277,sclérose en plaques,neurologie,douleur neuropathique chronique,1
+Q183134,sepsis,infectiologie,fièvre intermittente | fièvre rémittente | frissonnement,3
+Q327298,shigellose,infectiologie,diarrhée | douleur abdominale | fièvre | frissonnement | hématochézie | sensation d'évacuation incomplète des selles,6
+Q183344,sinusite,otorhinolaryngologie,congestion nasale | céphalée | douleur | fièvre | inflammation | toux,6
+Q1807401,sodoku,infectiologie,adénopathie | arthralgie | exanthème | fièvre | foyer d'infection primaire | frissonnement | lymphangite | myalgie,8
+Q842169,sparganose,infectiologie,abcès | cystite | douleur | exophtalmie | hydrocéphalie | larmoiement | nécrose | parésie | tumeur | œdème,10
+Q844717,spina bifida,génétique médicale | neurologie,asymptomatique,1
+Q21505502,spina bifida occulta,neurologie,asymptomatique,1
+Q115743091,spinal leak of cerebrospinal fluid,neurologie,cranial nerve dysfunction | céphalée posturale orthostatique | radicular arm pain | raideur de la nuque,4
+Q3843800,splénomégalie congestive chronique,hématologie,splénomégalie,1
+Q52849,spondylarthrite ankylosante,rhumatologie,douleur musculo-squelettique secondaire chronique,1
+Q585911,sprue tropicale,gastro-entérologie,stéatorrhée,1
+Q3973817,stomatocytose héréditaire,hématologie,stomatocyte,1
+Q18553900,stéatorrhée pancréatique,gastro-entérologie,stéatorrhée,1
+Q531019,sténose aortique,cardiologie,angine de poitrine | syncope,2
+Q1478321,sténose du canal vertébral,neurochirurgie | orthopédie,douleur | membres engourdis,2
+Q1585753,sténose urétrale,urologie,dysurie | impériosité urinaire | infection urinaire | pollakiurie | prostatite | rétention aiguë d'urine,6
+Q280156,stérilité masculine,médecine de la reproduction | urologie,dysfonction érectile,1
+Q7631130,subérose,pneumologie,dyspnée,1
+Q18966097,syndrome 3MC,génétique médicale,ptosis,1
+Q16242785,syndrome alpha-gal,immunologie,anaphylaxie | congestion nasale | céphalée | diarrhée | douleur abdominale | nausée | rhinorrhée | syncope | urticaire | œdème de Quincke,10
+Q5032577,syndrome cannabinoïde,gastro-entérologie,hyperémèse,1
+Q1097490,syndrome cardio-facio-cutané,génétique médicale,insuffisance cardiaque,1
+Q160796,syndrome confusionnel (délirium),neurologie | psychiatrie | psychologie,distraction | désorientation | labilité émotionnelle | psychose | trouble de la mémoire | trouble de la parole | trouble de la pensée | trouble du sommeil,8
+Q7879712,syndrome cubito-mammaire,génétique médicale,Puberté retardée | carcinome du sein | communication inter-ventriculaire | hernie inguinale | hymen imperforé | hypodontie | imperforation anale | mamelon inversé | micropénis | obésité | postaxial polydactyly of fingers | scrotum en châle | sténose du pylore | sténose sous-glottique | trouble du rythme cardiaque,15
+Q277254,syndrome d'Adams-Stokes,cardiologie,convulsion | syncope | étourdissement,3
+Q357067,syndrome d'Adie,ophtalmologie,pupillotonie,1
+Q28024539,syndrome d'alacrimie-choréoathétose-hépatopathie,génétique médicale,Abnormal auditory evoked potentials | Abnormal metabolic brain imaging by MRS | Decreased CSF biopterin level | Decreased resting energy expenditure | Elevated brain choline level by MRS | High myoinositol in brain by MRS | Hyperlactatémie | Hypofibrinogénémie | Impaired oral bolus formation | Impaired oropharyngeal swallow response | Mixed demyelinating and axonal polyneuropathy | Multifocal epileptiform discharges | Reduced brain N-acetyl aspartate level by MRS | Reduced brain gamma-aminobutyric acid level by MRS | Reduced brain glutamate level by MRS | Reduced brain glutamine level by MRS | Reduced factor IX activity | Reduced factor XI activity | abnormal brain imaging | abnormal liver storage | abnormality of retinal pigmentation | alacrymie | apraxie oculo-motrice | atrophie cérébrale | atrophie optique | augmentation de transaminases | chalazion | cicatrice de la cornée | concentration basse d'albumine dans le LCR | concentration basse de protéines dans le LCR | constipation | coxa valga | crise d'épilepsie | difficulté à accomplir les actes de la vie quotidienne | diminution de l'activité de la prothrombine | dysmorphie faciale | dysphagie | défauts de réfraction | déficit moteur | exotropie | faciès hypotonique | handicap intellectuel | hypermobilité articulaire | hypocholestérolémie | hypoplasie de la main | hypoplasie du pied | hyporéflexie | hypotonie musculaire | hépatomégalie | ictère néonatal | lagophtalmie | microcéphalie | mouvement involontaire | neuropathie périphérique | néovascularisation cornéenne | ostéopénie | ptosis | retard de croissance intra-utérin | retard de maturation osseuse | retard global de développement | réflexe de succion | scoliose | splénomégalie | strabisme | stéatose hépatique | tachycardie | transpiration anormale | trouble de la parole | trouble du mouvement | ulcère de cornée | valeur basse du ratio albumine du LCR/ albumine du sérum | électroencéphalogramme anormal | ésotropie,73
+Q1544408,syndrome d'Alagille,cardiologie | chirurgie | génétique médicale | pédiatrie,cholestasis facies,1
+Q4721578,syndrome d'Alezzandrini,dermatologie,perte de la vision | vitiligo,2
+Q432814,syndrome d'Alström,génétique médicale | neurologie | ophtalmologie,cécité,1
+Q773118,syndrome d'Andersen-Tawil,cardiologie | neuromuscular medicine,trouble du rythme cardiaque,1
+Q585011,syndrome d'Antley-Bixler,génétique médicale,crâniosynostose,1
+Q46545345,syndrome d'apathie-aboulie,psychiatrie,avolition,1
+Q1125121,syndrome d'avance de phase du sommeil,hypnologie | neurologie,somnolence,1
+Q1141499,syndrome d'Ehlers-Danlos,génétique médicale,hypermobilité articulaire | hyperélasticité cutanée,2
+Q1200256,syndrome d'Ekbom,dermatologie | infectiologie | parasitologie | psychiatrie,abrasion | délire | hypocondrie | prurit,4
+Q3109873,syndrome d'Evans,hématologie,contusion | pétéchie | épistaxis,3
+Q176671,syndrome d'excitation génitale persistante,neurologie | sexologie,excitation sexuelle,1
+Q209522,syndrome d'hyperphagie incontrôlée,psychiatrie | psychologie clinique,syndrome d'hyperphagie compulsive,1
+Q1760461,syndrome d'hyperstimulation ovarienne,gynécologie,nausée | vomissement,2
+Q18553889,syndrome d'hypotension maternelle,obstétrique,choc circulatoire | vascular alteration,2
+Q12199,syndrome d'immunodéficience acquise,infectiologie,adénopathie | amaigrissement | diarrhée | exanthème | fatigue | fièvre | frissonnement | gonflement des ganglions lymphatiques | lymphome | léthargie | mal de gorge | maladie de Kaposi | maladie opportuniste | myalgie | neuropathie périphérique | sueurs nocturnes | ulcère de la bouche,17
+Q19000393,syndrome d'immunodéficience acquise du chat,médecine vétérinaire,asymptomatique | fatigue | fièvre | gonflement des ganglions lymphatiques | immunodéficience acquise | stomatite,6
+Q2037224,syndrome d'insensibilité partielle aux androgènes,endocrinologie,ambiguous genitalia,1
+Q2214419,syndrome d'Omenn,hématologie,diarrhée | hépatosplénomégalie,2
+Q1208144,syndrome d'épuisement professionnel par l'ennui,psychologie,dépression,1
+Q174651,syndrome de Balint,neurologie,apraxie oculo-motrice | ataxie optique | simultagnosie,3
+Q18966102,syndrome de Baraitser-Winter,génétique médicale,ptosis,1
+Q928424,syndrome de Barth,endocrinologie,acidurie 3-méthylglutaconique | acidémie organique | agranulocytose | anomalie de la démarche | cardiomyopathie dilatée | cardiomyopathie hypertrophique | fatigue | fibroélastose endocardique | hypoacousie | insuffisance cardiaque | intolérance à l'effort | kératodermie palmoplantaire | lipoatrophie | macrotie | myopathic facies | myopathie | mésiocclusion | neutropénie | pied bot | retard de croissance staturo-pondérale | transmission récessive liée à l'X | trouble du rythme cardiaque | œil enfoncé,23
+Q3508625,syndrome de Carey-Fineman-Ziter,génétique médicale,ptosis,1
+Q32811,syndrome de Churg-Strauss,immunologie | rhumatologie,hémorragie | hémorragie digestive,2
+Q21127479,syndrome de Cole-Carpenter,génétique médicale,ptosis,1
+Q7161793,syndrome de congestion pelvienne,gynécologie | urologie,douleur pelvienne,1
+Q1133289,syndrome de Cornelia de Lange,génétique médicale,handicap mental,1
+Q5187584,syndrome de Crome,neurologie,cataracte | handicap mental | nécrose tubulaire aiguë | épilepsie,4
+Q47715,syndrome de Down,génétique médicale | neurologie,apnée obstructive du sommeil | cardiopathie | handicap mental | otite moyenne,4
+Q574741,syndrome de Dubowitz,génétique médicale,ptosis,1
+Q239848,syndrome de dumping,gastro-entérologie,diarrhée | hypoglycémie | vomissement,3
+Q1417880,syndrome de dysfonction non verbale,psychiatrie,dyspraxie | syndrome sémantique pragmatique | trouble des fonctions exécutives,3
+Q685200,syndrome de déhiscence du canal semi-circulaire supérieur,neurotologie,acouphène | céphalée | nystagmus | surdité de transmission | vertige | étourdissement,6
+Q344873,syndrome de détresse respiratoire aiguë,médecine d'urgence | pneumologie,choc circulatoire | cyanose | dyspnée | tachypnée,4
+Q817298,syndrome de fasciculations bénignes,neurologie | psychiatrie,fasciculation,1
+Q1404470,syndrome de Felty,rhumatologie,fièvre intermittente | leucopénie | polyarthrite rhumatoïde | splénomégalie,4
+Q3508725,syndrome de fièvre sévère avec thrombocytopénie,infectiologie,diarrhée | exanthème | fièvre | nausée | thrombopénie | vomissement,6
+Q177171,syndrome de fragilité de la personne âgée,gériatrie,ostéoporose | sarcopénie,2
+Q1431371,syndrome de Frey,neurologie,hyperhidrose gustative,1
+Q911160,syndrome de Ganser,psychiatrie | psychologie | psychothérapie,état crépusculaire,1
+Q1515119,Syndrome de Gerstmann,neurologie | neuropsychologie,agnosie digitale,1
+Q383228,syndrome de Gerstmann–Sträussler–Scheinker,neurologie,ataxie | dysarthrie | démence | surdité | trouble de la vision,5
+Q191779,syndrome de Gilles de La Tourette,neurologie,tic,1
+Q1345792,syndrome de Goodpasture,immunologie | néphrologie | pneumologie,hémorragie,1
+Q335555,syndrome de Gougerot-Sjögren,immunologie | rhumatologie,xérophtalmie | xérostomie,2
+Q205214,syndrome de Guillain-Barré,neurologie,paralysie ascendante,1
+Q632228,syndrome de Hajdu-Cheney,génétique médicale | rhumatologie,acro-ostéolyse,1
+Q1593605,Syndrome de Heerfordt,angiologie,paralysie faciale a frigore | salivary gland swelling | uvéite,3
+Q6121943,syndrome de Jaffe-Campanacci,génétique médicale,fibrome non ossifiant | handicap mental | taches café au lait,3
+Q1165179,syndrome de Kallmann,endocrinologie,anosmie | hypogonadisme | infertilité | ostéoporose,4
+Q207133,syndrome de Klinefelter,génétique médicale,azoospermie | dyslexie | faiblesse musculaire | gynécomastie | hypogonadisme | obésité | ostéoporose,7
+Q622901,syndrome de Korsakoff,psychiatrie,amnésie de fixation | confabulation | cryptomnésie | pseudo-réminiscence,4
+Q3508657,Syndrome de König,gastro-entérologie,constipation | diarrhée | distension abdominale | météorisme abdominal,4
+Q6056727,syndrome de l'intersection,orthopédie,douleur au poignet,1
+Q838966,syndrome de l'intestin irritable,gastro-entérologie,ballonnement abdominal | constipation | diarrhée | douleur abdominale | inconfort abdominal,5
+Q1235785,syndrome de la personne raide,neurologie,myoclonie | rigidité musculaire,2
+Q1051436,syndrome de la queue de cheval,neurochirurgie | neurologie,anesthésie en selle,1
+Q163905,syndrome de Lafora,neurologie,hallucination,1
+Q72000,syndrome de Lemierre,infectiologie | médecine vétérinaire,abcès | exanthème | fièvre | frissonnement | hyperleucocytose | sepsis,6
+Q727436,syndrome de Lesch-Nyhan,endocrinologie,automutilation,1
+Q32552,syndrome de Löffler,pneumologie,réaction allergique,1
+Q208562,syndrome de Marfan,génétique médicale,Pectus carinatum | anévrisme aortique | dissection aortique | dolichosténomélie | ectopie du cristallin | pectus excavatum | pied plat | prolapsus mitral | scoliose,9
+Q605576,syndrome de May-Thurner,cardiologie,couleur anormale de la peau | tuméfaction,2
+Q727008,syndrome de McCune–Albright,génétique médicale,dysplasie fibreuse polyostotique | puberté précoce | taches café au lait,3
+Q2979344,syndrome de Mendelson,pneumologie,accident vasculaire cérébral | pneumonie | tachypnée,3
+Q525642,syndrome de microdélétion 22q11,génétique médicale,hypoplasie du thymus,1
+Q17119515,syndrome de Mungan,gastro-entérologie,pseudo-obstruction intestinale chronique,1
+Q1418152,syndrome de Möbius,génétique médicale,paralysie faciale,1
+Q9390284,syndrome de Netherton,génétique médicale,inflammation | trichorrhexie invaginée,2
+Q1425018,syndrome de Pallister-Killian,génétique médicale,hernie diaphragmatique | hypotonie musculaire | polydactylie | troubles du développement du langage | épilepsie,5
+Q1503804,Syndrome de Parinaud,neurologie,convergence retraction nystagmus,1
+Q1462780,syndrome de Paris,psychiatrie,état dépressif,1
+Q190454,syndrome de perte de sel d’origine cérébrale,endocrinologie,hyponatrémie,1
+Q1756040,syndrome de Pierre Robin,génétique médicale,glossoptose,1
+Q31813,syndrome de Plummer-Vinson,gastro-entérologie,ptérygion de l'œsophage,1
+Q1648128,syndrome de Ramsay Hunt,infectiologie,acouphène | paralysie | paralysie faciale | vertige,4
+Q7313459,syndrome de Renpenning,génétique médicale,insuffisance staturale,1
+Q1470530,Syndrome de retard de phase du sommeil,neurologie,insomnie,1
+Q917357,syndrome de Rett,neurologie | psychiatrie | pédiatrie,dysfonctionnement cognitif,1
+Q1724539,syndrome de rubéole congénital,pédiatrie,cataracte | diabète sucré | glaucome | surdité,4
+Q3508686,syndrome de Saethre-Chotzen,rhumatologie,crâniosynostose,1
+Q500816,syndrome de Stein-Leventhal,endocrinologie | gynécologie,anovulation | hyperandrogénisme | ovaire polykistique,3
+Q1514476,Syndrome de Sweet,dermatologie,réaction allergique,1
+Q959457,syndrome de sécrétion inappropriée d'hormone anti-diurétique,endocrinologie,hyponatrémie,1
+Q620760,syndrome de tachycardie orthostatique posturale,cardiologie | neurologie,asthénie | brouillard mental | hypertension artérielle | hypotension artérielle | insomnie | nausée | sensation de tête légère | tachycardie | tremblement | vision du tunnel | vision floue,11
+Q3508705,syndrome de Timothy,neurologie,bradycardie | cardiopathie congénitale | fibrillation ventriculaire | syncope | tachycardie | troubles de la conduction cardiaque,6
+Q2033532,syndrome de Van der Woude,génétique médicale,fente palatine | fistule congénitale de la lèvre,2
+Q1238645,syndrome de Vogt-Koyanagi-Harada,ophtalmologie,méningite,1
+Q2140130,syndrome de Wallenberg,neurologie,ataxie | hypoesthésie | nausée | vertige,4
+Q654425,syndrome de Waterhouse-Friderichsen,endocrinologie,hémorragie | méningite,2
+Q558077,syndrome de Williams,génétique médicale | pédiatrie,sténose aortique supravalvulaire,1
+Q199295,syndrome de Zieve,gastro-entérologie,anémie hémolytique | douleur abdominale | hyperlipoprotéinémie | ictère,4
+Q18556319,syndrome des histiocytes bleus de mer,angiologie | endocrinologie | génétique médicale | neurologie,histiocytes bleus de mer,1
+Q13038909,syndrome des mouvements périodiques nocturnes des membres,neurophysiologie,mouvements périodiques nocturnes des membres,1
+Q5598273,syndrome des plaquettes grises,hématologie,hémorragie,1
+Q16889762,syndrome des ptérygium multiples,dermatologie,pterygium,1
+Q1587881,syndrome des ptérygiums poplités,génétique médicale,pterygium,1
+Q1857905,syndrome des vomissements cycliques,gastro-entérologie,douleur abdominale | fatigue | hyperémèse | nausée,4
+Q9390543,syndrome diencéphalique,neurologie,cachexie | retard de croissance staturo-pondérale,2
+Q332293,syndrome du canal carpien,neurologie | orthopédie,douleur au poignet,1
+Q1128440,syndrome du choc toxique,infectiologie,choc circulatoire | diarrhée | hypotension artérielle | vomissement,4
+Q192579,syndrome du décalage horaire,neurologie,céphalée | fatigue | irritabilité | trouble du sommeil,4
+Q662272,Syndrome du grêle court,gastro-entérologie,diarrhée,1
+Q3961652,syndrome du lobe moyen,pneumologie,Inflammation granulomateuse | adénopathie | gonflement des ganglions lymphatiques,3
+Q7005033,syndrome du naevus comédonien,dermatologie,cataracte | naevus comédonien | scoliose,3
+Q5319554,syndrome du naevus dysplasique,génétique médicale | oncologie,nævus dysplasique,1
+Q1741415,syndrome du nerf interosseux anterieur,chirurgie de la main | neurologie,douleur | faiblesse musculaire,2
+Q1484058,syndrome du QT court,cardiologie | génétique médicale,dyspnée | fatigue | palpitation | trouble du rythme cardiaque,4
+Q653924,syndrome du QT long,cardiologie,trouble du rythme cardiaque,1
+Q649340,syndrome d’Alice au pays des merveilles,neurologie,Macropsie | Micropsie | Pélopsie | lilliputian hallucination | microsomatognosie | téléopsie,6
+Q5986440,syndrome ichtyose folliculaire-alopécie-photophobie,génétique médicale,alopécie | ichtyose | photophobie,3
+Q3508566,syndrome IPEX,immunologie,diarrhée,1
+Q6668132,syndrome LPH,urologie,douleur du flanc | hématurie,2
+Q1151300,syndrome lymphoprolifératif avec auto-immunité,immunologie,adénopathie | hépatomégalie | splénomégalie,3
+Q3079989,syndrome MOMO,génétique,handicap mental | macrocéphalie | maladie de l'œil | obésité,4
+Q504790,syndrome néphrotique,néphrologie,hypoalbuminémie | protéinurie,2
+Q1424706,syndrome opsomyoclonique,neurologie,myoclonie | opsoclonie,2
+Q652744,syndrome pieds-mains-bouche,infectiologie,exanthème,1
+Q15974799,syndrome polyuro-polydipsique,endocrinologie | néphrologie | urologie,déséquilibres hydro-électrolytiques | polydipsie | polyurie,3
+Q2581333,syndrome post-commotionnel,neurologie | psychiatrie,céphalée | irritabilité | étourdissement,3
+Q220188,syndrome post-polio,infectiologie,faiblesse musculaire | syndrome d'apnées du sommeil,2
+Q220193,syndrome prémenstruel,gynécologie,arthralgie | céphalée | fatigue | myalgie,4
+Q6137239,syndrome pulmonaire à Hantavirus,pneumologie,choc circulatoire | conjonctivite | céphalée | diarrhée | douleur abdominale | dyspnée | fièvre | frissonnement | myalgie | pharyngite | toux | vomissement | œdème du poumon,13
+Q3508578,syndrome Rapadilano,génétique médicale,diarrhée,1
+Q103177,syndrome respiratoire aigu sévère,infectiologie | microbiologie | pneumologie,cyanose | céphalée | diarrhée | dyspnée | fièvre | hypoxie | myalgie | pneumonie atypique | syndrome d'épuisement professionnel | toux,10
+Q16654806,syndrome respiratoire du Moyen-Orient,infectiologie,diarrhée | dyspnée | fièvre | syndrome de détresse respiratoire aiguë | toux,5
+Q660330,syndrome TAR,génétique médicale,aplasie radiale | thrombopénie,2
+Q4677915,syndrome thoracique aigu,pneumologie,hyperleucocytose | tachypnée,2
+Q3508795,syndrome tricho-rhino-phalangien type 2,génétique médicale,insuffisance staturale,1
+Q1571398,syndrome vestibulaire,infectiologie | neurologie,nausée | nystagmus | vertige | vomissement,4
+Q4420034,syngamose,helminthologiste | infectiologie,asthme | bronchite | hémoptysie | laryngite | pharyngite | trachéite,6
+Q2583311,tabes dorsalis,infectiologie,dysfonction érectile | hyperesthésie | paresthésie,3
+Q1598909,tachycardie supra-ventriculaire,cardiologie,douleur thoracique | dyspnée,2
+Q1649897,tachycardie ventriculaire polymorphe catécholergique,cardiologie,tachycardie ventriculaire,1
+Q929313,temponade cardiaque,cardiologie,dyspnée | tachycardie | toux | vertige,4
+Q105725639,thromboembolie aortique féline,cardiologie | médecine d'urgence,douleur | paralysie flasque aiguë,2
+Q185986,thrombophilie par mutation du facteur V,hématologie,douleur | tuméfaction,2
+Q377978,thrombophlébite,cardiologie,maladie thromboembolique,1
+Q18554284,thrombophlébite de la veine fémorale,cardiologie,maladie thromboembolique,1
+Q1428132,thrombose des sinus veineux cérébraux,appareil cardiovasculaire | neurologie,asthénie | convulsion | céphalée,3
+Q187842,thyroïdite auto-immune,endocrinologie,douleur musculo-squelettique secondaire chronique | fatigue,2
+Q11094,thyroïdite de Hashimoto,endocrinologie,anticorps anti-thyroïdiens,1
+Q2090711,thélaziose,helminthologie | infectiologie,conjonctivite | larmoiement | sensation,3
+Q18558175,toxi-infection alimentaire à staphylocoques,infectiologie,crampe abdominale | faiblesse musculaire | nausée,3
+Q1345113,toxocarose,helminthologiste | infectiologie | médecine vétérinaire,adénopathie | cécité | céphalée | douleur abdominale | fièvre | hépatomégalie | hépatosplénomégalie | myocardite | toux | urticaire,10
+Q154878,toxoplasmose,gynécologie obstétrique | infectiologie,adénopathie | encéphalite | fièvre légère | hépatomégalie | hépatosplénomégalie | splénomégalie,6
+Q1415275,traumatisme médullaire,médecine d'urgence | neurochirurgie,douleur chronique | hypoesthésie | paralysie,3
+Q2681162,traumatisme oculaire,neurologie | ophtalmologie,atteinte occulaire,1
+Q2230578,traumatisme sonore,audiologie,douleur | perte auditive provoquée par le bruit | vertige,3
+Q495146,trichinose,infectiologie,douleur abdominale | fièvre | myalgie | éosinophilie | œdème,5
+Q2264130,trichocéphalose,infectiologie,amaigrissement | chlorose | diarrhée | douleur abdominale | éosinophilie,5
+Q18554338,trichostrongylose,infectiologie,diarrhée,1
+Q4463309,trichostrongyloïdose,infectiologie,anémie | asthénie | constipation | céphalée | douleur abdominale | irritabilité | éosinophilie | éructation,8
+Q608259,trichotillomanie,psychiatrie | psychologie,alopécie,1
+Q506433,triméthylaminurie,endocrinologie,foetor,1
+Q131755,trouble bipolaire,psychiatrie | psychologie clinique,agitation psychomotrice | anhédonie | aphasie | délire | fatigue | hallucination | hypersexualité | hypersomnie | hypomanie | insomnie | manie | saute d'humeur | état dépressif,13
+Q3065932,trouble cognitif,psychiatrie,dysfonctionnement cognitif,1
+Q4313500,trouble de la conscience,neurologie,altération de l'état de concience,1
+Q2338307,trouble de la dépersonnalisation,psychiatrie | psychologie clinique,dissociation | dépersonnalisation | déréalisation,3
+Q208166,trouble de la personnalité borderline,psychiatrie | psychologie clinique,automutilation | colère | dysphorie | dysrégulation émotionnelle | impulsivité,5
+Q320719,trouble de la personnalité dépendante,psychiatrie | psychologie,dependency,1
+Q1060310,trouble de la personnalité narcissique,psychiatrie | psychologie clinique,narcissisme,1
+Q747735,trouble de la personnalité paranoïaque,psychiatrie | psychologie | psychologie clinique,paranoïa,1
+Q861560,trouble de la personnalité schizotypique,psychiatrie | psychologie,anxiété sociale | dysfonctionnement cognitif | paranoïa | pensée magique | émoussement affectif,5
+Q498237,trouble de la personnalité schizoïde,psychiatrie | psychologie clinique,Trouble de la rêverie compulsive | anhédonie | dépersonnalisation | déréalisation | isolement social | émoussement affectif,6
+Q509122,trouble de la personnalité évitante,psychiatrie | psychologie,Évitement (psychologie),1
+Q202387,trouble de stress post-traumatique,psychiatrie | psychologie clinique,anxiété | cauchemar | pensée intrusive | retour en arrière | trouble du sommeil,5
+Q477502,trouble de stress post-traumatique complexe,psychiatrie | psychologie clinique,anxiété | cauchemar | dysrégulation émotionnelle | retour en arrière | réponse combat-fuite | somatisation,6
+Q18657,trouble dissociatif de l'identité,psychiatrie | psychologie,amnésie | dissociation | dépersonnalisation | déréalisation | multiplicity,5
+Q181923,trouble du déficit de l'attention avec ou sans hyperactivité,psychiatrie | pédopsychiatrie,distractibilité | dysrégulation émotionnelle | hyperfocus | hypersensibilité au rejet | impulsivité | procrastination | trouble des fonctions exécutives,7
+Q1993146,trouble du déficit de l'attention forme avec inattention prédominante,psychiatrie,attention deficit | distractibilité | dysrégulation émotionnelle | hyperfocus | hypersensibilité au rejet | rêverie | trouble des fonctions exécutives,7
+Q49000071,trouble du jeu informatique,psychiatrie | psychologie clinique,accoutumance | dissimulation | dysfonctionnement cognitif | isolement social | perte de contrôle | stress dépassé,6
+Q2845978,trouble du mouvement stéréotypé,psychiatrie,stéréotypie,1
+Q2728811,trouble dysphorique prémenstruel,gynécologie | psychiatrie | psychologie clinique,dysfonctionnement cognitif | dysphorie,2
+Q721073,trouble délirant,psychiatrie | psychologie clinique,délire,1
+Q18671,trouble explosif intermittent,psychiatrie | psychologie | psychologie clinique,colère,1
+Q136542288,trouble lié au jeu,psychiatrie | psychologie | psychologie clinique,accoutumance | dysfonctionnement cognitif | isolement social | perte de contrôle,4
+Q19000444,trouble névrotique,psychiatrie | psychologie,hallucination,1
+Q178190,trouble obsessionnel compulsif,psychiatrie | psychologie,anxiété | compulsion | obsession | pensée intrusive,4
+Q741713,trouble panique,psychiatrie | psychologie clinique,crise de panique | palpitation,2
+Q1077139,troubles des tics,psychiatrie,tic,1
+Q12204,tuberculose,infectiologie | phtisiologie | pneumologie,amaigrissement | douleur thoracique | fatigue physiologique | fièvre | frissonnement | hémoptysie | sueurs nocturnes | toux,8
+Q618032,tuberculose bovine,infectiologie | médecine vétérinaire,amaigrissement | asymptomatique | constipation | diarrhée | dyspnée | faiblesse | infertilité | toux chronique,8
+Q18557555,tuberculose de l'œsophage,infectiologie,dysphagie,1
+Q18558100,tuberculose de la rate,infectiologie,abcès,1
+Q18556166,tuberculose gastro-intestinale,gastro-entérologie | infectiologie,amaigrissement | nausée | vomissement,3
+Q18556185,tuberculose hépatique,gastro-entérologie | infectiologie,ictère,1
+Q1166500,tuberculose intestinale,infectiologie,hémorragie | hémorragie digestive | nausée | vomissement,4
+Q1737838,tuberculose laryngée,infectiologie,Inflammation granulomateuse | dysphagie | voix rauque,3
+Q13046587,tuberculose pulmonaire,infectiologie,épanchement pleural,1
+Q153861,tularémie,infectiologie,anorexie | bronchite | bubon | céphalée | diarrhée | douleur abdominale | empoisonnement | exanthème | fièvre | hépatomégalie | lymphadénite | lymphangite | mal de gorge | malaise | nausée | pleurésie | pneumonie | splénomégalie | trachéite | ulcère | vomissement | énanthème | épistaxis,23
+Q18554715,tularémie gastro-intestinale,infectiologie,frissonnement | vomissement,2
+Q1981276,tumeur neuroendocrinienne,oncologie endocrinienne,diarrhée | douleur abdominale | indigestion | mal de dos | rougissement,5
+Q7053975,typhus d'Asie du Nord,infectiologie,arthralgie | bradycardie | céphalée | exanthème | fièvre | foyer d'infection primaire | hyperémie | hypotension artérielle | hépatomégalie | myalgie | splénomégalie,11
+Q1194496,typhus des broussailles,infectiologie,Papule | adénopathie | arthralgie | bradycardie | conjonctivite | céphalée | exanthème | fièvre | foyer d'infection primaire | frissonnement | hypotension artérielle | insomnie | macule | mal de gorge | tachycardie | toux,16
+Q1290616,typhus exanthématique,infectiologie,Chiari symptom | Godelier's symptom | amimie | arthralgie | conjonctivite | céphalée | dysarthrie | dysphagie | délire | escarre | euphorie | examen des signes méningés | fièvre | frissonnement | hood symptom | hyperesthésie | insomnie | macule | manie | nystagmus | pétéchie | surdité | syndrome confusionnel (délirium) | syndrome de Korsakoff | thrombose | tremblement | trouble du rythme cardiaque | étourdissement,28
+Q18975615,typhus félin,médecine vétérinaire,ataxie cérébelleuse | diarrhée | douleur abdominale | déshydratation | fatigue | hyperthermie | hypothermie | vomissement,8
+Q3084532,typhus murin,infectiologie,céphalée | empoisonnement | exanthème | fièvre | frissonnement | hépatomégalie | macule | nausée | pétéchie | vomissement,10
+Q7700555,ténonite,neurologie,inflammation,1
+Q511818,tétanie,endocrinologie | neurologie,contractures tétaniques,1
+Q47790,tétanos,infectiologie,céphalée | douleur | dysphagie | fièvre | insuffisance respiratoire | irritabilité | raideur de la nuque | rire sardonique | salivation | spasme | tachycardie | triade diagnostique du tétanos | trismus,13
+Q1017169,ulcère de Buruli,infectiologie,nécrose,1
+Q5196200,ulcère de Cushing,gastro-entérologie,hypertension intra-crânienne,1
+Q4003012,ulcère de Mooren,neurologie,inflammation,1
+Q172941,ulcère gastro-duodénal,gastro-entérologie,hématémèse | melæna | pyrosis | épigastralgie,4
+Q7901359,urticaire allergique,dermatologie,réaction allergique,1
+Q280027,uvéite,ophtalmologie,inflammation,1
+Q676191,vaginite,gynécologie,inflammation,1
+Q4007235,vaginite atrophique,gynécologie,dyspareunie | impériosité urinaire | prurit | sécheresse vaginale,4
+Q977090,vaginite candidosique,gynécologie,exanthème | tuméfaction,2
+Q44727,varicelle,infectiologie | pédiatrie,Papule | adénopathie | céphalée | fatigue | fièvre | fièvre légère | macule | prurit | vésicule | érosion,10
+Q12214,variole,infectiologie,cicatrice | céphalée | douleur abdominale | exanthème | fatigue | fièvre | phlyctène | pimple | vomissement,9
+Q382370,variole simienne,infectiologie,adénopathie | céphalée | fièvre | mal de gorge | myalgie | phlyctène | prurit,7
+Q644318,vascularite,angiologie | immunologie | rhumatologie,inflammation,1
+Q1613670,vascularite des petits vaisseaux cutanés,rhumatologie,réaction allergique,1
+Q7316771,vascularite rétinienne,neurologie,inflammation,1
+Q1035319,Vascularite à IgA,immunologie,arthrite | douleur abdominale | purpura,3
+Q55784812,vasculopathie de l'enfant associée à STING,génétique médicale,nécrose,1
+Q18555094,vertige central,neurologie,nausée | vomissement,2
+Q817310,vertige paroxystique positionnel bénin,otorhinolaryngologie,vertige | étourdissement,2
+Q1518637,VIPome,chirurgie | endocrinologie,syndrome de Verner-Morrison,1
+Q180152,vitiligo,dermatologie,dépigmentation,1
+Q5432936,vitréorétinopathie exsudative familiale,ophtalmologie,saignement,1
+Q1061988,volet thoracique,médecine d'urgence,Paradoxical breathing,1
+Q1542466,vulvite,urologie,inflammation,1
+Q2535470,vulvovaginite,urologie,inflammation,1
+Q4021721,xanthomatose,endocrinologie,xanthome,1
+Q2600216,yersiniose,infectiologie,appendicite | arthralgie | céphalée | diarrhée | douleur abdominale | empoisonnement | exanthème | fièvre | frissonnement | gastro-entérite | hépatomégalie | lymphadénite mésentérique | myalgie | pharyngite | sepsis | érythème noueux,16
+Q8069612,zero stroke,trouble obsessionnel compulsif,graphomanie,1
+Q182155,zona,dermatologie | infectiologie | neurologie,céphalée | douleur neuropathique chronique | fièvre | frissonnement | névralgie post-herpétique | paresthésie | phlyctène,7
+Q777087,échinococcose,helminthologiste | infectiologie,amaigrissement | douleur abdominale | hémoptysie | hépatomégalie | nausée | pyrosis | toux | vomissement,8
+Q448768,échinococcose alvéolaire,helminthologiste | infectiologie,fièvre | hépatomégalie | malaise | tumeur,4
+Q246046,échinococcose cystique,infectiologie,choc anaphylactique | choc circulatoire | hémoptysie | masse abdominale | urticaire,5
+Q736776,épicondylite,médecine physique et de réadaptation,douleur,1
+Q204176,épidermolyse toxinique staphylococcique du nouveau-né,dermatologie,exanthème | irritabilité | nécrose,3
+Q11883686,épilepsie myoclonique,neurologie,myoclonie,1
+Q18554242,épisclérite diffuse,neurologie,inflammation,1
+Q207092,érysipèle,infectiologie,adénopathie | céphalée | fièvre | frissonnement | lymphangite | érythème,6
+Q1607983,érysipéloïde,infectiologie,Papule | adénopathie | fièvre légère | lymphangite | érythème,5
+Q1363732,érythème polymorphe,dermatologie,réaction allergique,1
+Q4340209,état dépressif,psychiatrie,dysphorie | fatigue | trouble des fonctions exécutives,3
+Q19275831,étouffement,médecine d'urgence,dyspnée,1
+Q60786208,œsophagite lymphocytaire,gastro-entérologie,douleur abdominale | dysphagie | obstruction alimentaire oesophagienne | pyrosis,4
+Q2057356,œsophagite à éosinophiles,gastro-entérologie,inflammation,1
+Q18556139,œsophagostomose,infectiologie,douleur abdominale à la palpation,1

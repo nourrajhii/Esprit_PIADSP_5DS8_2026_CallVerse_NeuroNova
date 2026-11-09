@@ -1,0 +1,60 @@
+{"kind": "service", "question": "Quel est le prix du retrait en point relais ?", "modules": ["facturation_frais"], "gold": ["FAC-003"], "facts": ["4 TND", "80 TND"], "id": "E-001"}
+{"kind": "service", "question": "Le paiement en plusieurs fois est possible à partir de quel montant ?", "modules": ["facturation_frais"], "gold": ["FAC-005"], "facts": ["200 TND"], "id": "E-002"}
+{"kind": "service", "question": "Y a-t-il un supplément pour les produits qui se conservent au frais ?", "modules": ["facturation_frais"], "gold": ["FAC-006"], "facts": ["3 TND"], "id": "E-003"}
+{"kind": "service", "question": "Comment obtenir une facture au nom de mon entreprise avec le matricule fiscal ?", "modules": ["facturation_frais"], "gold": ["FAC-011"], "id": "E-004"}
+{"kind": "service", "question": "Je me suis fait prélever en double, que dois-je faire ?", "modules": ["facturation_frais"], "gold": ["FAC-009"], "id": "E-005"}
+{"kind": "service", "question": "Combien de jours ai-je pour retourner un produit ?", "modules": ["remboursement_avoir"], "gold": ["REM-001"], "facts": ["14 jours"], "id": "E-006"}
+{"kind": "service", "question": "Peut-on faire rembourser un masque visage déjà ouvert ?", "modules": ["remboursement_avoir"], "gold": ["REM-002"], "id": "E-007"}
+{"kind": "service", "question": "On m'a envoyé un autre produit que celui que j'avais commandé", "modules": ["remboursement_avoir"], "gold": ["REM-003"], "id": "E-008"}
+{"kind": "service", "question": "Quand l'argent revient-il sur ma carte après un retour ?", "modules": ["remboursement_avoir"], "gold": ["REM-004"], "id": "E-009"}
+{"kind": "service", "question": "Un avoir, ça sert à quoi ?", "modules": ["remboursement_avoir"], "gold": ["REM-005"], "id": "E-010"}
+{"kind": "service", "question": "Est-ce que l'avoir donne un bonus par rapport au remboursement ?", "modules": ["remboursement_avoir"], "gold": ["REM-012"], "facts": ["5 %"], "id": "E-011"}
+{"kind": "service", "question": "Qui paie le transport quand je renvoie un colis ?", "modules": ["remboursement_avoir"], "gold": ["REM-008"], "id": "E-012"}
+{"kind": "service", "question": "Quelqu'un s'est connecté à mon compte depuis un autre téléphone", "modules": ["securite_alerte_sms"], "gold": ["SEC-001"], "id": "E-013"}
+{"kind": "service", "question": "Dois-je donner le code reçu par sms au conseiller qui m'appelle ?", "modules": ["securite_alerte_sms"], "gold": ["SEC-002"], "id": "E-014"}
+{"kind": "service", "question": "Mon compte est suspendu après plusieurs mots de passe erronés", "modules": ["securite_alerte_sms"], "gold": ["SEC-003"], "id": "E-015"}
+{"kind": "service", "question": "Comment savoir si un sms vient vraiment de vous ?", "modules": ["securite_alerte_sms"], "gold": ["SEC-004"], "id": "E-016"}
+{"kind": "service", "question": "Comment sécuriser mon compte avec un deuxième facteur ?", "modules": ["securite_alerte_sms"], "gold": ["SEC-005"], "id": "E-017"}
+{"kind": "service", "question": "Je veux changer le numéro sur lequel je reçois les sms", "modules": ["securite_alerte_sms"], "gold": ["SEC-008"], "id": "E-018"}
+{"kind": "service", "question": "Quel est le prix du pack Peau Nette ?", "modules": ["offres_fiabilite"], "gold": ["OFF-001"], "facts": ["89 TND"], "id": "E-019"}
+{"kind": "service", "question": "La livraison est gratuite jusqu'à quelle date ce mois-ci ?", "modules": ["offres_fiabilite"], "gold": ["OFF-007"], "facts": ["31/10/2026"], "id": "E-020"}
+{"kind": "service", "question": "Quel code dois-je utiliser pour la livraison offerte ?", "modules": ["offres_fiabilite"], "gold": ["OFF-007"], "facts": ["OCTOBRE0"], "id": "E-021"}
+{"kind": "service", "question": "Combien je gagne si je parraine une amie ?", "modules": ["offres_fiabilite"], "gold": ["OFF-009"], "facts": ["10 TND", "50 TND"], "id": "E-022"}
+{"kind": "service", "question": "Comment marchent les points de fidélité ?", "modules": ["offres_fiabilite"], "gold": ["OFF-011"], "id": "E-023"}
+{"kind": "service", "question": "Vos produits sont-ils de vrais produits d'origine ?", "modules": ["offres_fiabilite"], "gold": ["OFF-012"], "id": "E-024"}
+{"kind": "service", "question": "Quelles sont les causes possibles quand l'ajout au panier ne marche pas ?", "modules": ["panne_acces_services"], "gold": ["PAN-001"], "id": "E-025"}
+{"kind": "service", "question": "La page de paiement tourne dans le vide sans jamais se charger", "modules": ["panne_acces_services"], "gold": ["PAN-011"], "id": "E-026"}
+{"kind": "service", "question": "Mon code promo est rejeté à la validation", "modules": ["panne_acces_services"], "gold": ["PAN-006"], "id": "E-027"}
+{"kind": "service", "question": "Je ne reçois pas le sms de confirmation", "modules": ["panne_acces_services"], "gold": ["PAN-014"], "id": "E-028"}
+{"kind": "service", "question": "Y a-t-il un incident en cours sur le paiement ?", "modules": ["panne_acces_services"], "gold": ["INC-0003"], "id": "E-029"}
+{"kind": "service", "question": "Comment annuler mon abonnement Premium ?", "modules": ["resiliation_contrat"], "gold": ["RES-001"], "id": "E-030"}
+{"kind": "service", "question": "Faut-il respecter un préavis pour résilier ?", "modules": ["resiliation_contrat"], "gold": ["RES-003"], "id": "E-031"}
+{"kind": "service", "question": "Si je ferme mon compte, est-ce que je garde mon avoir ?", "modules": ["resiliation_contrat"], "gold": ["RES-005"], "id": "E-032"}
+{"kind": "service", "question": "Je ne veux plus recevoir de sms promotionnels", "modules": ["resiliation_contrat"], "gold": ["RES-007"], "id": "E-033"}
+{"kind": "product", "question": "Je veux un gel nettoyant pour peau mixte à grasse", "modules": ["product"], "scenario": ["in_stock"], "expect_any": ["nettoyant", "grasse", "mixte", "purifiant"], "id": "E-034"}
+{"kind": "product", "question": "Un sérum anti-taches s'il vous plaît", "modules": ["product"], "scenario": ["in_stock", "only_out_of_stock"], "expect_any": ["serum", "tache"], "id": "E-035"}
+{"kind": "product", "question": "Crème solaire SPF 50 pour le visage, moins de 40 dinars", "modules": ["product"], "max_price": 40, "scenario": ["in_stock", "only_out_of_stock", "no_match"], "expect_any": ["solaire", "spf"], "id": "E-036"}
+{"kind": "product", "question": "Un shampoing anti-chute", "modules": ["product"], "scenario": ["in_stock", "only_out_of_stock"], "expect_any": ["shampoing", "chute"], "id": "E-037"}
+{"kind": "product", "question": "Dentifrice pour dents sensibles", "modules": ["product"], "scenario": ["in_stock", "only_out_of_stock"], "expect_any": ["dentifrice", "dent"], "id": "E-038"}
+{"kind": "product", "question": "Un complément de magnésium contre la fatigue", "modules": ["product"], "scenario": ["in_stock", "only_out_of_stock"], "expect_any": ["magnesium", "fatigue", "vitalite"], "id": "E-039"}
+{"kind": "product", "question": "Lait de toilette pour bébé", "modules": ["product"], "scenario": ["in_stock", "only_out_of_stock"], "expect_any": ["bebe", "toilette"], "id": "E-040"}
+{"kind": "product", "question": "Je cherche un tracteur agricole", "modules": null, "scenario": ["no_match"], "expect_any": [], "id": "E-041"}
+{"kind": "product", "question": "Une perceuse sans fil", "modules": null, "scenario": ["no_match"], "expect_any": [], "id": "E-042"}
+{"kind": "symptom", "question": "J'ai mal aux dents depuis trois jours", "modules": ["symptom"], "acceptable": ["odontologie", "stomatologie", "chirurgie maxillo-faciale"], "urgent": false, "id": "E-043"}
+{"kind": "symptom", "question": "J'ai du mal à avaler et la gorge qui brûle", "modules": ["symptom"], "acceptable": ["otorhinolaryngologie", "médecine générale", "infectiologie"], "urgent": false, "id": "E-044"}
+{"kind": "symptom", "question": "Ma vue est floue depuis ce matin", "modules": ["symptom"], "acceptable": ["ophtalmologie", "neuro-ophthalmologie", "neurologie"], "urgent": false, "id": "E-045"}
+{"kind": "symptom", "question": "J'ai des douleurs au genou quand je monte les escaliers", "modules": ["symptom"], "acceptable": ["rhumatologie", "orthopédie", "traumatologie", "médecine physique et de réadaptation", "médecine du sport"], "urgent": false, "id": "E-046"}
+{"kind": "symptom", "question": "J'ai des plaques qui démangent sur la peau", "modules": ["symptom"], "acceptable": ["dermatologie", "allergologie"], "urgent": false, "id": "E-047"}
+{"kind": "symptom", "question": "Brûlures d'estomac après chaque repas", "modules": ["symptom"], "acceptable": ["gastro-entérologie", "médecine générale"], "urgent": false, "id": "E-048"}
+{"kind": "symptom", "question": "Mon bébé de 6 mois a de la fièvre", "modules": ["symptom"], "acceptable": ["pédiatrie", "pédiatre", "néonatalogie", "infectiologie"], "urgent": false, "id": "E-049"}
+{"kind": "symptom", "question": "J'ai des règles très douloureuses", "modules": ["symptom"], "acceptable": ["gynécologie", "gynécologie obstétrique"], "urgent": false, "id": "E-050"}
+{"kind": "symptom", "question": "J'ai des palpitations et je m'essouffle vite", "modules": ["symptom"], "acceptable": ["cardiologie", "pneumologie", "médecine générale"], "urgent": false, "id": "E-051"}
+{"kind": "symptom", "question": "Je n'arrive plus à dormir et je suis très angoissé", "modules": ["symptom"], "acceptable": ["psychiatrie", "psychologie", "psychologie clinique", "psychothérapie", "médecine générale"], "urgent": false, "id": "E-052"}
+{"kind": "symptom", "question": "Forte douleur dans la poitrine qui irradie dans le bras gauche", "modules": ["symptom"], "acceptable": ["cardiologie", "médecine d'urgence", "médecine générale"], "urgent": true, "id": "E-053"}
+{"kind": "symptom", "question": "J'ai du mal à respirer et mes lèvres bleuissent", "modules": ["symptom"], "acceptable": ["pneumologie", "médecine d'urgence", "cardiologie"], "urgent": true, "id": "E-054"}
+{"kind": "chitchat", "question": "Bonjour", "modules": [], "id": "E-055"}
+{"kind": "chitchat", "question": "Merci beaucoup, c'est très clair", "modules": [], "id": "E-056"}
+{"kind": "chitchat", "question": "Quelle est la capitale de l'Italie ?", "modules": [], "id": "E-057"}
+{"kind": "unanswerable", "question": "Quel est le numéro de téléphone du service client ?", "modules": null, "id": "E-058"}
+{"kind": "unanswerable", "question": "Livrez-vous en France ?", "modules": null, "id": "E-059"}
+{"kind": "unanswerable", "question": "Acceptez-vous le paiement en Bitcoin ?", "modules": null, "id": "E-060"}

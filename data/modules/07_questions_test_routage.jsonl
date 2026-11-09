@@ -1,0 +1,16 @@
+{"id": "Q-001", "question": "Quels sont les packs du mois ?", "module_attendu": "offres_fiabilite"}
+{"id": "Q-002", "question": "Comment avoir le mois gratuit ?", "module_attendu": "offres_fiabilite"}
+{"id": "Q-003", "question": "Je n'arrive pas à ajouter un produit au panier", "module_attendu": "panne_acces_services"}
+{"id": "Q-004", "question": "Le site affiche une erreur 500", "module_attendu": "panne_acces_services"}
+{"id": "Q-005", "question": "Combien coûte la livraison express ?", "module_attendu": "facturation_frais"}
+{"id": "Q-006", "question": "Où je télécharge ma facture ?", "module_attendu": "facturation_frais"}
+{"id": "Q-007", "question": "J'ai été débité deux fois", "module_attendu": "facturation_frais"}
+{"id": "Q-008", "question": "Puis-je rendre une crème que j'ai ouverte ?", "module_attendu": "remboursement_avoir"}
+{"id": "Q-009", "question": "Combien de temps pour être remboursé ?", "module_attendu": "remboursement_avoir"}
+{"id": "Q-010", "question": "C'est quoi un avoir ?", "module_attendu": "remboursement_avoir"}
+{"id": "Q-011", "question": "J'ai reçu un SMS suspect avec un lien", "module_attendu": "securite_alerte_sms"}
+{"id": "Q-012", "question": "Comment activer la double authentification ?", "module_attendu": "securite_alerte_sms"}
+{"id": "Q-013", "question": "Je veux résilier mon abonnement Premium", "module_attendu": "resiliation_contrat"}
+{"id": "Q-014", "question": "Que deviennent mes points si je supprime mon compte ?", "module_attendu": "resiliation_contrat"}
+{"id": "Q-015", "question": "Je veux un gel nettoyant pour peau mixte et grasse", "module_attendu": "produit_conseil"}
+{"id": "Q-016", "question": "J'ai mal aux dents depuis 3 jours", "module_attendu": "symptome_specialiste"}

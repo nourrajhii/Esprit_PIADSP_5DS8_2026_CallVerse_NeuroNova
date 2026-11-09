@@ -1,0 +1,10 @@
+{
+  "recherche_service": {
+    "n": 1,
+    "hit@1": 1.0,
+    "hit@3": 1.0,
+    "hit@5": 1.0,
+    "MRR": 1.0,
+    "rappel_pipeline": 1.0
+  }
+}

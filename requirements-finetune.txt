@@ -1,0 +1,6 @@
+torch
+transformers>=4.44
+peft>=0.12
+accelerate>=0.33
+# optionnel, uniquement pour --qlora (Linux + GPU NVIDIA) :
+# bitsandbytes>=0.43
